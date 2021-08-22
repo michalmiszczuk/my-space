@@ -9,6 +9,9 @@
 }
 
 .main-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
   color: black;
   border: 3px solid white;
   color: white;
@@ -22,21 +25,27 @@
 }
 
 .main-text-hidden {
+  position: absolute;
   border: 2px solid white;
   opacity: 0.5;
   font-size: 1rem;
   transition: 1s;
   padding: 1rem;
   border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: right;
 }
 
 @keyframes headline {
   0%,
   100% {
-    transform: translateZ(0rem) rotateX(0) translateY(0);
+    transform: translateZ(0rem) rotateX(0) translateY(-50%) translateX(-50%);
   }
   50% {
-    transform: translateZ(5rem) rotateX(0deg) translateY(-10rem);
+    transform: translateZ(5rem) rotateX(0deg) translateY(calc(-50% - 10rem)) translateX(-50%);
     box-shadow: 0px 0px 10px white;
   }
 }

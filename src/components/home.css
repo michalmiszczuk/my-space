@@ -32,7 +32,7 @@
   opacity: 0;
   transition: 1s;
   z-index: 1;
-  transform: translateX(-20rem);
+  transform: translate(-20rem, -10rem);
 }
 
 .item2 {
@@ -53,7 +53,7 @@
   opacity: 0;
   transition: 1s;
   z-index: 1;
-  transform: translateX(20rem);
+  transform: translate(20rem, 10rem);
 }
 
 .page-container {
