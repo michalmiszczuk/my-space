@@ -5,7 +5,7 @@ import Skills from './Skills';
 
 function Home(props) {
     const [page, setPage] = useState(1)
-    const [pageEngaged, setPageEngaged] = useState(true)
+    const [pageEngaged, setPageEngaged] = useState(false)
 
 
     return (
@@ -20,7 +20,7 @@ function Home(props) {
                 </div>
                 <div className={pageEngaged ? "page-container-hover center" : "page-container center"}>
                     {page === 1 && <AboutMe setPageEngaged={setPageEngaged} pageEngaged={pageEngaged} />}
-                    {page === 3 && <Skills />}
+                    {page === 3 && <Skills setPageEngaged={setPageEngaged} pageEngaged={pageEngaged} />}
                 </div>
                 <div className={pageEngaged ? "item3 altered-right center" : "item3 center"}>
                     <div onClick={() => setPage(3)} className="nav-link-right">Skills</div>
