@@ -39,6 +39,10 @@
   transform-origin: right;
 }
 
+.main-text-hidden:hover {
+  opacity: 1;
+}
+
 @keyframes headline {
   0%,
   100% {

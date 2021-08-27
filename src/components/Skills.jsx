@@ -1,7 +1,7 @@
 import React from 'react';
 import './skills.css'
 import './page.css'
-import comp from '../static/tech.jpg'
+import picture from '../static/tech.jpg'
 
 function Skills({ pageEngaged, setPageEngaged }) {
     let image = []
@@ -18,7 +18,7 @@ function Skills({ pageEngaged, setPageEngaged }) {
         <div
             onMouseEnter={() => setPageEngaged(true)}
             onMouseLeave={() => setPageEngaged(false)}
-            className={pageEngaged ? "page-background about-me " : "page-background"}>
+            className={pageEngaged ? "page-background skills " : "page-background"}>
 
 
             {/* <img className="img-container" alt="" src={comp} /> */}
@@ -26,12 +26,13 @@ function Skills({ pageEngaged, setPageEngaged }) {
                 {image.map(row => row.map(img => {
                     return <div key={`${img.x}${img.y}`}
                         style={{
-                            backgroundImage: `url(${comp})`,
+                            backgroundImage: `url(${picture})`,
                             backgroundPosition: `${img.x}% ${img.y}% `,
-                            animation: !pageEngaged ? `drop-tiles 1s ${img.x * 20 + img.y * 5}ms ease` :
+                            animation: !pageEngaged ? `move-tiles 1s ${img.x * 10 + img.y * 10}ms ease forwards` :
                                 'change-img 2s ease forwards',
                             animationFillMode: "forwards",
                             backgroundSize: "1000%",
+                            opacity: "0"
                         }}
                         className="img-part center"></div>
                 }))}
@@ -43,6 +44,16 @@ function Skills({ pageEngaged, setPageEngaged }) {
                     <div className="me-icon">2</div>
                     <div className="me-icon">3</div>
                     <div className="me-icon">4</div>
+                </div>
+            </div>
+            <div className="cube-container">
+                <div className="cube">
+                    <div className="side front">1</div>
+                    <div className="side left">2</div>
+                    <div className="side right">3</div>
+                    <div className="side bottom">4</div>
+                    <div className="side top">5</div>
+                    <div className="side back">6</div>
                 </div>
             </div>
 

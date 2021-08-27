@@ -1,3 +1,91 @@
 .skills {
-  background-image: url("../static/tech.jpg");
+  background-image: url("../static/tech1.jpg");
+  perspective: 1000px;
+}
+
+.cube-container {
+  height: 20rem;
+  width: 20rem;
+  /* border: 2px solid white; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 15%;
+  top: 50%;
+  transform: translateY(-50%);
+  perspective: 1000px;
+  perspective-origin: top right;
+}
+
+.cube {
+  position: relative;
+  width: 10rem;
+  height: 10rem;
+  animation: cube-rotate 10s linear infinite;
+  transform-style: preserve-3d;
+  transition: 1s;
+}
+
+.cube:hover {
+  /* animation-play-state: paused; */
+  transform: translateZ(-10rem);
+  width: 100vh;
+  height: 100vh;
+  transition: 1s;
+}
+
+.side {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  opacity: 0.5;
+  border: 2px solid cornflowerblue;
+}
+
+.front {
+  transform: translateZ(5rem);
+  background-color: red;
+}
+.back {
+  transform: translateZ(-5rem);
+  background-color: yellow;
+}
+.right {
+  transform: rotateY(-90deg) translateZ(5rem);
+  background-color: aqua;
+}
+.left {
+  transform: rotateY(90deg) translateZ(5rem);
+  background-color: green;
+}
+.top {
+  transform: rotateX(90deg) translateZ(5rem);
+  background-color: grey;
+}
+.bottom {
+  transform: rotateX(-90deg) translateZ(5rem);
+  /* background-color: gold; */
+}
+
+@keyframes move-tiles {
+  0% {
+    opacity: 0.5;
+    transform: scale(2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    /* transform: translateX(0rem) translateZ(0rem) rotateX(0deg); */
+  }
+}
+
+@keyframes cube-rotate {
+  from {
+    transform: rotateY(0deg) rotateX(0deg) rotateZ(0deg);
+  }
+  to {
+    transform: rotateY(360deg) rotateX(0deg) rotateZ(0deg);
+  }
 }

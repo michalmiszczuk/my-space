@@ -4,8 +4,8 @@ import './home.css'
 import Skills from './Skills';
 
 function Home(props) {
-    const [page, setPage] = useState(1)
-    const [pageEngaged, setPageEngaged] = useState(false)
+    const [page, setPage] = useState(3)
+    const [pageEngaged, setPageEngaged] = useState(true)
 
 
     return (

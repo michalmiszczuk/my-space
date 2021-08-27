@@ -6,7 +6,7 @@ import comp from '../static/33.jpg'
 
 function AboutMe({ pageEngaged, setPageEngaged }) {
 
-
+    const [mousePos, setMousePos] = useState({ x: 0, y: 0 })
     let image = []
 
     for (let y = 0; y < 100; y += 10) {
@@ -20,9 +20,7 @@ function AboutMe({ pageEngaged, setPageEngaged }) {
     const mouse = (e) => {
         let x = e.clientX
         let y = e.clientY
-        const div = document.querySelector(".mouse")
-        div.style.top = `${y}px`
-        div.style.left = `${x}px`
+        setMousePos({ x: x, y: y })
     }
 
 
@@ -60,7 +58,7 @@ function AboutMe({ pageEngaged, setPageEngaged }) {
             </div>
 
             <div onClick={() => setPageEngaged(false)} className={pageEngaged ? "main-text-hidden" : "main-text"}>ABOUT ME</div>
-            <div className="mouse"></div>
+            {pageEngaged && <div style={{ top: mousePos.y + 2, left: mousePos.x + 2 }} className="mouse"></div>}
         </div>
     );
 }
