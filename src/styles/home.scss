@@ -1,0 +1,92 @@
+@import "./utils";
+
+.main-container {
+  @include flexCenter(column, flex-start, stretch);
+  height: 100vh;
+  background-color: black;
+  color: white;
+  perspective: 40rem;
+  overflow: hidden;
+}
+
+.main-info {
+  height: 25%;
+}
+
+.grid-container {
+  display: grid;
+  height: 60%;
+  grid-template-columns: 25% 50% 25%;
+  grid-template-rows: 50% 50%;
+  justify-items: center;
+  grid-template-areas:
+    "item1  bkground  item3"
+    "item2  bkground  item4";
+}
+
+.altered-left {
+  @include altered(-20rem, -1rem);
+}
+
+.altered-right {
+  @include altered(20rem, 10rem);
+}
+
+.item1,
+.item2,
+.item3,
+.item4 {
+  @include flexCenter();
+  transition: 1s;
+}
+
+$items: 1, 2, 3, 4;
+
+@each $item in $items {
+  .item#{$item} {
+    grid-area: item#{$item};
+  }
+}
+
+.nav-link {
+  padding: 1rem;
+  transition: 400ms;
+  font-weight: lighter;
+  font-style: italic;
+  z-index: 1;
+  border: 1px solid #fff;
+  cursor: pointer;
+  &:hover {
+    background-color: #222;
+    transform: scale(1.2);
+  }
+}
+
+.page-container {
+  width: 70%;
+  border-radius: 50px;
+  grid-area: bkground;
+  transform: rotateX(60deg);
+  transition: 700ms;
+  position: relative;
+}
+
+.page-container-hover {
+  background-size: cover;
+  transform: rotateX(0deg);
+  transform-origin: top;
+  transition: 1s;
+  width: 100vw;
+  height: 100vh;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  transform-origin: bottom;
+  transform-style: preserve-3d;
+}
+
+.footer {
+  height: 15%;
+}

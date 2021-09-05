@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import './aboutMe.css'
-import './page.css'
+import React, { useState } from 'react';
+import '../styles/aboutMe.scss'
+import '../styles/page.scss'
 import computer from '../static/komp.jpg'
 import comp from '../static/33.jpg'
 
@@ -29,9 +29,7 @@ function AboutMe({ pageEngaged, setPageEngaged }) {
             onMouseEnter={() => setPageEngaged(true)}
             onMouseLeave={() => setPageEngaged(false)}
             onMouseMove={(e) => mouse(e)}
-            className={pageEngaged ? "page-background about-me " : "page-background"}>
-
-
+            className={pageEngaged ? "page-background about-me" : "page-background"}>
             {/* <img className="img-container" alt="" src={comp} /> */}
             <div className="img-container ">
                 {image.map(row => row.map(img => {

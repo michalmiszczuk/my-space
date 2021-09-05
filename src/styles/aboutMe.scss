@@ -67,7 +67,8 @@
   perspective: 20rem;
 }
 
-.img-part:hover {
+.img-part {
+  transition: 500ms;
 }
 
 .img-part:nth-child(1) {

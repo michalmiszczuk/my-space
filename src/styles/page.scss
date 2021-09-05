@@ -1,3 +1,10 @@
+@mixin absCentered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .page-background {
   width: 100%;
   height: 100%;
@@ -9,9 +16,7 @@
 }
 
 .main-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
+  @include absCentered();
   color: black;
   border: 3px solid white;
   color: white;
@@ -20,22 +25,17 @@
   box-shadow: 0 10px 20px white;
   border-radius: 20px;
   animation: headline 4s ease-out infinite;
-  position: absolute;
   transition: 500ms;
 }
 
 .main-text-hidden {
-  position: absolute;
+  @include absCentered();
   border: 2px solid white;
   opacity: 0.5;
   font-size: 1rem;
   transition: 1s;
   padding: 1rem;
   border-radius: 10px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   transform-origin: right;
 }
 
