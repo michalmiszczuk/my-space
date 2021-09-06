@@ -18,3 +18,15 @@
   z-index: 1;
   transform: translate($value1, $value2);
 }
+
+@mixin progress-animation($name, $value, $delay) {
+  @keyframes #{$name} {
+    from {
+      width: 0%;
+    }
+    to {
+      width: $value;
+    }
+  }
+  animation: $name 2s $delay ease-out forwards;
+}

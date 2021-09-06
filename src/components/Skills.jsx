@@ -5,7 +5,7 @@ import picture from '../static/tech.jpg'
 
 function Skills({ pageEngaged, setPageEngaged }) {
 
-    const [cube, setCube] = useState(true)
+    const [cube, setCube] = useState(false)
     let image = []
 
     for (let y = 0; y < 100; y += 10) {
@@ -40,16 +40,19 @@ function Skills({ pageEngaged, setPageEngaged }) {
                 }))}
 
             </div>
-            <div className="skills-container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, minima.
-                <div className="skills-item">HTML</div>
-                <div className="skills-item">CSS (sass/scss)</div>
-                <div className="skills-item">Javascript</div>
-                <div className="skills-item">React</div>
-                <div className="skills-item">Node / Express</div>
-                <div className="skills-item">MongoDB</div>
-                <div className="skills-item">Git</div>
+            <div className={cube ? "skills-container" : "skills-container-hidden"}>
+                {cube && <div style={{ width: "100%" }}>
+                    <div id="skills-title">Skills acquired:</div>
+                    <div className="skills-item" id="html">HTML</div>
+                    <div className="skills-item" id="css">CSS (sass/scss)</div>
+                    <div className="skills-item" id="javascript">Javascript</div>
+                    <div className="skills-item" id="react">React</div>
+                    <div className="skills-item" id="node">Node.js / Express</div>
+                    <div className="skills-item" id="mongo">MongoDB</div>
+                    <div className="skills-item" id="git">Git</div>
+                </div>}
             </div>
-            {pageEngaged && <div onMouseEnter={() => setCube(false)} onMouseLeave={() => setCube(true)} className="cube-container">
+            {pageEngaged && <div onMouseEnter={() => setCube(true)} onMouseLeave={() => setCube(false)} className="cube-container">
                 <div className="cube">
                     <div className="side front">HTML</div>
                     <div className="side left">CSS</div>

@@ -8,16 +8,138 @@
 
 .skills-container {
   @include flexCenter(column);
-  border: 1px solid white;
+  width: 15rem;
   position: absolute;
   top: 15%;
   left: 5%;
+  padding-top: 1rem;
+  perspective: 30rem;
+  transition: 2s;
+}
+
+.skills-container-hidden {
+  @include flexCenter(column);
+  width: 15rem;
+  position: absolute;
+  top: 15%;
+  left: 5%;
+  padding-top: 1rem;
+  perspective: 30rem;
+  transition: 2s;
+  opacity: 0;
+}
+
+#skills-title {
+  padding: 1rem 0;
+  text-align: center;
   background-color: black;
+  width: 100%;
+  height: 100%;
+  font-weight: lighter;
+  font-style: italic;
 }
 
 .skills-item {
   width: 100%;
-  border: 1px solid cornflowerblue;
+  padding: 1rem 0;
+  text-align: center;
+  position: relative;
+  background-color: transparent;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    opacity: 0.3;
+    background-color: cornflowerblue;
+  }
+  &:nth-child(1) {
+    margin-top: 1rem;
+  }
+}
+
+#html::after {
+  @include progress-animation(eighty, 80%, 3s);
+}
+
+#css::after {
+  @include progress-animation(seventyFive, 75%, 4s);
+}
+
+#javascript::after {
+  @include progress-animation(seventy, 70%, 5s);
+}
+#react::after {
+  @include progress-animation(seventy, 70%, 6s);
+}
+#node::after {
+  @include progress-animation(fourty, 40%, 7s);
+}
+#mongo::after {
+  @include progress-animation(thirty, 30%, 8s);
+}
+#git::after {
+  @include progress-animation(fourtyFive, 45%, 9s);
+}
+
+#html {
+  transform: translateY(-100%) rotateX(180deg);
+  animation: roll 1s 1s forwards;
+  backface-visibility: hidden;
+  background-color: transparent;
+}
+
+#css {
+  transform: translateY(-100%) rotateX(180deg);
+  animation: roll 1s 2s forwards;
+  backface-visibility: hidden;
+  background: transparent;
+}
+
+#javascript {
+  transform: translateY(-100%) rotateX(180deg);
+  animation: roll 1s 3s forwards;
+  backface-visibility: hidden;
+  background: transparent;
+}
+
+#react {
+  transform: translateY(-100%) rotateX(180deg);
+  animation: roll 1s 4s forwards;
+  backface-visibility: hidden;
+  background: transparent;
+}
+
+#node {
+  transform: translateY(-100%) rotateX(180deg);
+  animation: roll 1s 5s forwards;
+  backface-visibility: hidden;
+  background: transparent;
+}
+
+#mongo {
+  transform: translateY(-100%) rotateX(180deg);
+  animation: roll 1s 6s forwards;
+  backface-visibility: hidden;
+  background: transparent;
+}
+
+#git {
+  transform: translateY(-100%) rotateX(180deg);
+  animation: roll 1s 7s forwards;
+  backface-visibility: hidden;
+  background: transparent;
+}
+
+@keyframes roll {
+  from {
+    transform: translateY(-100%) rotateX(180deg);
+  }
+  to {
+    transform: translateY(0) rotateX(0deg);
+    background-color: black;
+  }
 }
 
 @keyframes move-tiles {
