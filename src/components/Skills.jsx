@@ -5,7 +5,7 @@ import picture from '../static/tech.jpg'
 
 function Skills({ pageEngaged, setPageEngaged }) {
 
-    const [cube, setCube] = useState(false)
+    const [cube, setCube] = useState(true)
     let image = []
 
     for (let y = 0; y < 100; y += 10) {
@@ -20,7 +20,7 @@ function Skills({ pageEngaged, setPageEngaged }) {
         <div
             onMouseEnter={() => setPageEngaged(true)}
             // onMouseLeave={() => setPageEngaged(false)}
-            className={pageEngaged ? "page-background skills " : "page-background"}>
+            className={pageEngaged && cube ? "page-background transformed skills " : pageEngaged ? "page-background skills" : "page-background"}>
 
 
             {/* <img className="img-container" alt="" src={comp} /> */}
@@ -30,7 +30,7 @@ function Skills({ pageEngaged, setPageEngaged }) {
                         style={{
                             backgroundImage: `url(${picture})`,
                             backgroundPosition: `${img.x}% ${img.y}% `,
-                            animation: !pageEngaged ? `move-tiles 1s ${img.x * 10 + img.y * 10}ms ease forwards` :
+                            animation: !pageEngaged ? `drop-tiles 1s ${img.x * 10 + img.y * 10}ms ease forwards` :
                                 'change-img 2s ease forwards',
                             animationFillMode: "forwards",
                             backgroundSize: "1000%",
@@ -40,7 +40,7 @@ function Skills({ pageEngaged, setPageEngaged }) {
                 }))}
 
             </div>
-            <div className={cube ? "skills-container" : "skills-container-hidden"}>
+            {pageEngaged && <div className={cube ? "skills-container" : "skills-container-hidden"}>
                 {cube && <div style={{ width: "100%" }}>
                     <div id="skills-title">Skills acquired:</div>
                     <div className="skills-item" id="html">HTML</div>
@@ -51,7 +51,7 @@ function Skills({ pageEngaged, setPageEngaged }) {
                     <div className="skills-item" id="mongo">MongoDB</div>
                     <div className="skills-item" id="git">Git</div>
                 </div>}
-            </div>
+            </div>}
             {pageEngaged && <div onMouseEnter={() => setCube(true)} onMouseLeave={() => setCube(false)} className="cube-container">
                 <div className="cube">
                     <div className="side front">HTML</div>

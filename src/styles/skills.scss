@@ -17,18 +17,6 @@
   transition: 2s;
 }
 
-.skills-container-hidden {
-  @include flexCenter(column);
-  width: 15rem;
-  position: absolute;
-  top: 15%;
-  left: 5%;
-  padding-top: 1rem;
-  perspective: 30rem;
-  transition: 2s;
-  opacity: 0;
-}
-
 #skills-title {
   padding: 1rem 0;
   text-align: center;
@@ -42,9 +30,11 @@
 .skills-item {
   width: 100%;
   padding: 1rem 0;
+  margin: 0.5rem;
   text-align: center;
   position: relative;
   background-color: transparent;
+  font-weight: lighter;
   &::after {
     content: "";
     position: absolute;
