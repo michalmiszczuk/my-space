@@ -3,9 +3,10 @@ import AboutMe from './AboutMe'
 import '../styles/aboutMe.scss';
 import '../styles/home.scss'
 import Skills from './Skills';
+import MyProjects from './MyProjects';
 
 function Home(props) {
-    const [page, setPage] = useState(3)
+    const [page, setPage] = useState(2)
     const [pageEngaged, setPageEngaged] = useState(true)
 
 
@@ -16,11 +17,12 @@ function Home(props) {
                 <div onClick={() => setPage(1)} className={pageEngaged ? "item1 altered-left" : "item1"}>
                     <div className="nav-link">About Me</div>
                 </div>
-                <div className={pageEngaged ? "item2 altered-left" : "item2"}>
+                <div onClick={() => setPage(2)} className={pageEngaged ? "item2 altered-left" : "item2"}>
                     <div className="nav-link">My Projects</div>
                 </div>
                 <div className={pageEngaged ? "page-container-hover" : "page-container"}>
                     {page === 1 && <AboutMe setPageEngaged={setPageEngaged} pageEngaged={pageEngaged} />}
+                    {page === 2 && <MyProjects setPageEngaged={setPageEngaged} pageEngaged={pageEngaged} />}
                     {page === 3 && <Skills setPageEngaged={setPageEngaged} pageEngaged={pageEngaged} />}
                 </div>
                 <div className={pageEngaged ? "item3 altered-right" : "item3"}>

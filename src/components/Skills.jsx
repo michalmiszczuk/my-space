@@ -41,7 +41,7 @@ function Skills({ pageEngaged, setPageEngaged }) {
 
             </div>
             {pageEngaged && <div className={cube ? "skills-container" : "skills-container-hidden"}>
-                {cube && <div style={{ width: "100%" }}>
+                {cube && <div className={cube ? "skills-tab" : "skills-tab-hidden"}>
                     <div id="skills-title">Skills acquired:</div>
                     <div className="skills-item" id="html">HTML</div>
                     <div className="skills-item" id="css">CSS (sass/scss)</div>
@@ -52,7 +52,7 @@ function Skills({ pageEngaged, setPageEngaged }) {
                     <div className="skills-item" id="git">Git</div>
                 </div>}
             </div>}
-            {pageEngaged && <div onMouseEnter={() => setCube(true)} onMouseLeave={() => setCube(false)} className="cube-container">
+            {pageEngaged && <div onMouseEnter={() => setCube(true)} onMouseLeave={() => setCube(false)} className={cube ? "cube-container cube-background" : "cube-container"}>
                 <div className="cube">
                     <div className="side front">HTML</div>
                     <div className="side left">CSS</div>

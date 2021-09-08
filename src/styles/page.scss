@@ -19,6 +19,11 @@
 .transformed {
   background-size: 50%;
   transition: 2s;
+  perspective: 40rem;
+}
+
+.skills-tab {
+  width: 100%;
 }
 
 .main-text {

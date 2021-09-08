@@ -1,7 +1,6 @@
 .cube-container {
   height: 20rem;
   width: 20rem;
-  /* border: 2px solid white; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,6 +13,16 @@
   transition: 1s;
 }
 
+.cube-background {
+  height: 25rem;
+  width: 25rem;
+  background-color: #000;
+  opacity: 0.8;
+  transform-style: preserve-3d;
+  box-shadow: inset 0 0 100px 0px hsl(219, 79%, 66%);
+  border-radius: 50px;
+}
+
 .cube {
   position: relative;
   width: 10rem;
@@ -24,9 +33,10 @@
 }
 
 .cube:hover {
-  width: 40vh;
-  height: 40vh;
+  width: 70%;
+  height: 70%;
   transition: 1s;
+  opacity: 1;
 }
 
 .side {

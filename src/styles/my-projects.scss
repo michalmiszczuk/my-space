@@ -1,0 +1,28 @@
+.my-projects {
+  background-image: url("../static/projects.jpeg");
+  background-size: cover;
+  //   animation: hue 12s infinite;
+}
+
+.projects-container {
+  padding: 1rem 1rem;
+  width: 5rem;
+  height: 5rem;
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  border: 2px solid #fff;
+  transition: 2s;
+  overflow: hidden;
+  &:hover {
+    width: 80%;
+    height: 40%;
+    transition: 2s;
+    background-color: black;
+    opacity: 0.5;
+  }
+}
+
+.projects-item {
+  margin: 1rem;
+}
