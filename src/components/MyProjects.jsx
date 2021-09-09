@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import comp from '../static/projects.jpeg'
 import '../styles/my-projects.scss'
+import '../styles/page.scss'
 
 function MyProjects({ pageEngaged, setPageEngaged }) {
+
+    const [skills, setSkills] = useState(false)
 
     let image = []
 
@@ -17,7 +20,7 @@ function MyProjects({ pageEngaged, setPageEngaged }) {
         <div
             onMouseEnter={() => setPageEngaged(true)}
             // onMouseLeave={() => setPageEngaged(false)}
-            className={pageEngaged ? "page-background my-projects" : "page-background"}>
+            className={pageEngaged && skills ? " page-background my-projects magnified " : pageEngaged ? "page-background my-projects " : "page-background"}>
             {/* <img className="img-container" alt="" src={comp} /> */}
             <div className="img-container ">
                 {image.map(row => row.map(img => {
@@ -34,11 +37,18 @@ function MyProjects({ pageEngaged, setPageEngaged }) {
                 }))}
 
             </div>
-            <div class="projects-container">
-                <div className="projects-item">Website / App - online business card where students can book English lessons.</div>
-                <div className="projects-item">Tile Wars - a board game </div>
-                <div className="projects-item">Sorting Alogrithm</div>
-                <div className="projects-item">Calculator - a simple project using vanilla JS</div>
+            <div onMouseEnter={() => setSkills(true)} onMouseLeave={() => setSkills(false)} class="projects-container">
+                <div className="projects-item">- Website / App - my online business card where students can book English lessons.</div>
+                <a href="https://github.com/michalmiszczuk/english-empowering">GitHub</a>
+                <a href="https://englishempowering.com/">Live</a>
+                <div className="projects-item">- Tile Wars - a board game </div>
+                <a href="https://github.com/michalmiszczuk/english-empowering">GitHub</a>
+                <a href="https://englishempowering.com/">Live</a>
+                <div className="projects-item">- Sorting Alogrithm</div>
+                <a href="https://github.com/michalmiszczuk/english-empowering">GitHub</a>
+                <div className="projects-item">- Calculator - a simple project using vanilla JS</div>
+                <a href="https://github.com/michalmiszczuk/english-empowering">GitHub</a>
+                <a href="https://englishempowering.com/">Live</a>
             </div>
             <div onClick={() => setPageEngaged(false)} className={pageEngaged ? "main-text-hidden" : "main-text"}>My Projects</div>
         </div>

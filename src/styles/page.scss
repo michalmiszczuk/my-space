@@ -22,6 +22,12 @@
   perspective: 40rem;
 }
 
+.magnified {
+  background-size: 150%;
+  transition: 1s;
+  filter: saturate(120%);
+}
+
 .skills-tab {
   width: 100%;
 }
