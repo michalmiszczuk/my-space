@@ -39,16 +39,25 @@ function MyProjects({ pageEngaged, setPageEngaged }) {
             </div>
             <div onMouseEnter={() => setSkills(true)} onMouseLeave={() => setSkills(false)} class="projects-container">
                 <div className="projects-item">- Website / App - my online business card where students can book English lessons.</div>
-                <a href="https://github.com/michalmiszczuk/english-empowering">GitHub</a>
-                <a href="https://englishempowering.com/">Live</a>
+                <div className="link-container">
+                    <div className="link"><a href="https://github.com/michalmiszczuk/english-empowering">GitHub</a></div>
+                    <div className="link trans-2"><a href="https://englishempowering.com/">Live</a></div>
+                </div>
                 <div className="projects-item">- Tile Wars - a board game </div>
-                <a href="https://github.com/michalmiszczuk/english-empowering">GitHub</a>
-                <a href="https://englishempowering.com/">Live</a>
+                <div className="link-container">
+                    <div className="link"><a href="https://github.com/michalmiszczuk/english-empowering">GitHub</a></div>
+                    <div className="link trans-2"><a href="https://englishempowering.com/">Live</a></div>
+                </div>
                 <div className="projects-item">- Sorting Alogrithm</div>
-                <a href="https://github.com/michalmiszczuk/english-empowering">GitHub</a>
+                <div className="link-container">
+                    <div className="link"><a href="https://github.com/michalmiszczuk/english-empowering">GitHub</a></div>
+                    <div className="link trans-2"><a href="https://englishempowering.com/">Live</a></div>
+                </div>
                 <div className="projects-item">- Calculator - a simple project using vanilla JS</div>
-                <a href="https://github.com/michalmiszczuk/english-empowering">GitHub</a>
-                <a href="https://englishempowering.com/">Live</a>
+                <div className="link-container">
+                    <div className="link"><a href="https://github.com/michalmiszczuk/english-empowering">GitHub</a></div>
+                    <div className="link trans-2"><a href="https://englishempowering.com/">Live</a></div>
+                </div>
             </div>
             <div onClick={() => setPageEngaged(false)} className={pageEngaged ? "main-text-hidden" : "main-text"}>My Projects</div>
         </div>
