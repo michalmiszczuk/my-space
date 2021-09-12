@@ -6,6 +6,7 @@ import '../styles/page.scss'
 function MyProjects({ pageEngaged, setPageEngaged }) {
 
     const [skills, setSkills] = useState(false)
+    const [mousePos, setMousePos] = useState({ x: 0, y: 0 })
 
     let image = []
 
@@ -16,12 +17,21 @@ function MyProjects({ pageEngaged, setPageEngaged }) {
         }
         image.push(row)
     }
+
+    const mouse = (e) => {
+        let x = e.clientX
+        let y = e.clientY
+        setMousePos({ x: x, y: y })
+    }
+
     return (
         <div
             onMouseEnter={() => setPageEngaged(true)}
             // onMouseLeave={() => setPageEngaged(false)}
+            onMouseMove={(e) => mouse(e)}
             className={pageEngaged && skills ? " page-background my-projects magnified " : pageEngaged ? "page-background my-projects " : "page-background"}>
             {/* <img className="img-container" alt="" src={comp} /> */}
+            {pageEngaged && <div style={{ top: mousePos.y, left: mousePos.x }} className="mouse-projects"></div>}
             <div className="img-container ">
                 {image.map(row => row.map(img => {
                     return <div key={`${img.x}${img.y}`}
@@ -60,6 +70,7 @@ function MyProjects({ pageEngaged, setPageEngaged }) {
                 </div>
             </div>
             <div onClick={() => setPageEngaged(false)} className={pageEngaged ? "main-text-hidden" : "main-text"}>My Projects</div>
+
         </div>
     );
 }

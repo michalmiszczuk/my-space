@@ -7,7 +7,7 @@ import MyProjects from './MyProjects';
 import Contact from './Contact';
 
 function Home(props) {
-    const [page, setPage] = useState(2)
+    const [page, setPage] = useState(4)
     const [pageEngaged, setPageEngaged] = useState(true)
 
 
@@ -30,8 +30,8 @@ function Home(props) {
                 <div className={pageEngaged ? "item3 altered-right" : "item3"}>
                     <div onClick={() => setPage(3)} className="nav-link">Skills</div>
                 </div>
-                <div className={pageEngaged ? "item4 altered-right" : "item4"}>
-                    <div className="nav-link">Education</div>
+                <div onClick={() => setPage(4)} className={pageEngaged ? "item4 altered-right" : "item4"}>
+                    <div className="nav-link">Contact</div>
                 </div>
             </div>
             <div className="footer">Footer...</div>

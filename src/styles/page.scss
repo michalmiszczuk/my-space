@@ -22,6 +22,12 @@
   perspective: 40rem;
 }
 
+.magnified-contact {
+  filter: sepia(100%);
+  transition: 3s;
+  perspective: 40rem;
+}
+
 .magnified {
   background-size: 150%;
   transition: 1s;

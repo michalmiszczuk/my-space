@@ -1,0 +1,20 @@
+.contact {
+  background-image: url("../static/contact.jpg");
+  background-repeat: no-repeat;
+}
+
+.contact-info-container {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 5rem;
+  height: 5rem;
+  background-color: #222;
+  transition: 2s;
+  &:hover {
+    width: 15rem;
+    height: 40rem;
+    transition: 2s;
+    background-color: #222;
+  }
+}
