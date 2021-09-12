@@ -3,18 +3,32 @@
   background-repeat: no-repeat;
 }
 
+.contact-icon {
+  position: absolute;
+  top: 57%;
+  right: 18%;
+  width: 5rem;
+  height: 5rem;
+  box-shadow: 0 0 50px black;
+  transition: 1s;
+  border-radius: 50px;
+}
+
+.info-icon-hidden {
+  position: absolute;
+  top: 0%;
+  right: 100%;
+  width: 0;
+  height: 0;
+  transition: 4s;
+}
+
 .contact-info-container {
   position: absolute;
   top: 10%;
   left: 10%;
-  width: 5rem;
-  height: 5rem;
-  background-color: #222;
+  width: 10rem;
+  height: 20rem;
   transition: 2s;
-  &:hover {
-    width: 15rem;
-    height: 40rem;
-    transition: 2s;
-    background-color: #222;
-  }
+  background-color: #333;
 }
