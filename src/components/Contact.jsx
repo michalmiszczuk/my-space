@@ -30,8 +30,8 @@ function Contact({ pageEngaged, setPageEngaged }) {
             onMouseEnter={() => setPageEngaged(true)}
             // onMouseLeave={() => setPageEngaged(false)}
             onMouseMove={(e) => mouse(e)}
-            className={pageEngaged && infoShown ? "page-background  contact magnified-contact" : pageEngaged ? "page-background contact " : "page-background"}>
-            {pageEngaged && <div style={{ top: mousePos.y + 2, left: mousePos.x + 2 }} className="mouse"></div>}
+            className={pageEngaged && infoShown ? "page-background contact " : pageEngaged ? "page-background contact grey-contact" : "page-background"}>
+            {/* {pageEngaged && <div style={{ top: mousePos.y + 2, left: mousePos.x + 2 }} className="mouse"></div>} */}
             <div className="img-container ">
                 {image.map(row => row.map(img => {
                     return <div key={`${img.x}${img.y}`}
@@ -46,13 +46,12 @@ function Contact({ pageEngaged, setPageEngaged }) {
                         className="img-part"></div>
                 }))}
             </div>
-            <div onMouseEnter={() => setInfoShown(true)} className={infoShown ? "info-icon-hidden" : "contact-icon"}></div>
-            <div className="contact-info-container">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
+            <div onClick={() => setInfoShown(false)} onMouseEnter={() => setInfoShown(true)} className={infoShown ? "info-icon-hidden" : "contact-icon"}></div>
+            {pageEngaged && <div className={infoShown ? "contact-info-container" : "info-container-hidden"}>
+                <div className="contact-item">Mail: athlarster@gmail.com</div>
+                <div className="contact-item">Linkedin: fdfdfdf</div>
+                <div className="contact-items-perspective"></div>
+            </div>}
             {!infoShown && <div onClick={() => setPageEngaged(false)} className={pageEngaged ? "main-text-hidden" : "main-text"}>CONTACT</div>}
 
         </div >

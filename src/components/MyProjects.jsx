@@ -31,7 +31,7 @@ function MyProjects({ pageEngaged, setPageEngaged }) {
             onMouseMove={(e) => mouse(e)}
             className={pageEngaged && skills ? " page-background my-projects magnified " : pageEngaged ? "page-background my-projects " : "page-background"}>
             {/* <img className="img-container" alt="" src={comp} /> */}
-            {pageEngaged && <div style={{ top: mousePos.y, left: mousePos.x }} className="mouse-projects"></div>}
+            {pageEngaged && <div style={{ top: mousePos.y, left: mousePos.x }} className={skills ? "mouse-projects-hidden" : "mouse-projects"}></div>}
             <div className="img-container ">
                 {image.map(row => row.map(img => {
                     return <div key={`${img.x}${img.y}`}

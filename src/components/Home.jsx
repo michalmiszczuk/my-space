@@ -13,7 +13,7 @@ function Home(props) {
 
     return (
         <div className="main-container">
-            <div className="main-info">Something....</div>
+            <div className="main-info">Front end developer</div>
             <div className="grid-container">
                 <div onClick={() => setPage(1)} className={pageEngaged ? "item1 altered-left" : "item1"}>
                     <div className="nav-link">About Me</div>
