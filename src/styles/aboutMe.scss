@@ -1,7 +1,7 @@
 .about-me {
-  background-image: url("../static/33.jpg");
+  background-image: url("../static/aboutme.jpg");
   background-size: 100%;
-  animation: hue 7s infinite;
+  animation: hue 15s infinite;
 }
 
 .me-text {
@@ -132,7 +132,7 @@
     filter: hue-rotate(0deg);
   }
   50% {
-    filter: hue-rotate(-30deg);
+    filter: hue-rotate(360deg);
   }
 }
 

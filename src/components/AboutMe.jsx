@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 import '../styles/aboutMe.scss'
 import '../styles/page.scss'
 import computer from '../static/komp.jpg'
-import comp from '../static/33.jpg'
+import comp from '../static/aboutme.jpg'
 
 function AboutMe({ pageEngaged, setPageEngaged }) {
 
+    const [info, setInfo] = useState(false)
     const [mousePos, setMousePos] = useState({ x: 0, y: 0 })
     let image = []
 
@@ -27,9 +28,9 @@ function AboutMe({ pageEngaged, setPageEngaged }) {
     return (
         <div
             onMouseEnter={() => setPageEngaged(true)}
-            onMouseLeave={() => setPageEngaged(false)}
+            // onMouseLeave={() => setPageEngaged(false)}
             onMouseMove={(e) => mouse(e)}
-            className={pageEngaged ? "page-background about-me" : "page-background"}>
+            className={pageEngaged && info ? " page-background about-me magnified-2 " : pageEngaged ? "page-background about-me" : "page-background"}>
             {/* <img className="img-container" alt="" src={comp} /> */}
             <div className="img-container ">
                 {image.map(row => row.map(img => {
@@ -46,7 +47,7 @@ function AboutMe({ pageEngaged, setPageEngaged }) {
                 }))}
 
             </div>
-            <div className={pageEngaged ? "me-text" : "me-text-hidden"}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, minima.
+            <div onMouseEnter={() => setInfo(true)} onMouseLeave={() => setInfo(false)} className={pageEngaged ? "me-text" : "me-text-hidden"}>
                 <div className="me-icon-container">
                     <div className="me-icon">1</div>
                     <div className="me-icon">2</div>
@@ -55,7 +56,7 @@ function AboutMe({ pageEngaged, setPageEngaged }) {
                 </div>
             </div>
 
-            <div onClick={() => setPageEngaged(false)} className={pageEngaged ? "main-text-hidden" : "main-text"}>ABOUT ME</div>
+            <div onClick={() => setPageEngaged(false)} className={pageEngaged ? "main-text-hidden" : "main-text"}>{pageEngaged ? "MENU" : "ABOUT ME"}</div>
             {pageEngaged && <div style={{ top: mousePos.y + 2, left: mousePos.x + 2 }} className="mouse"></div>}
         </div>
     );
