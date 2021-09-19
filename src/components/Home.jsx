@@ -8,18 +8,18 @@ import Contact from './Contact';
 
 function Home(props) {
     const [page, setPage] = useState(1)
-    const [pageEngaged, setPageEngaged] = useState(true)
+    const [pageEngaged, setPageEngaged] = useState(false)
 
 
     return (
         <div className="main-container">
-            <div className="main-info">Front end developer</div>
+            <div className="main-info"> Hello ! I'm Michal, Web developer.</div>
             <div className="grid-container">
                 <div onClick={() => setPage(1)} className={pageEngaged ? "item1 altered-left" : "item1"}>
-                    <div className="nav-link">About Me</div>
+                    <div className="nav-link nav-left">About Me</div>
                 </div>
                 <div onClick={() => setPage(2)} className={pageEngaged ? "item2 altered-left" : "item2"}>
-                    <div className="nav-link">My Projects</div>
+                    <div className="nav-link nav-left">My Projects</div>
                 </div>
                 <div className={pageEngaged ? "page-container-hover" : "page-container"}>
                     {page === 1 && <AboutMe setPageEngaged={setPageEngaged} pageEngaged={pageEngaged} />}
@@ -28,13 +28,12 @@ function Home(props) {
                     {page === 4 && <Contact setPageEngaged={setPageEngaged} pageEngaged={pageEngaged} />}
                 </div>
                 <div className={pageEngaged ? "item3 altered-right" : "item3"}>
-                    <div onClick={() => setPage(3)} className="nav-link">Skills</div>
+                    <div onClick={() => setPage(3)} className="nav-link nav-right">Skills</div>
                 </div>
                 <div onClick={() => setPage(4)} className={pageEngaged ? "item4 altered-right" : "item4"}>
-                    <div className="nav-link">Contact</div>
+                    <div className="nav-link nav-right">Contact</div>
                 </div>
             </div>
-            <div className="footer">Footer...</div>
         </div>
 
     );

@@ -1,21 +1,39 @@
 @import "./utils";
+@import "./variables";
 
 .main-container {
   @include flexCenter(column, flex-start, stretch);
   height: 100vh;
   background-color: black;
-  color: white;
+  color: $text-color;
   perspective: 40rem;
   overflow: hidden;
 }
 
 .main-info {
-  height: 25%;
+  @include flexCenter;
+  padding-top: 0.5rem;
+  height: 15%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif, "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif, "Arial Narrow", Arial, sans-serif;
+  font-style: italic;
+  font-weight: lighter;
+  font-size: 3.2rem;
+  color: hsl(247, 13%, 25%, 0.65);
+  transform: rotateX(30deg);
+  text-shadow: 10px 10px 1px hsl(247, 23%, 55%, 0.8);
+  transition: 2s;
+  &:hover {
+    color: hsl(247, 33%, 55%, 0.9);
+    text-shadow: 10px 10px 3px hsl(247, 23%, 85%, 0.5);
+    transform: rotateX(0deg);
+    transition: 2s;
+  }
 }
 
 .grid-container {
   display: grid;
-  height: 60%;
+  height: 75%;
   grid-template-columns: 25% 50% 25%;
   grid-template-rows: 50% 50%;
   justify-items: center;
@@ -49,16 +67,39 @@ $items: 1, 2, 3, 4;
 }
 
 .nav-link {
-  padding: 1rem;
+  perspective: 20rem;
+  padding: 2rem;
   transition: 400ms;
   font-weight: lighter;
   font-style: italic;
   z-index: 1;
-  border: 1px solid #fff;
   cursor: pointer;
+
   &:hover {
-    background-color: #222;
-    transform: scale(1.2);
+    // padding: 2rem 4rem;
+  }
+}
+
+.nav-left {
+  transform: rotateY(20deg);
+  box-shadow: -5px 0px 10px #222;
+  text-shadow: -10px 7px 2px white;
+  &:hover {
+    color: hsl(100, 0%, 100%, 0.1);
+    transform: rotateY(0deg);
+    text-shadow: 0px 10px 1px white;
+    box-shadow: 0px 0px 10px #222;
+  }
+}
+
+.nav-right {
+  transform: rotateY(-20deg);
+  box-shadow: 3px 0px 10px #222;
+  text-shadow: 10px 7px 2px white;
+  &:hover {
+    transform: rotateY(0deg);
+    text-shadow: 0px 10px 2px white;
+    box-shadow: 0px 0px 10px #222;
   }
 }
 
@@ -85,8 +126,4 @@ $items: 1, 2, 3, 4;
   right: 0;
   transform-origin: bottom;
   transform-style: preserve-3d;
-}
-
-.footer {
-  height: 15%;
 }
