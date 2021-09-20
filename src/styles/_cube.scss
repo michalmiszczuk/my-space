@@ -1,3 +1,5 @@
+@import "./variables";
+
 .cube-container {
   height: 20rem;
   width: 20rem;
@@ -19,7 +21,7 @@
   background-color: #000;
   opacity: 0.8;
   transform-style: preserve-3d;
-  box-shadow: inset 0 0 100px 0px hsl(219, 79%, 66%);
+  box-shadow: inset 0 0 100px 0px $base-color;
   border-radius: 50px;
 }
 
@@ -44,7 +46,7 @@
   width: 100%;
   height: 100%;
   opacity: 0.5;
-  border: 2px solid white;
+  border: 1px solid $text-color;
   display: flex;
   justify-content: center;
   align-items: center;

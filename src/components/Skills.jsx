@@ -1,20 +1,12 @@
 import React, { useState } from 'react';
 import '../styles/skills.scss'
 import '../styles/page.scss'
-import picture from '../static/tech.jpg'
+import picture from '../static/skills2.jpg'
+import Background from './Background';
 
 function Skills({ pageEngaged, setPageEngaged }) {
 
     const [cube, setCube] = useState(true)
-    let image = []
-
-    for (let y = 0; y < 100; y += 10) {
-        let row = []
-        for (let x = 0; x < 100; x += 10) {
-            row.push({ y: y, x: x })
-        }
-        image.push(row)
-    }
 
     return (
         <div
@@ -24,22 +16,7 @@ function Skills({ pageEngaged, setPageEngaged }) {
 
 
             {/* <img className="img-container" alt="" src={comp} /> */}
-            <div className="img-container ">
-                {image.map(row => row.map(img => {
-                    return <div key={`${img.x}${img.y}`}
-                        style={{
-                            backgroundImage: `url(${picture})`,
-                            backgroundPosition: `${img.x}% ${img.y}% `,
-                            animation: !pageEngaged ? `drop-tiles 1s ${img.x * 10 + img.y * 10}ms ease forwards` :
-                                'change-img 2s ease forwards',
-                            animationFillMode: "forwards",
-                            backgroundSize: "1000%",
-                            opacity: "0"
-                        }}
-                        className="img-part center"></div>
-                }))}
-
-            </div>
+            <Background pageEngaged={pageEngaged} picture={picture} />
             {pageEngaged && <div className={cube ? "skills-container" : "skills-container-hidden"}>
                 {cube && <div className={cube ? "skills-tab" : "skills-tab-hidden"}>
                     <div id="skills-title">Skills acquired:</div>

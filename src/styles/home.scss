@@ -76,7 +76,7 @@ $items: 1, 2, 3, 4;
   cursor: pointer;
 
   &:hover {
-    // padding: 2rem 4rem;
+    padding: 2rem 4rem;
   }
 }
 
@@ -85,21 +85,16 @@ $items: 1, 2, 3, 4;
   box-shadow: -5px 0px 10px #222;
   text-shadow: -10px 7px 2px white;
   &:hover {
-    color: hsl(100, 0%, 100%, 0.1);
-    transform: rotateY(0deg);
-    text-shadow: 0px 10px 1px white;
-    box-shadow: 0px 0px 10px #222;
+    @extend %nav-hover;
   }
 }
 
 .nav-right {
   transform: rotateY(-20deg);
-  box-shadow: 3px 0px 10px #222;
+  box-shadow: 5px 0px 10px #222;
   text-shadow: 10px 7px 2px white;
   &:hover {
-    transform: rotateY(0deg);
-    text-shadow: 0px 10px 2px white;
-    box-shadow: 0px 0px 10px #222;
+    @extend %nav-hover;
   }
 }
 
@@ -110,12 +105,11 @@ $items: 1, 2, 3, 4;
   transform: rotateX(60deg);
   transition: 700ms;
   position: relative;
+  top: -5%;
 }
 
 .page-container-hover {
-  background-size: cover;
   transform: rotateX(0deg);
-  transform-origin: top;
   transition: 1s;
   width: 100vw;
   height: 100vh;

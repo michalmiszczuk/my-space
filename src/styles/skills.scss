@@ -1,8 +1,9 @@
 @use './cube';
 @import "./utils";
+@import "./variables";
 
 .skills {
-  background-image: url("../static/tech.jpg");
+  background-image: url("../static/skills2.jpg");
   perspective: 1px;
 }
 
@@ -43,7 +44,7 @@
     left: 0;
     height: 100%;
     opacity: 0.3;
-    background-color: cornflowerblue;
+    background-color: $base-color-lighter;
   }
   &:nth-child(1) {
     margin-top: 1rem;
