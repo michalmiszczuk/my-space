@@ -52,7 +52,7 @@ function Contact({ pageEngaged, setPageEngaged }) {
                 <div className="contact-item">Linkedin: fdfdfdf</div>
                 <div className="contact-items-perspective"></div>
             </div>}
-            {!infoShown && <div onClick={() => setPageEngaged(false)} className={pageEngaged ? "main-text-hidden" : "main-text"}>CONTACT</div>}
+            {!infoShown && <div onClick={() => setPageEngaged(false)} className={pageEngaged ? "main-text-hidden" : "main-text"}>{pageEngaged ? "MENU" : "CONTACT"}</div>}
 
         </div >
     );

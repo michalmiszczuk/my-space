@@ -47,7 +47,7 @@ function MyProjects({ pageEngaged, setPageEngaged }) {
                     <div className="link trans-2"><a href="https://englishempowering.com/">Live</a></div>
                 </div>
             </div>
-            <div onClick={() => setPageEngaged(false)} className={pageEngaged ? "main-text-hidden" : "main-text"}>My Projects</div>
+            <div onClick={() => setPageEngaged(false)} className={pageEngaged ? "main-text-hidden" : "main-text"}>{pageEngaged ? "MENU" : "MY PROJECTS"}</div>
 
         </div>
     );

@@ -8,7 +8,7 @@ import Contact from './Contact';
 
 function Home(props) {
     const [page, setPage] = useState(1)
-    const [pageEngaged, setPageEngaged] = useState(false)
+    const [pageEngaged, setPageEngaged] = useState(true)
 
 
     return (
