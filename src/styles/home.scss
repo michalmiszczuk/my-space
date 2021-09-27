@@ -121,3 +121,37 @@ $items: 1, 2, 3, 4;
   transform-origin: bottom;
   transform-style: preserve-3d;
 }
+
+@media (max-width: 768px) {
+  .page-container {
+    width: 100%;
+    height: 70vh;
+  }
+
+  .nav-link {
+    display: none;
+  }
+
+  .main-info {
+    font-size: 2rem;
+    margin-top: 4rem;
+    padding: 0 2rem;
+    text-align: center;
+  }
+
+  .page-container {
+    top: -10%;
+  }
+}
+
+@media (min-width: 1400px) {
+  .page-container {
+    max-width: 60%;
+    border-radius: 50px;
+    grid-area: bkground;
+    transform: rotateX(55deg);
+    transition: 700ms;
+    position: relative;
+    top: -10%;
+  }
+}
