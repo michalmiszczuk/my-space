@@ -13,6 +13,11 @@ function Home(props) {
     const [navbar, setNavbar] = useState(true)
     const [pageEngaged, setPageEngaged] = useState(false)
 
+    const handleNavBar = (page) => {
+        setPage(page);
+        setPageEngaged(false);
+    }
+
 
     return (
         <div className="main-container">
@@ -29,7 +34,7 @@ function Home(props) {
                 <NavButton setPage={(page) => setPage(page)} direction="right" pageEngaged={pageEngaged} pageNumber={3} title="Skills" />
                 <NavButton setPage={(page) => setPage(page)} direction="right" pageEngaged={pageEngaged} pageNumber={4} title="Contact" />
             </div>
-            <NavBar setPage={(page) => setPage(page), () => setPageEngaged(false)} navbar={navbar} setNavbar={setNavbar} />
+            <NavBar setPage={handleNavBar} navbar={navbar} setNavbar={setNavbar} />
         </div>
 
     );

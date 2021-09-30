@@ -12,13 +12,12 @@ function Skills({ pageEngaged, setPageEngaged }) {
 
     return (
         <div
-            onMouseEnter={() => setPageEngaged(true)}
             // onMouseLeave={() => setPageEngaged(false)}
             className={pageEngaged && cube ? "page-background transformed skills " : pageEngaged ? "page-background skills" : "page-background"}>
             <Background pageEngaged={pageEngaged} picture={picture} />
             {pageEngaged && <SkillsTable cube={cube} />}
             {pageEngaged && <Cube cube={cube} setCube={setCube} />}
-            <div onClick={() => setPageEngaged(false)} className={pageEngaged ? "main-text-hidden" : "main-text"}>{pageEngaged ? "MENU" : "SKILLS"}</div>
+            <div onClick={() => setPageEngaged(!pageEngaged)} className={pageEngaged ? "main-text-hidden" : "main-text"}>{pageEngaged ? "MENU" : "SKILLS"}</div>
         </div>
     );
 }

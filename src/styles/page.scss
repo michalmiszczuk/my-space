@@ -25,7 +25,6 @@
   display: grid;
   grid-template-columns: repeat(10, auto);
   grid-template-rows: repeat(10, auto);
-  perspective: 20rem;
 }
 
 .img-part {
@@ -34,6 +33,9 @@
 
 .img-part {
   transition: 500ms;
+  &:hover {
+    background-size: 100%;
+  }
 }
 
 .img-part:nth-child(1) {
@@ -52,13 +54,13 @@
 .transformed {
   background-size: 50%;
   transition: 2s;
-  perspective: 40rem;
+  // perspective: 40rem;
 }
 
 .grey-contact {
   filter: grayscale(100%);
   transition: 3s;
-  perspective: 40rem;
+  // perspective: 40rem;
 }
 
 .magnified {
@@ -81,10 +83,16 @@
   color: $text-color;
   font-size: 2rem;
   padding: 2rem;
-  box-shadow: 0 3px 20px $text-color;
   animation: headline 4s ease-out infinite;
   transition: 500ms;
   width: fit-content;
+  &:hover {
+    background-color: $base-color;
+    padding: 3rem;
+    transition: 1s;
+    cursor: pointer;
+    border-radius: 20px;
+  }
 }
 
 .main-text-hidden {

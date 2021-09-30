@@ -44,7 +44,6 @@ function AboutMe({ pageEngaged, setPageEngaged }) {
                 </div>
             </div>}
             <div onClick={() => setPageEngaged(false)} className={pageEngaged ? "main-text-hidden" : "main-text"}>{pageEngaged ? "MENU" : "ABOUT ME"}</div>
-            {pageEngaged && <div style={{ top: mousePos.y + 2, left: mousePos.x + 2 }} className="mouse"></div>}
         </div>
     );
 }
