@@ -32,6 +32,7 @@
 }
 
 .grid-container {
+  transform-style: preserve-3d;
   display: grid;
   height: 75%;
   grid-template-columns: 25% 50% 25%;
@@ -115,9 +116,7 @@ $items: 1, 2, 3, 4;
   height: 100vh;
   cursor: pointer;
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
+  bottom: -12%;
   transform-origin: bottom;
   transform-style: preserve-3d;
 }
@@ -147,11 +146,11 @@ $items: 1, 2, 3, 4;
 @media (min-width: 1400px) {
   .page-container {
     max-width: 60%;
+    max-height: 90%;
     border-radius: 50px;
     grid-area: bkground;
     transform: rotateX(55deg);
     transition: 700ms;
     position: relative;
-    top: -10%;
   }
 }

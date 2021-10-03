@@ -7,20 +7,10 @@ import Background from './Background';
 function AboutMe({ pageEngaged, setPageEngaged }) {
 
     const [info, setInfo] = useState(false)
-    const [mousePos, setMousePos] = useState({ x: 0, y: 0 })
-
-
-    const mouse = (e) => {
-        let x = e.clientX
-        let y = e.clientY
-        setMousePos({ x: x, y: y })
-    }
 
     return (
         <div
-            onMouseEnter={() => setPageEngaged(true)}
             // onMouseLeave={() => setPageEngaged(false)}
-            onMouseMove={(e) => mouse(e)}
             className={pageEngaged && info ? " page-background about-me magnified-2 " : pageEngaged ? "page-background about-me" : "page-background"}>
             <Background pageEngaged={pageEngaged} picture={picture} />
             <div onMouseEnter={() => setInfo(true)} onMouseLeave={() => setInfo(false)} className={pageEngaged ? "me-text" : "me-text me-text-hidden"}>
@@ -43,7 +33,7 @@ function AboutMe({ pageEngaged, setPageEngaged }) {
                     Watching and reading sci-fiction and fantasy.
                 </div>
             </div>}
-            <div onClick={() => setPageEngaged(false)} className={pageEngaged ? "main-text-hidden" : "main-text"}>{pageEngaged ? "MENU" : "ABOUT ME"}</div>
+            <div onClick={() => setPageEngaged(!pageEngaged)} className={pageEngaged ? "main-text-hidden" : "main-text"}>{pageEngaged ? "MENU" : "ABOUT ME"}</div>
         </div>
     );
 }

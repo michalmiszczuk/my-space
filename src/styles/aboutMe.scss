@@ -15,16 +15,15 @@
   transition: 1s;
   text-align: justify;
   margin-top: 2rem;
-  font-size: 1.2rem;
+  font-size: 0rem;
   font-weight: lighter;
   color: white;
   background-color: black;
   opacity: 0.7;
   transition: 1s;
-  clip-path: circle(0% at 50% 50%);
-  animation: open 2s 1s forwards;
+  clip-path: polygon(0 0, 100% 0, 100% 40%, 0 40%);
   &:hover {
-    padding-bottom: 10rem;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
 }
 
@@ -93,15 +92,6 @@
   color: white;
   font-size: 0.5rem;
   animation: mouse 3s ease infinite;
-}
-
-@keyframes open {
-  0% {
-    clip-path: circle(0% at 50% 50%);
-  }
-  100% {
-    clip-path: circle(100% at 50% 50%);
-  }
 }
 
 @keyframes fade-in {
