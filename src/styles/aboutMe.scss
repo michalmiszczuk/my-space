@@ -15,14 +15,17 @@
   transition: 1s;
   text-align: justify;
   margin-top: 2rem;
-  font-size: 0rem;
+  font-size: 1rem;
   font-weight: lighter;
   color: white;
   background-color: black;
   opacity: 0.7;
   transition: 1s;
-  clip-path: polygon(0 0, 100% 0, 100% 40%, 0 40%);
+  transform: translateY(5rem);
+  clip-path: polygon(0 0, 100% 0, 100% 20%, 0 80%);
   &:hover {
+    font-size: 1rem;
+    transform: scale(1);
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
 }

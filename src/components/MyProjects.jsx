@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import picture from '../static/projects.jpeg'
+import picture from '../static/pro2.jpg'
 import '../styles/my-projects.scss'
 import '../styles/page.scss'
 import Background from './Background';
@@ -11,8 +11,8 @@ function MyProjects({ pageEngaged, setPageEngaged }) {
 
     return (
         <div
-            onMouseLeave={() => setPageEngaged(false)}
-            className={pageEngaged && skills ? " page-background my-projects magnified " : pageEngaged ? "page-background my-projects " : "page-background"}>
+            // onMouseLeave={() => setPageEngaged(false)}
+            className={pageEngaged && skills ? " page-background my-projects magnified" : pageEngaged ? "page-background my-projects " : "page-background"}>
 
             <Background pageEngaged={pageEngaged} picture={picture} />
             {pageEngaged && <div onMouseEnter={() => setSkills(true)} onMouseLeave={() => setSkills(false)} className="projects-container">
