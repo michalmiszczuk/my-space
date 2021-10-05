@@ -20,6 +20,17 @@
   z-index: 1;
   box-shadow: 0 0 100px 10px $base-color;
 
+  &:before {
+    content: "my projects";
+    font-size: 1rem;
+    position: absolute;
+    left: 20%;
+    opacity: 1;
+    &:hover {
+      opacity: 0;
+    }
+  }
+
   &:hover {
     width: 80%;
     height: 30rem;

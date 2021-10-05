@@ -15,12 +15,14 @@ function AboutMe({ pageEngaged, setPageEngaged }) {
             <Background pageEngaged={pageEngaged} picture={picture} />
             <div onMouseEnter={() => setInfo(true)} onMouseLeave={() => setInfo(false)} className={pageEngaged ? "me-text" : "me-text me-text-hidden"}>
 
-                Engulfed by the discovery of my latent passion to computer since in 2020 I started to immerse myself in this bizzare world of ones and zeros.
-                Not only did logic gates  ? kindled my curiosity but also they made me aware of the numerous levels of abstracion behind the scenes.
-                Intermingling of a scientific and humanistic mind pushed me towards both front-end and back-end developement. Being a young apprentice
-                of the coding order I know that I still "must unlearn what I have learned".
-                <br />     <br />     <br />
-                In the past I worked as a musician as well as in a recording studio. Now an English teacher who is awaiting a new chapter in his life.
+                <p className="my-description">
+                    Engulfed by the discovery of my latent passion to computer since in 2020 I started to immerse myself in this bizzare world of ones and zeros.
+                    Not only did logic gates  ? kindled my curiosity but also they made me aware of the numerous levels of abstracion behind the scenes.
+                    Intermingling of a scientific and humanistic mind pushed me towards both front-end and back-end developement. Being a young apprentice
+                    of the coding order I know that I still "must unlearn what I have learned".
+                    <br />     <br />     <br />
+                    In the past I worked as a musician as well as in a recording studio. Now an English teacher who is awaiting a new chapter in his life.
+                </p>
 
             </div>
             {pageEngaged && <div className="aboutme-info-container">

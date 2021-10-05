@@ -9,10 +9,12 @@
   position: absolute;
   right: 15%;
   top: 50%;
+  opacity: 0;
   transform: translateY(-50%);
   perspective: 40rem;
   perspective-origin: top right;
   transition: 1s;
+  animation: show 1s 1s forwards;
 }
 
 .cube-background {
@@ -82,5 +84,14 @@
   }
   to {
     transform: rotateY(360deg) rotateX(360deg) rotateZ(360deg);
+  }
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

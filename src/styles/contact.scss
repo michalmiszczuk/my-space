@@ -18,6 +18,7 @@
   transition: 1s;
   border-radius: 50px;
   color: transparent;
+  clip-path: circle(100% at 50% 50%);
 }
 
 .info-icon-hidden {
@@ -46,13 +47,9 @@
   left: 10%;
   width: 30rem;
   height: 15rem;
-  transition: 3s;
+  transition: 1s;
   border-radius: 20px;
-  box-shadow: inset 0 0 40px #333;
   perspective: 20rem;
-  &:hover {
-    box-shadow: inset 0 0 0px #333;
-  }
 }
 
 .info-container-hidden {
@@ -73,20 +70,16 @@
   width: 50%;
   padding: 1rem;
   border-radius: 10px;
-  transform: rotateY(20deg);
-  transition: 500ms;
-  box-shadow: -5px 3px 10px $base-color;
+  transform: rotateY(0deg);
+  transition: 600ms;
+  box-shadow: inset 0 0 40px $base-color;
+  font-weight: lighter;
+  font-style: italic;
+  font-family: $base-font;
+  opacity: 0.8;
   &:hover {
-    z-index: 1;
-    transition: 500ms;
-    transform: rotateY((0deg));
-    box-shadow: 0 0 10px $base-color;
+    opacity: 1;
+    transition: 600ms;
+    box-shadow: inset 0 0 0 $base-color;
   }
-}
-
-.contact-items-perspective {
-  width: 100%;
-  height: 5rem;
-  box-shadow: -5px 3px 10px 1px $base-color;
-  transform: rotateX(80deg);
 }
