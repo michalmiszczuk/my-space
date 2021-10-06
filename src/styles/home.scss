@@ -32,7 +32,7 @@
 }
 
 .grid-container {
-  transform-style: preserve-3d;
+  perspective: 40rem;
   display: grid;
   height: 75%;
   grid-template-columns: 25% 50% 25%;
