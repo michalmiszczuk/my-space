@@ -44,11 +44,11 @@
 }
 
 .altered-left {
-  @include altered(-20rem, -1rem);
+  @include altered(-20rem, -2rem);
 }
 
 .altered-right {
-  @include altered(20rem, 10rem);
+  @include altered(20rem, 2rem);
 }
 
 .item1,
