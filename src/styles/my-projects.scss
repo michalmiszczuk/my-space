@@ -7,56 +7,73 @@
 }
 
 .projects-container {
-  padding: 1rem 0 1rem 3rem;
+  display: flex;
+  padding: 2rem 0 1rem 3rem;
   width: 5rem;
   height: 5rem;
   position: absolute;
   top: 10%;
   left: 10%;
-  transition: 2s;
+  transition: 1s;
+  font-weight: lighter;
+  font-size: 1rem;
+  opacity: 1;
+  box-shadow: 0 0 100px 10px $base-color;
+  border-radius: 0px;
+  // &:before {
+  //   content: "my projects";
+  //   font-size: 1rem;
+  //   position: absolute;
+  //   left: 20%;
+  //   opacity: 1;
+  //   &:hover {
+  //     opacity: 0;
+  //   }
+  // }
+  &:hover {
+    background-color: $base-color;
+    box-shadow: 0 0 0 0 $base-color;
+  }
+
+  // &:hover {
+  //   width: 80%;
+  //   height: 30rem;
+  //   transition: width 1s, height 1s ease-out 1s, background-color 1s, font-size 1s linear 2s, opacity 2s,
+  //     transform 2s;
+  //   background-color: rgb(0, 0, 0, 0.4);
+  //   backdrop-filter: contrast(120%) sepia(40%);
+  //   box-shadow: inset 0 0 100px $base-color-lighter;
+  // }
+  // &:hover .projects-item {
+  //   transform: translateX(0rem);
+  //   transition: 1s 1s;
+  // }
+  // &:hover .link {
+  //   transition: transform 2s, background-color 400ms;
+  //   transform: translateX(0rem) rotateX(0deg);
+  // }
+  // &:hover .trans-2 {
+  //   transition: transform 2s ease-in-out 1s, background-color 400ms;
+  //   transform: translateX(0rem);
+  // }
+}
+
+.projects-container-open {
+  padding: 1rem 0 1rem 3rem;
+  width: 80%;
+  height: 30rem;
+  position: absolute;
+  transition: width 1s, height 1s ease-out 1s, background-color 1s, font-size 1s linear 2s, opacity 2s,
+    transform 2s;
+  top: 10%;
+  left: 10%;
   font-weight: lighter;
   font-size: 1.2rem;
   opacity: 1;
   z-index: 1;
-  box-shadow: 0 0 100px 10px $base-color;
-
-  &:before {
-    content: "my projects";
-    font-size: 1rem;
-    position: absolute;
-    left: 20%;
-    opacity: 1;
-    &:hover {
-      opacity: 0;
-    }
-  }
-
-  &:hover {
-    width: 80%;
-    height: 30rem;
-    transition: width 1s, height 1s ease-out 1s, background-color 1s, font-size 1s linear 2s, opacity 2s,
-      transform 2s;
-    background-color: rgb(0, 0, 0, 0.4);
-    backdrop-filter: contrast(120%) sepia(40%);
-    box-shadow: inset 0 0 100px $base-color-lighter;
-  }
-  &:hover .projects-item {
-    transform: translateX(0rem);
-    transition: 1s 1s;
-  }
-  &:hover .link {
-    transition: transform 2s, background-color 400ms;
-    transform: translateX(0rem) rotateX(0deg);
-  }
-  &:hover .trans-2 {
-    transition: transform 2s ease-in-out 1s, background-color 400ms;
-    transform: translateX(0rem);
-  }
-  a {
-    outline: none;
-    color: $text-color;
-    text-decoration: none;
-  }
+  background-color: rgb(0, 0, 0, 0.4);
+  backdrop-filter: contrast(120%) sepia(40%);
+  box-shadow: inset 0 0 100px $base-color-lighter;
 }
 
 .projects-item {
@@ -64,55 +81,115 @@
   transition: 1s;
 }
 
+.projects-item-visible {
+  transform: translateX(0rem);
+  transition: 1s 1s;
+}
+
+.link-container-visible {
+  display: flex;
+  margin: 1rem 0;
+  text-align: center;
+  transition: 600ms;
+  opacity: 1;
+}
+
 .link-container {
   display: flex;
   margin: 1rem 0;
   text-align: center;
-  transition: 300ms;
-
-  .link {
-    @include flexCenter();
-    background-color: $base-color-lighter2;
-    width: 6rem;
-    height: 3rem;
-    transform: translateX(100rem) rotateZ(20deg);
-    transition: 1s;
-
-    &:hover {
-      background-color: $base-color-lighter;
-      transition: 300ms;
-    }
-
-    &:first-child {
-      margin-right: 1rem;
-    }
-  }
-
-  .trans-2 {
-    transform: translateX(100rem);
-  }
+  transition: 600ms;
+  opacity: 0;
 }
 
-.mouse-projects {
-  width: 3rem;
-  height: 3rem;
-  border-radius: 50px;
-  position: absolute;
-  // background-color: hsl(219, 79%, 66%, 0.5);
-  backdrop-filter: invert(100%);
-  transform: translateX(-1rem) translateY(-1rem);
-  z-index: -1;
-  transition: 100ms 3ms;
-}
-
-.mouse-projects-hidden {
+.link {
+  @include flexCenter();
+  background-color: $base-color-lighter2;
   width: 6rem;
-  height: 6rem;
-  border-radius: 50px;
+  height: 3rem;
+  transform: translateX(100rem) rotateZ(0deg);
+  transition: 1s;
+}
+
+.link-2 {
+  @include flexCenter();
+  background-color: $base-color-lighter2;
+  width: 6rem;
+  height: 3rem;
+  transform: translateX(100rem) rotateZ(20deg);
+  transition: 1s;
+
+  &:hover {
+    background-color: $base-color-lighter;
+    transition: 300ms;
+  }
+}
+
+.trans-2 {
+  transition: transform 2s ease-in-out 1s, background-color 400ms;
+}
+
+.link-visible {
+  @include flexCenter();
+  background-color: $base-color-lighter2;
+  width: 6rem;
+  height: 3rem;
+  transition: transform 2s, background-color 400ms;
+  transform: translateX(0rem) rotateX(0deg);
+
+  &:hover {
+    background-color: $base-color-lighter;
+    transition: 300ms;
+  }
+
+  &:first-child {
+    margin-right: 1rem;
+  }
+}
+
+.link-visible-2 {
+  @include flexCenter();
+  background-color: $base-color-lighter2;
+  width: 6rem;
+  height: 3rem;
+  transition: transform 2s 1s, background-color 400ms;
+  transform: translateX(0rem) rotateX(0deg);
+
+  &:hover {
+    background-color: $base-color-lighter;
+    transition: 300ms;
+  }
+}
+
+.project-close-icon {
+  z-index: 1;
   position: absolute;
-  opacity: 0.2;
-  backdrop-filter: invert(100%);
-  transform: translateX(-3rem) translateY(-3rem);
-  z-index: -1;
-  transition: 100ms 3ms;
+  background-color: $base-color-lighter2;
+  top: 5%;
+  right: 5%;
+  width: 1rem;
+  height: 1rem;
+  transition: 500ms;
+  clip-path: polygon(
+    20% 0%,
+    0% 20%,
+    30% 50%,
+    0% 80%,
+    20% 100%,
+    50% 70%,
+    80% 100%,
+    100% 80%,
+    70% 50%,
+    100% 20%,
+    80% 0%,
+    50% 30%
+  );
+  &:hover {
+    background-color: white;
+  }
+}
+
+.project-close-icon-hidden {
+  transition: 1s;
+  clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%);
 }
