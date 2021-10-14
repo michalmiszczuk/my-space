@@ -55,13 +55,15 @@
 .transformed {
   background-size: 50%;
   transition: 2s;
-  // perspective: 40rem;
+}
+.transformed-2 {
+  background-size: 70%;
+  transition: 2s;
 }
 
 .grey-contact {
   filter: grayscale(100%);
   transition: 3s;
-  // perspective: 40rem;
 }
 
 .magnified {
@@ -82,9 +84,11 @@
 .main-text {
   @include absCentered();
   color: $text-color;
-  font-size: 2rem;
+  font-size: 2.5rem;
+  font-weight: lighter;
   padding: 2rem;
   animation: headline 4s ease-out infinite;
+  font-style: $base-font;
   transition: 500ms;
   width: fit-content;
   &:hover {
@@ -98,9 +102,10 @@
 
 .main-text-hidden {
   @include absCentered();
-  border: 2px solid white;
-  opacity: 0.5;
+  border: 1px solid #fff;
+  opacity: 1;
   font-size: 1rem;
+  font-weight: lighter;
   transition: 1s;
   padding: 1rem;
   border-radius: 10px;
@@ -109,6 +114,10 @@
 
 .main-text-hidden:hover {
   opacity: 1;
+  padding: 3rem;
+  font-size: 0.5rem;
+  border-radius: 0;
+  box-shadow: inset 0 0 10px #fff;
 }
 
 @keyframes headline {

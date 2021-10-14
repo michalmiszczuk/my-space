@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../styles/skills.scss'
 import '../styles/page.scss'
-import picture from '../static/skills2.jpg'
+import picture from '../static/1.jpg'
 import Background from './Background';
 import Cube from './Cube';
 import SkillsTable from './SkillsTable';
@@ -12,8 +12,7 @@ function Skills({ pageEngaged, setPageEngaged }) {
 
     return (
         <div
-            // onMouseLeave={() => setPageEngaged(false)}
-            className={pageEngaged && cube ? "page-background transformed skills " : pageEngaged ? "page-background skills" : "page-background"}>
+            className={pageEngaged && cube ? "page-background transformed-2 skills " : pageEngaged ? "page-background skills" : "page-background"}>
             <Background pageEngaged={pageEngaged} picture={picture} />
             {pageEngaged && <SkillsTable cube={cube} />}
             {pageEngaged && <Cube cube={cube} setCube={setCube} />}
