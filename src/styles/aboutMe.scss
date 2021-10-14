@@ -22,11 +22,12 @@
   background-color: #000;
   opacity: 0.7;
   transition: 1s;
-  transform: translateY(5rem);
+  transform: translateY(20%);
   clip-path: polygon(0 0, 100% 0, 100% 20%, 0 80%);
+
   &:hover {
     font-size: 1rem;
-    transform: scale(1);
+    transform: translateY(0);
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     &::before {
       transition: 600ms;
@@ -115,6 +116,15 @@
   color: white;
   font-size: 0.5rem;
   animation: mouse 3s ease infinite;
+}
+
+@media (min-width: 1400px) {
+  .me-text {
+    transform: translateY(60%);
+    &:hover {
+      transform: translateY(30%);
+    }
+  }
 }
 
 @keyframes fade-in {

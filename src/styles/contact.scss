@@ -19,6 +19,7 @@
   border-radius: 50px;
   color: transparent;
   clip-path: circle(100% at 50% 50%);
+  animation: icon-pulse 2.5s infinite;
 }
 
 .info-icon-hidden {
@@ -81,5 +82,15 @@
     opacity: 1;
     transition: 600ms;
     box-shadow: inset 0 0 0 $base-color;
+  }
+}
+
+@keyframes icon-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
   }
 }
