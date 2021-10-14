@@ -8,7 +8,7 @@
 
 .projects-container {
   display: flex;
-  padding: 2rem 0 1rem 3rem;
+  padding: 2rem;
   width: 5rem;
   height: 5rem;
   position: absolute;
@@ -20,46 +20,16 @@
   opacity: 1;
   box-shadow: 0 0 100px 10px $base-color;
   border-radius: 0px;
-  // &:before {
-  //   content: "my projects";
-  //   font-size: 1rem;
-  //   position: absolute;
-  //   left: 20%;
-  //   opacity: 1;
-  //   &:hover {
-  //     opacity: 0;
-  //   }
-  // }
+  flex-flow: column;
+
   &:hover {
     background-color: $base-color;
     box-shadow: 0 0 0 0 $base-color;
   }
-
-  // &:hover {
-  //   width: 80%;
-  //   height: 30rem;
-  //   transition: width 1s, height 1s ease-out 1s, background-color 1s, font-size 1s linear 2s, opacity 2s,
-  //     transform 2s;
-  //   background-color: rgb(0, 0, 0, 0.4);
-  //   backdrop-filter: contrast(120%) sepia(40%);
-  //   box-shadow: inset 0 0 100px $base-color-lighter;
-  // }
-  // &:hover .projects-item {
-  //   transform: translateX(0rem);
-  //   transition: 1s 1s;
-  // }
-  // &:hover .link {
-  //   transition: transform 2s, background-color 400ms;
-  //   transform: translateX(0rem) rotateX(0deg);
-  // }
-  // &:hover .trans-2 {
-  //   transition: transform 2s ease-in-out 1s, background-color 400ms;
-  //   transform: translateX(0rem);
-  // }
 }
 
 .projects-container-open {
-  padding: 1rem 0 1rem 3rem;
+  padding: 2rem;
   width: 80%;
   height: 30rem;
   position: absolute;
@@ -68,12 +38,14 @@
   top: 10%;
   left: 10%;
   font-weight: lighter;
-  font-size: 1.2rem;
+  font-size: 1rem;
   opacity: 1;
   z-index: 1;
   background-color: rgb(0, 0, 0, 0.4);
   backdrop-filter: contrast(120%) sepia(40%);
   box-shadow: inset 0 0 100px $base-color-lighter;
+  display: flex;
+  flex-flow: column;
 }
 
 .projects-item {
@@ -92,14 +64,17 @@
   text-align: center;
   transition: 600ms;
   opacity: 1;
+  transform: rotateX(0deg);
 }
 
 .link-container {
+  top: -10rem;
   display: flex;
   margin: 1rem 0;
   text-align: center;
   transition: 600ms;
-  opacity: 0;
+  opacity: 1;
+  transform: rotateX(90deg);
 }
 
 .link {

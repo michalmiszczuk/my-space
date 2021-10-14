@@ -8,7 +8,6 @@ import ProjectLink from './ProjectLink';
 function MyProjects({ pageEngaged, setPageEngaged }) {
 
     const [skills, setSkills] = useState(false)
-    console.log(skills)
 
     return (
         <div
