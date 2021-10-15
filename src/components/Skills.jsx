@@ -9,14 +9,14 @@ import MainText from './MainText';
 
 function Skills({ pageChanged, pageEngaged, setPageEngaged }) {
 
-    const [cube, setCube] = useState(true)
+    const [cube, setCube] = useState(false)
 
     return (
         <div
             className={pageEngaged && cube ? "page-background transformed-2 skills " : pageEngaged ? "page-background skills" : "page-background"}>
             <Background pageChanged={pageChanged} pageEngaged={pageEngaged} picture={picture} />
-            {pageEngaged && <SkillsTable cube={cube} />}
             {pageEngaged && <Cube cube={cube} setCube={setCube} />}
+            {pageEngaged && <SkillsTable cube={cube} />}
             <MainText setPageEngaged={setPageEngaged} pageChanged={pageChanged} pageEngaged={pageEngaged} buttonText="SKILLS" />
         </div>
     );

@@ -22,7 +22,7 @@ function Background({ pageChanged, picture, pageEngaged }) {
                             backgroundPosition: `${img.x - 1}% ${img.y - 1}% `,
                             animation: !pageEngaged ? `drop-tiles 1s ${img.y * 10 + img.x * 10}ms ease forwards` :
                                 'change-img 2s ease forwards',
-                            opacity: "0"
+                            opacity: "0",
                         }}
                         className="img-part"></div>
                 }))}
@@ -35,7 +35,8 @@ function Background({ pageChanged, picture, pageEngaged }) {
                             backgroundPosition: `${img.x - 1}% ${img.y - 1}% `,
                             animation: !pageEngaged ? `drop-tiles 1s ${img.y * 10 + img.x * 10}ms ease forwards reverse` :
                                 'change-img 2s ease forwards',
-                            opacity: "1"
+                            opacity: "1",
+
                         }}
                         className="img-part"></div>
                 }))}

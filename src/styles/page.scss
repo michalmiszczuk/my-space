@@ -29,6 +29,7 @@
 }
 
 .img-part {
+  transition: 500ms;
   background-size: 1350%;
 }
 
@@ -107,14 +108,14 @@
   font-size: 1rem;
   font-weight: lighter;
   transition: 1s;
-  padding: 1rem;
+  padding: 1.5rem;
   border-radius: 10px;
   transform-origin: right;
 }
 
 .main-text-hidden:hover {
   opacity: 1;
-  padding: 3rem;
+  padding: 2rem;
   font-size: 0.5rem;
   border-radius: 0;
   box-shadow: inset 0 0 10px #fff;

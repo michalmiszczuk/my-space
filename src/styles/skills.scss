@@ -11,8 +11,9 @@
   @include flexCenter(column);
   width: 15rem;
   position: absolute;
-  top: 15%;
-  left: 5%;
+  top: 50vh;
+  transform: translateY(-50%);
+  right: 15%;
   padding-top: 1rem;
   perspective: 30rem;
   transition: 2s;
@@ -142,6 +143,5 @@
   100% {
     opacity: 1;
     transform: scale(1);
-    /* transform: translateX(0rem) translateZ(0rem) rotateX(0deg); */
   }
 }
