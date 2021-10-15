@@ -88,7 +88,7 @@
   font-weight: lighter;
   padding: 2rem;
   animation: headline 4s ease-out infinite;
-  font-style: $base-font;
+  font-family: $base-font;
   transition: 500ms;
   width: fit-content;
   &:hover {
@@ -120,6 +120,14 @@
   box-shadow: inset 0 0 10px #fff;
 }
 
+.main-text-disappear {
+  animation: main-out 1s forwards;
+}
+
+.main-text-appear {
+  animation: main 1s forwards;
+}
+
 @keyframes headline {
   0%,
   100% {
@@ -141,5 +149,23 @@
 
   .img-part {
     background-size: 1300%;
+  }
+}
+
+@keyframes main {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes main-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }

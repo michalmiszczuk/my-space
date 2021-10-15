@@ -12,10 +12,20 @@ function Home(props) {
     const [page, setPage] = useState(1)
     const [navbar, setNavbar] = useState(true)
     const [pageEngaged, setPageEngaged] = useState(false)
+    const [pageChanged, setPageChanged] = useState(false)
 
     const handleNavBar = (page) => {
         setPage(page);
         setPageEngaged(false);
+    }
+
+    const handlePageChange = (page) => {
+        setPageChanged(true)
+        setTimeout(() => {
+            setPage(page)
+            setPageChanged(false)
+        }, 2500)
+
     }
 
 
@@ -23,16 +33,16 @@ function Home(props) {
         <div className="main-container">
             <div className="main-info"> Hello ! I'm Michal, Web developer.</div>
             <div className="grid-container">
-                <NavButton setPage={(page) => setPage(page)} direction="left" pageEngaged={pageEngaged} pageNumber={1} title="About me" />
-                <NavButton setPage={(page) => setPage(page)} direction="left" pageEngaged={pageEngaged} pageNumber={2} title="My projects" />
+                <NavButton setPage={handlePageChange} direction="left" pageEngaged={pageEngaged} pageNumber={1} title="About me" />
+                <NavButton setPage={handlePageChange} direction="left" pageEngaged={pageEngaged} pageNumber={2} title="My projects" />
                 <div className={pageEngaged ? "page-container-hover" : "page-container"}>
-                    {page === 1 && <AboutMe setPageEngaged={setPageEngaged} pageEngaged={pageEngaged} />}
-                    {page === 2 && <MyProjects setPageEngaged={setPageEngaged} pageEngaged={pageEngaged} />}
-                    {page === 3 && <Skills setPageEngaged={setPageEngaged} pageEngaged={pageEngaged} />}
-                    {page === 4 && <Contact setPageEngaged={setPageEngaged} pageEngaged={pageEngaged} />}
+                    {page === 1 && <AboutMe pageChanged={pageChanged} setPageEngaged={setPageEngaged} pageEngaged={pageEngaged} />}
+                    {page === 2 && <MyProjects pageChanged={pageChanged} setPageEngaged={setPageEngaged} pageEngaged={pageEngaged} />}
+                    {page === 3 && <Skills pageChanged={pageChanged} setPageEngaged={setPageEngaged} pageEngaged={pageEngaged} />}
+                    {page === 4 && <Contact pageChanged={pageChanged} setPageEngaged={setPageEngaged} pageEngaged={pageEngaged} />}
                 </div>
-                <NavButton setPage={(page) => setPage(page)} direction="right" pageEngaged={pageEngaged} pageNumber={3} title="Skills" />
-                <NavButton setPage={(page) => setPage(page)} direction="right" pageEngaged={pageEngaged} pageNumber={4} title="Contact" />
+                <NavButton setPage={handlePageChange} direction="right" pageEngaged={pageEngaged} pageNumber={3} title="Skills" />
+                <NavButton setPage={handlePageChange} direction="right" pageEngaged={pageEngaged} pageNumber={4} title="Contact" />
             </div>
             <NavBar setPage={handleNavBar} navbar={navbar} setNavbar={setNavbar} />
         </div>

@@ -3,8 +3,9 @@ import '../styles/aboutMe.scss'
 import '../styles/page.scss'
 import picture from '../static/aboutme.jpg'
 import Background from './Background';
+import MainText from './MainText';
 
-function AboutMe({ pageEngaged, setPageEngaged }) {
+function AboutMe({ pageChanged, pageEngaged, setPageEngaged }) {
 
     const [info, setInfo] = useState(false)
 
@@ -12,7 +13,7 @@ function AboutMe({ pageEngaged, setPageEngaged }) {
         <div
 
             className={pageEngaged && info ? " page-background about-me magnified-2 " : pageEngaged ? "page-background about-me" : "page-background"}>
-            <Background pageEngaged={pageEngaged} picture={picture} />
+            <Background pageChanged={pageChanged} pageEngaged={pageEngaged} picture={picture} />
             <div onMouseEnter={() => setInfo(true)} onMouseLeave={() => setInfo(false)} className={pageEngaged ? "me-text" : "me-text me-text-hidden"}>
 
                 <p className="my-description">
@@ -34,7 +35,7 @@ function AboutMe({ pageEngaged, setPageEngaged }) {
                     Watching and reading sci-fiction and fantasy.
                 </div>
             </div>}
-            <div onClick={() => setPageEngaged(!pageEngaged)} className={pageEngaged ? "main-text-hidden" : "main-text"}>{pageEngaged ? "MENU" : "ABOUT ME"}</div>
+            <MainText setPageEngaged={setPageEngaged} pageChanged={pageChanged} pageEngaged={pageEngaged} buttonText="ABOUT ME" />
         </div>
     );
 }
