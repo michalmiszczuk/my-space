@@ -20,7 +20,7 @@ function AboutMe({ pageChanged, pageEngaged, setPageEngaged }) {
                     Engulfed by the discovery of my latent passion to computer since in 2020 I started to immerse myself in this bizzare world of ones and zeros.
                     Numerous levels of abstracion behind the scenes not only kindled my curiosity but also made me an avid student who has always
                     balanced on the brink of both scientific and humanistic realities. Now being a young apprentice I eagerly broaden knowledge of the coding order.
-                    <br />     <br />     <br />
+                    <br />     <br />
                     In the past I worked as a musician as well as in a recording studio. Now an English teacher who is awaiting a new chapter in his life.
                 </p>
 

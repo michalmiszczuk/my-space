@@ -85,9 +85,9 @@
 .main-text {
   @include absCentered();
   color: $text-color;
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   font-weight: lighter;
-  padding: 2rem;
+  padding: 2.7rem;
   animation: headline 4s ease-out infinite;
   font-family: $base-font;
   transition: 500ms;
@@ -103,6 +103,7 @@
 
 .main-text-hidden {
   @include absCentered();
+  perspective: 20rem;
   border: 1px solid #fff;
   opacity: 1;
   font-size: 1rem;
@@ -111,16 +112,12 @@
   padding: 1.5rem;
   border-radius: 10px;
   transform-origin: right;
+  &:hover {
+    padding: 2rem;
+    box-shadow: inset 0 0 0px 50px $base-color;
+    transition: 1s;
+  }
 }
-
-.main-text-hidden:hover {
-  opacity: 1;
-  padding: 2rem;
-  font-size: 0.5rem;
-  border-radius: 0;
-  box-shadow: inset 0 0 10px #fff;
-}
-
 .main-text-disappear {
   animation: main-out 1s forwards;
 }

@@ -14,11 +14,10 @@
   @include flexCenter;
   padding-top: 0.5rem;
   height: 15%;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif, "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif, "Arial Narrow", Arial, sans-serif;
+  font-family: $base-color;
   font-style: italic;
   font-weight: lighter;
-  font-size: 3.2rem;
+  font-size: 4rem;
   color: hsl(247, 13%, 25%, 0.65);
   transform: rotateX(30deg);
   text-shadow: 10px 10px 1px hsl(247, 23%, 55%, 0.8);
@@ -35,7 +34,7 @@
   perspective: 40rem;
   display: grid;
   height: 75%;
-  grid-template-columns: 25% 50% 25%;
+  grid-template-columns: 22% 56% 22%;
   grid-template-rows: 50% 50%;
   justify-items: center;
   grid-template-areas:
@@ -69,12 +68,13 @@ $items: 1, 2, 3, 4;
 
 .nav-link {
   perspective: 20rem;
-  padding: 2rem;
+  padding: 2rem 2.5rem;
   transition: 400ms;
   font-weight: lighter;
   font-style: italic;
   z-index: 1;
   cursor: pointer;
+  font-size: 1.4rem;
 
   &:hover {
     padding: 2rem 4rem;
@@ -106,7 +106,6 @@ $items: 1, 2, 3, 4;
   transform: rotateX(60deg);
   transition: 700ms;
   position: relative;
-  top: -5%;
 }
 
 .page-container-hover {

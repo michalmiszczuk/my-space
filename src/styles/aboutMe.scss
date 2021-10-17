@@ -1,32 +1,33 @@
 @import "./variables";
+@import "./utils";
 
 .about-me {
   background-image: url("../static/aboutme.jpg");
   background-size: 100%;
-  // animation: hue 15s infinite;
+  animation: hue 25s infinite;
 }
 
 .me-text {
   position: absolute;
-  top: 0;
+  top: -50%;
   left: 0;
   right: 0;
   padding: 1rem 2rem;
   transition: 1s;
   text-align: justify;
   margin-top: 1rem;
-  font-size: 1rem;
+  font-size: 1.3rem;
   font-weight: lighter;
   font-family: $base-font;
   color: $text-color;
   background-color: #000;
-  opacity: 0.7;
   transition: 1s;
-  transform: translateY(20%);
+  opacity: 0.7;
+  // transform: translateY(20%);
   clip-path: polygon(0 0, 100% 0, 100% 20%, 0 80%);
+  animation: open-me-text 1s 0.5s forwards;
 
   &:hover {
-    font-size: 1rem;
     transform: translateY(0);
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     &::before {
@@ -58,13 +59,16 @@
   height: 10rem;
   position: absolute;
   top: 80%;
-  transform: translateY(-50%);
+  transform: translateY(200%);
   display: flex;
   justify-content: space-around;
   align-items: center;
+  font-size: 1.3rem;
+  animation: open-icons-text 1s 0.5s forwards;
 }
 
 .about-me-icon {
+  @include flexCenter();
   position: relative;
   width: 40rem;
   height: 10rem;
@@ -73,9 +77,6 @@
   opacity: 0.5;
   clip-path: circle(30% at 0 0);
   transition: 500ms;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   text-align: center;
   transition: 1.5s;
   color: hsl(67, 10%, 90%, 0);
@@ -170,12 +171,19 @@
   }
 }
 
-@keyframes mouse {
-  0%,
-  100% {
-    box-shadow: 0 0 2px 2px white;
+@keyframes open-me-text {
+  0% {
+    top: -50%;
   }
-  50% {
-    box-shadow: 0 0 10px 10px white;
+  100% {
+    top: -5%;
+  }
+}
+@keyframes open-icons-text {
+  0% {
+    transform: translateY(200%);
+  }
+  100% {
+    transform: translateY(-50%);
   }
 }
