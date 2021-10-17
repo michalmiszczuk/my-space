@@ -85,6 +85,16 @@
   }
 }
 
+@media (min-width: 1400px) {
+  .contact-info-container {
+    font-size: 1.2rem;
+    bottom: 25%;
+  }
+  .contact-item {
+    padding: 2rem;
+  }
+}
+
 @keyframes icon-pulse {
   0%,
   100% {

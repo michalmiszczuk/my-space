@@ -125,6 +125,15 @@
   background: transparent;
 }
 
+@media (min-width: 1400px) {
+  .skills-container {
+    font-size: 1.25rem;
+  }
+  .skills-item {
+    padding: 1.5rem;
+  }
+}
+
 @keyframes roll {
   from {
     transform: translateY(-100%) rotateX(180deg);

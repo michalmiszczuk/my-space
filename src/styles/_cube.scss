@@ -77,6 +77,13 @@
   /* background-color: gold; */
 }
 
+@media (min-width: 1400px) {
+  .cube-container {
+    width: 30rem;
+    height: 30rem;
+  }
+}
+
 @keyframes cube-rotate {
   from {
     transform: rotateY(0deg) rotateX(0deg) rotateZ(0deg);

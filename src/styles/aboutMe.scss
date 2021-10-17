@@ -110,20 +110,12 @@
   }
 }
 
-.mouse {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  color: white;
-  font-size: 0.5rem;
-  animation: mouse 3s ease infinite;
-}
-
 @media (min-width: 1400px) {
   .me-text {
-    transform: translateY(60%);
+    padding: 3rem;
+    transform: translateY(40%);
     &:hover {
-      transform: translateY(30%);
+      transform: translateY(50%);
     }
   }
 }
