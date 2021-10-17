@@ -10,6 +10,11 @@ function MyProjects({ pageChanged, pageEngaged, setPageEngaged }) {
 
     const [skills, setSkills] = useState(false)
 
+    const handleCloseSkills = (e) => {
+        e.stopPropagation()
+        setSkills(false)
+    }
+
     return (
         <div
 
@@ -26,7 +31,7 @@ function MyProjects({ pageChanged, pageEngaged, setPageEngaged }) {
                     description="Sorting Alogrithm" />
                 <ProjectLink skills={skills} liveLink="https://englishempowering.com/" gitLink="https://englishempowering.com/"
                     description="Calculator - a simple project using vanilla JS" />
-                <div onMouseEnter={() => setSkills(false)} className={skills ? "project-close-icon" : "project-close-icon-hidden"} />
+                <div onClick={(e) => handleCloseSkills(e)} className={skills ? "project-close-icon" : "project-close-icon-hidden"} />
             </div>}
             <MainText setPageEngaged={setPageEngaged} pageChanged={pageChanged} pageEngaged={pageEngaged} buttonText="MY PROJECTS" />
         </div>

@@ -32,11 +32,13 @@
 .text-my-projects {
   text-align: center;
   transition: 1s;
+  font-size: 1rem;
 }
 .text-my-projects-open {
   text-align: center;
   padding: 1rem;
   transition: 1s;
+  font-size: 1.2rem;
 }
 
 .projects-container-open {
@@ -153,8 +155,8 @@
   background-color: $base-color-lighter2;
   top: 5%;
   right: 5%;
-  width: 1rem;
-  height: 1rem;
+  width: 1.5rem;
+  height: 1.5rem;
   transition: 500ms;
   clip-path: polygon(
     20% 0%,
@@ -171,7 +173,21 @@
     50% 30%
   );
   &:hover {
-    background-color: white;
+    background-color: #fff;
+    clip-path: polygon(
+      0% 20%,
+      20% 0%,
+      50% 30%,
+      80% 0%,
+      100% 20%,
+      70% 50%,
+      100% 80%,
+      80% 100%,
+      50% 70%,
+      20% 100%,
+      0% 80%,
+      30% 50%
+    );
   }
 }
 
