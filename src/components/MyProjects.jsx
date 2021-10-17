@@ -17,13 +17,13 @@ function MyProjects({ pageChanged, pageEngaged, setPageEngaged }) {
 
             <Background pageChanged={pageChanged} pageEngaged={pageEngaged} picture={picture} />
             {pageEngaged && <div onClick={() => setSkills(true)} className={skills ? "projects-container-open" : "projects-container"} >
-                <span class="text-my-projects">my projects</span>
+                <span class={skills ? "text-my-projects-open" : "text-my-projects"}>my projects</span>
                 <ProjectLink skills={skills} liveLink="https://englishempowering.com/" gitLink="https://englishempowering.com/"
                     description="Website / App - my online business card where students can book English lessons." />
                 <ProjectLink skills={skills} liveLink="https://englishempowering.com/" gitLink="https://englishempowering.com/"
                     description="Tile Wars - a board game" />
                 <ProjectLink skills={skills} liveLink="https://englishempowering.com/" gitLink="https://englishempowering.com/"
-                    description="- Sorting Alogrithm" />
+                    description="Sorting Alogrithm" />
                 <ProjectLink skills={skills} liveLink="https://englishempowering.com/" gitLink="https://englishempowering.com/"
                     description="Calculator - a simple project using vanilla JS" />
                 <div onMouseEnter={() => setSkills(false)} className={skills ? "project-close-icon" : "project-close-icon-hidden"} />

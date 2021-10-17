@@ -29,6 +29,16 @@
   }
 }
 
+.text-my-projects {
+  text-align: center;
+  transition: 1s;
+}
+.text-my-projects-open {
+  text-align: center;
+  padding: 1rem;
+  transition: 1s;
+}
+
 .projects-container-open {
   padding: 2rem;
   width: 80%;
