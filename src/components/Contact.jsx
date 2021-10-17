@@ -17,6 +17,7 @@ function Contact({ pageChanged, pageEngaged, setPageEngaged }) {
             {pageEngaged && <div className={infoShown ? "contact-info-container" : "info-container-hidden"}>
                 <a href="mailto:athlarster@gmail.com" className="contact-item">Mail: athlarster@gmail.com</a>
                 <a href="https://linkedin.com" className="contact-item">Linkedin: fdfdfdf</a>
+                <a href="tel:579 870 405" className="contact-item">579 870 405</a>
             </div>}
             <MainText setPageEngaged={setPageEngaged} pageChanged={pageChanged} pageEngaged={pageEngaged} buttonText="CONTACT" />
         </div >

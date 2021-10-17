@@ -15,17 +15,18 @@ function Home(props) {
     const [pageChanged, setPageChanged] = useState(false)
 
     const handleNavBar = (page) => {
+        if (pageChanged) return;
         setPage(page);
         setPageEngaged(false);
     }
 
     const handlePageChange = (page) => {
+        if (pageChanged) return
         setPageChanged(true)
         setTimeout(() => {
             setPage(page)
             setPageChanged(false)
         }, 2500)
-
     }
 
 
