@@ -31,9 +31,9 @@ function MyProjects({ pageChanged, pageEngaged, setPageEngaged }) {
                     description="Sorting Alogrithm" />
                 <ProjectLink skills={skills} liveLink="https://englishempowering.com/" gitLink="https://englishempowering.com/"
                     description="Calculator - a simple project using vanilla JS" />
-                <div onClick={(e) => handleCloseSkills(e)} className={skills ? "project-close-icon" : "project-close-icon-hidden"} />
+                <div onClick={(e) => handleCloseSkills(e)} onTouchMove={(e) => handleCloseSkills(e)} className={skills ? "project-close-icon" : "project-close-icon-hidden"} />
             </div>}
-            <MainText setPageEngaged={setPageEngaged} pageChanged={pageChanged} pageEngaged={pageEngaged} buttonText="MY PROJECTS" />
+            <MainText setPageEngaged={setPageEngaged} pageChanged={pageChanged} pageEngaged={pageEngaged} buttonText="PROJECTS" />
         </div>
     );
 }

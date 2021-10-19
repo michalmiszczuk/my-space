@@ -35,7 +35,7 @@ function AboutMe({ pageChanged, pageEngaged, setPageEngaged }) {
                     Watching and reading sci-fiction and fantasy.
                 </div>
             </div>}
-            <MainText setPageEngaged={setPageEngaged} pageChanged={pageChanged} pageEngaged={pageEngaged} buttonText="ABOUT ME" />
+            <MainText setPageEngaged={setPageEngaged} pageChanged={pageChanged} pageEngaged={pageEngaged} buttonText="ABOUT" />
         </div>
     );
 }

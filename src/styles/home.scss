@@ -4,10 +4,12 @@
 .main-container {
   @include flexCenter(column, flex-start, stretch);
   height: 100vh;
+  width: 100%;
   background-color: black;
   color: $text-color;
   perspective: 40rem;
-  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 .main-info {

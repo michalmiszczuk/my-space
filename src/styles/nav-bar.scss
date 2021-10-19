@@ -12,21 +12,8 @@
   flex-flow: column;
   opacity: 0.9;
   transition: 1s;
+  overflow: hidden;
 }
-
-// .navbar-hidden {
-//   position: absolute;
-//   width: 40%;
-//   top: 0;
-//   right: 0;
-//   display: flex;
-//   justify-content: center;
-//   display: flex;
-//   justify-content: center;
-//   flex-flow: column;
-//   transform: translateX(20rem);
-//   transition: 1s;
-// }
 
 .navbar-item {
   width: 100%;

@@ -36,16 +36,16 @@ function Home(props) {
         <div className="main-container">
             <div className="main-info"> Hello ! I'm Michal, Web developer.</div>
             <div className="grid-container">
-                <NavButton setPage={handlePageChange} direction="left" pageEngaged={pageEngaged} pageNumber={1} title="About me" />
-                <NavButton setPage={handlePageChange} direction="left" pageEngaged={pageEngaged} pageNumber={2} title="My projects" />
+                <NavButton setPage={handlePageChange} direction="left" pageEngaged={pageEngaged} pageNumber={1} title="about" />
+                <NavButton setPage={handlePageChange} direction="left" pageEngaged={pageEngaged} pageNumber={2} title="projects" />
                 <div className={pageEngaged ? "page-container-hover" : "page-container"}>
                     {page === 1 && <AboutMe pageChanged={pageChanged} setPageEngaged={setPageEngaged} pageEngaged={pageEngaged} />}
                     {page === 2 && <MyProjects pageChanged={pageChanged} setPageEngaged={setPageEngaged} pageEngaged={pageEngaged} />}
                     {page === 3 && <Skills pageChanged={pageChanged} setPageEngaged={setPageEngaged} pageEngaged={pageEngaged} />}
                     {page === 4 && <Contact pageChanged={pageChanged} setPageEngaged={setPageEngaged} pageEngaged={pageEngaged} />}
                 </div>
-                <NavButton setPage={handlePageChange} direction="right" pageEngaged={pageEngaged} pageNumber={3} title="Skills" />
-                <NavButton setPage={handlePageChange} direction="right" pageEngaged={pageEngaged} pageNumber={4} title="Contact" />
+                <NavButton setPage={handlePageChange} direction="right" pageEngaged={pageEngaged} pageNumber={3} title="skills" />
+                <NavButton setPage={handlePageChange} direction="right" pageEngaged={pageEngaged} pageNumber={4} title="contact" />
             </div>
             <NavBar setPage={handlePageChange} navbar={navbar} setNavbar={setNavbar} />
         </div>
