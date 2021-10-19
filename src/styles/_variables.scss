@@ -6,6 +6,9 @@ $base-color-lighter: hsl(247, 23%, 55%);
 $base-color-lighter2: hsl(247, 53%, 75%);
 
 $text-color: hsl(67, 10%, 90%);
+$small: 768px;
+$medium: 1200px;
+$large: 1600px;
 
 %nav-hover {
   color: hsl(100, 0%, 100%, 0.2);

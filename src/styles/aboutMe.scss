@@ -12,7 +12,7 @@
   top: -50%;
   left: 0;
   right: 0;
-  padding: 1rem 2rem;
+  padding: 1rem 2rem 3rem 2rem;
   transition: 1s;
   text-align: justify;
   margin-top: 1rem;
@@ -23,31 +23,14 @@
   background-color: #000;
   transition: 1s;
   opacity: 0.7;
-  transform: translateY(40%);
+  transform: translateY(50%);
   clip-path: polygon(0 0, 100% 0, 100% 20%, 0 80%);
   animation: open-me-text 1s 0.5s forwards;
-
-  &:hover {
-    transform: translateY(30%);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    &::before {
-      transition: 600ms;
-      opacity: 0;
-    }
-  }
-  &:before {
-    transition: 600ms;
-    content: "my story";
-  }
 }
 
 .my-description {
   opacity: 0;
   transition: 1s;
-  &:hover {
-    transition: 600ms;
-    opacity: 1;
-  }
 }
 
 .me-text-hidden {
@@ -91,16 +74,6 @@
     left: 5%;
     transition: 1s;
   }
-  &:hover {
-    color: hsl(67, 10%, 90%, 0.8);
-    opacity: 1;
-    clip-path: circle(150% at 0 0);
-    transition: 1.5s;
-    &::after {
-      opacity: 0;
-      transition: 1s;
-    }
-  }
 }
 .icon-2 {
   clip-path: circle(30% at 100% 0%);
@@ -110,7 +83,94 @@
   }
 }
 
-@media (min-width: 1600px) {
+@media (max-width: $small) {
+  .about-me {
+    animation: unset;
+    display: flex;
+    flex-flow: column;
+  }
+  .me-text {
+    clip-path: unset;
+    transform: unset;
+    padding: 1rem;
+    font-size: 1rem;
+    animation: unset;
+    padding: 1rem;
+    position: static;
+    margin: 3rem 0 2rem 0;
+  }
+  .my-description {
+    opacity: 1;
+  }
+  .aboutme-info-container {
+    flex-flow: column;
+    transform: none;
+    animation: none;
+    height: auto;
+    width: 100%;
+    font-size: 1rem;
+    position: static;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .about-me-icon {
+    clip-path: none;
+    opacity: 0.7;
+    width: 95%;
+    height: auto;
+    opacity: 1;
+    color: hsl(67, 10%, 90%, 0.7);
+    padding: 1rem 0.5rem;
+    font-size: 1rem;
+    &::after {
+      content: unset;
+    }
+  }
+  .icon-2 {
+    clip-path: none;
+    margin: 1rem 0;
+    &::after {
+      content: unset;
+    }
+  }
+}
+
+@media (min-width: $medium) {
+  .me-text {
+    &:hover {
+      transform: translateY(20%);
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      &::before {
+        transition: 600ms;
+        opacity: 0;
+      }
+    }
+    &:before {
+      transition: 600ms;
+      content: "my story";
+    }
+  }
+  .my-description {
+    &:hover {
+      transition: 600ms;
+      opacity: 1;
+    }
+  }
+  .about-me-icon {
+    &:hover {
+      color: hsl(67, 10%, 90%, 0.8);
+      opacity: 1;
+      clip-path: circle(150% at 0 0);
+      transition: 1.5s;
+      &::after {
+        opacity: 0;
+        transition: 1s;
+      }
+    }
+  }
+}
+
+@media (min-width: $large) {
   .me-text {
     padding: 3rem;
     transform: translateY(40%);

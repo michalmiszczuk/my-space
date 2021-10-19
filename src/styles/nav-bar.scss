@@ -1,7 +1,7 @@
 @import "./variables";
 
 .navbar-container {
-  position: absolute;
+  position: fixed;
   width: 40%;
   top: 0;
   right: 0;
@@ -59,8 +59,8 @@
 .close-icon {
   position: absolute;
   background-color: white;
-  top: 5%;
-  right: 5%;
+  top: 10%;
+  right: 10%;
   width: 1rem;
   height: 1rem;
   transition: 1s;
@@ -83,8 +83,8 @@
 .menu-icon {
   position: absolute;
   background-color: $base-color-lighter;
-  top: 7%;
-  right: 7%;
+  top: 10%;
+  right: 10%;
   width: 1.5rem;
   height: 1.5rem;
   clip-path: polygon(
@@ -104,7 +104,7 @@
   transition: 1s;
 }
 
-@media (min-width: 768px) {
+@media (min-width: $small) {
   .navbar-container {
     display: none;
   }

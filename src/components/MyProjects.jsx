@@ -22,7 +22,7 @@ function MyProjects({ pageChanged, pageEngaged, setPageEngaged }) {
 
             <Background pageChanged={pageChanged} pageEngaged={pageEngaged} picture={picture} />
             {pageEngaged && <div onClick={() => setSkills(true)} className={skills ? "projects-container-open" : "projects-container"} >
-                <span class={skills ? "text-my-projects-open" : "text-my-projects"}>my projects</span>
+                <span className={skills ? "text-my-projects-open" : "text-my-projects"}>my projects</span>
                 <ProjectLink skills={skills} liveLink="https://englishempowering.com/" gitLink="https://englishempowering.com/"
                     description="Website / App - my online business card where students can book English lessons." />
                 <ProjectLink skills={skills} liveLink="https://englishempowering.com/" gitLink="https://englishempowering.com/"

@@ -10,7 +10,7 @@ import NavBar from './NavBar';
 
 function Home(props) {
     const [page, setPage] = useState(1)
-    const [navbar, setNavbar] = useState(true)
+    const [navbar, setNavbar] = useState(false)
     const [pageEngaged, setPageEngaged] = useState(false)
     const [pageChanged, setPageChanged] = useState(false)
 
@@ -22,6 +22,8 @@ function Home(props) {
 
     const handlePageChange = (page) => {
         if (pageChanged) return
+        setNavbar(false)
+        setPageEngaged(false)
         setPageChanged(true)
         setTimeout(() => {
             setPage(page)
@@ -45,7 +47,7 @@ function Home(props) {
                 <NavButton setPage={handlePageChange} direction="right" pageEngaged={pageEngaged} pageNumber={3} title="Skills" />
                 <NavButton setPage={handlePageChange} direction="right" pageEngaged={pageEngaged} pageNumber={4} title="Contact" />
             </div>
-            <NavBar setPage={handleNavBar} navbar={navbar} setNavbar={setNavbar} />
+            <NavBar setPage={handlePageChange} navbar={navbar} setNavbar={setNavbar} />
         </div>
 
     );

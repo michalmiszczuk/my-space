@@ -12,6 +12,7 @@ function Background({ pageChanged, picture, pageEngaged }) {
         image.push(row)
     }
 
+    if (pageEngaged) return null;
     return (
         <>
             {!pageChanged && <div className="img-container ">

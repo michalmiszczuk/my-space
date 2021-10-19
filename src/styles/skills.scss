@@ -125,7 +125,23 @@
   background: transparent;
 }
 
-@media (min-width: 1600px) {
+@media (max-width: $small) {
+  .skills-container-mobile {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 50%;
+  }
+}
+
+@media (min-width: $medium) {
+  .skills-tab-hidden {
+    display: none;
+  }
+}
+
+@media (min-width: $large) {
   .skills-container {
     font-size: 1.25rem;
   }
