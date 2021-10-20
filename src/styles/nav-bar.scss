@@ -103,7 +103,13 @@
 }
 
 .back-icon-hidden {
-  transform: translateX(-10rem);
+  position: fixed;
+  background-color: $base-color-lighter;
+  top: 3.5%;
+  left: 5%;
+  width: 1.5rem;
+  height: 1.5rem;
+  clip-path: polygon(0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0);
   transition: 1s;
 }
 
