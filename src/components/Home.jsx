@@ -34,6 +34,7 @@ function Home(props) {
         if (pageChanged) return
         setPageEngaged(false)
         setPageChanged(true)
+        setNavbar(false)
         setTimeout(() => {
             setPage(page)
             setPageChanged(false)
