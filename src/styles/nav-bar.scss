@@ -91,6 +91,22 @@
   transition: 1s;
 }
 
+.back-icon {
+  position: fixed;
+  background-color: $base-color-lighter;
+  top: 3.5%;
+  left: 5%;
+  width: 1.5rem;
+  height: 1.5rem;
+  clip-path: polygon(40% 0%, 40% 20%, 100% 20%, 100% 80%, 40% 80%, 40% 100%, 0% 50%);
+  transition: 1s;
+}
+
+.back-icon-hidden {
+  transform: translateX(-10rem);
+  transition: 1s;
+}
+
 @media (min-width: $small) {
   .navbar-container {
     display: none;

@@ -15,14 +15,23 @@ function Home(props) {
     const [pageChanged, setPageChanged] = useState(false)
 
     const handleNavBar = (page) => {
-        if (pageChanged) return;
-        setPage(page);
-        setPageEngaged(false);
+        if (pageChanged) return
+        if (pageEngaged) {
+            setPage(page)
+            setNavbar(false)
+            return
+        }
+        setPageEngaged(false)
+        setPageChanged(true)
+        setNavbar(false)
+        setTimeout(() => {
+            setPage(page)
+            setPageChanged(false)
+        }, 2500)
     }
 
     const handlePageChange = (page) => {
         if (pageChanged) return
-        setNavbar(false)
         setPageEngaged(false)
         setPageChanged(true)
         setTimeout(() => {
@@ -47,7 +56,7 @@ function Home(props) {
                 <NavButton setPage={handlePageChange} direction="right" pageEngaged={pageEngaged} pageNumber={3} title="skills" />
                 <NavButton setPage={handlePageChange} direction="right" pageEngaged={pageEngaged} pageNumber={4} title="contact" />
             </div>
-            <NavBar setPage={handlePageChange} navbar={navbar} setNavbar={setNavbar} />
+            <NavBar pageEngaged={pageEngaged} closePage={() => setPageEngaged(false)} setPage={handleNavBar} navbar={navbar} setNavbar={setNavbar} />
         </div>
 
     );
