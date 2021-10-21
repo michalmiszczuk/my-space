@@ -88,8 +88,7 @@
   .contact-icon-hidden {
     animation: icon-pulse 3s infinite;
   }
-  .contact-info-container {
-  }
+
   .info-container-hidden {
     bottom: 0;
   }
@@ -100,6 +99,9 @@
 }
 
 @media (min-width: $medium) {
+  .contact-icon-hidden {
+    cursor: pointer;
+  }
   .info-icon-hidden {
     &:hover {
       box-shadow: inset 0 0 20px whitesmoke;

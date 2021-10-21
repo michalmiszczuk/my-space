@@ -38,7 +38,7 @@ function Home(props) {
         setTimeout(() => {
             setPage(page)
             setPageChanged(false)
-        }, 2500)
+        }, 2000)
     }
 
 

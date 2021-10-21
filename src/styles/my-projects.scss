@@ -178,8 +178,8 @@
     height: 1.5rem;
   }
   .project-close-icon {
-    height: 1rem;
-    width: 1rem;
+    height: 1.2rem;
+    width: 1.2rem;
     z-index: 5;
     left: 5%;
   }
@@ -190,6 +190,7 @@
     &:hover {
       background-color: $base-color;
       box-shadow: 0 0 0 0 $base-color;
+      cursor: pointer;
     }
   }
   .link-2 {
@@ -212,6 +213,7 @@
   }
   .project-close-icon {
     &:hover {
+      cursor: pointer;
       background-color: #fff;
       clip-path: polygon(
         0% 20%,

@@ -105,11 +105,6 @@
   padding: 1.5rem;
   border-radius: 10px;
   transform-origin: right;
-  &:hover {
-    padding: 2rem;
-    box-shadow: inset 0 0 0px 50px $base-color;
-    transition: 1s;
-  }
 }
 .main-text-disappear {
   animation: main-out 1s forwards;
@@ -146,6 +141,14 @@
       transition: 1s;
       cursor: pointer;
       border-radius: 20px;
+    }
+  }
+  .main-text-hidden {
+    &:hover {
+      padding: 2rem;
+      box-shadow: inset 0 0 0px 50px $base-color;
+      transition: 1s;
+      cursor: pointer;
     }
   }
 }
