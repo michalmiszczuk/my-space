@@ -4,10 +4,13 @@
 .about-me {
   background-image: url("../static/aboutme.jpg");
   background-size: 100%;
-  animation: hue 25s infinite;
+  // animation: hue 25s infinite;
 }
 
 .me-text {
+  background: url("../static/zero2.jpg");
+  background-position: center;
+  background-size: contain;
   position: absolute;
   top: -50%;
   left: 0;
@@ -22,14 +25,16 @@
   color: $text-color;
   background-color: #000;
   transition: 1s;
-  opacity: 0.7;
-  transform: translateY(50%);
+  opacity: 0;
   clip-path: polygon(0 0, 100% 0, 100% 20%, 0 80%);
   animation: open-me-text 1s 0.5s forwards;
+  z-index: 1;
 }
 
 .my-description {
   opacity: 0;
+  padding: 1rem;
+  border-radius: 20px;
   transition: 1s;
 }
 
@@ -52,12 +57,13 @@
 
 .about-me-icon {
   @include flexCenter();
+
   position: relative;
   width: 40rem;
   height: 10rem;
   border-radius: 50px;
   background-color: black;
-  opacity: 0.5;
+  opacity: 0.8;
   clip-path: circle(30% at 0 0);
   transition: 500ms;
   text-align: center;
@@ -74,6 +80,10 @@
     left: 5%;
     transition: 1s;
   }
+}
+.about-me-icon-text {
+  padding: 1rem;
+  opacity: 0;
 }
 .icon-2 {
   clip-path: circle(30% at 100% 0%);
@@ -98,9 +108,12 @@
     padding: 1rem;
     position: static;
     margin: 3rem 0 2rem 0;
+    opacity: 0.8;
+    background-size: cover;
   }
   .my-description {
     opacity: 1;
+    background-color: black;
   }
   .aboutme-info-container {
     flex-flow: column;
@@ -126,6 +139,7 @@
       content: unset;
     }
   }
+
   .icon-2 {
     clip-path: none;
     margin: 1rem 0;
@@ -153,13 +167,20 @@
   .my-description {
     &:hover {
       transition: 600ms;
-      opacity: 1;
+      opacity: 0.8;
+      background-color: black;
+      padding: 1rem;
     }
   }
+
   .about-me-icon {
+    background: url("../static/books.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: black;
     &:hover {
       color: hsl(67, 10%, 90%, 0.8);
-      opacity: 1;
       clip-path: circle(150% at 0 0);
       transition: 1.5s;
       &::after {
@@ -167,6 +188,24 @@
         transition: 1s;
       }
     }
+  }
+  .about-me-icon-text {
+    transition: 1s;
+    &:hover {
+      transition: 1s;
+      background-color: black;
+      opacity: 1;
+      z-index: 1;
+      padding: 1rem;
+      color: hsl(67, 10%, 90%, 1);
+    }
+  }
+  .icon-2 {
+    background: url("../static/drums.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: black;
   }
 }
 
@@ -213,22 +252,14 @@
   }
 }
 
-@keyframes hue {
-  0%,
-  100% {
-    filter: hue-rotate(0deg);
-  }
-  50% {
-    filter: hue-rotate(360deg);
-  }
-}
-
 @keyframes open-me-text {
   0% {
+    opacity: 0;
     top: -50%;
   }
   100% {
-    top: -5%;
+    opacity: 0.8;
+    top: 5%;
   }
 }
 @keyframes open-icons-text {

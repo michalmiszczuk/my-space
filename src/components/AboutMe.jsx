@@ -27,12 +27,16 @@ function AboutMe({ pageChanged, pageEngaged, setPageEngaged }) {
             </div>
             {pageEngaged && <div className="aboutme-info-container">
                 <div className='about-me-icon'>
-                    Education: The graduation in English Philology has opened me the door to worldwide learning. I have completed a few online courses regarding
-                    web development, which gave me a good starting point to explore this world as well as to create a few projects of my own.
+                    <p className="about-me-icon-text">
+                        Education: The graduation in English Philology has opened me the door to worldwide learning. I have completed a few online courses regarding
+                        web development, which gave me a good starting point to explore this world as well as to create a few projects of my own.
+                    </p>
                 </div>
                 <div className='about-me-icon icon-2'>
-                    Hobbies: Exploring the diversity of music genres by playing instruments. Learning about the universe and its mysteries.
-                    Watching and reading sci-fiction and fantasy.
+                    <p className="about-me-icon-text">
+                        Hobbies: Exploring the diversity of music genres by playing instruments. Learning about the universe and its mysteries.
+                        Watching and reading sci-fiction and fantasy.
+                    </p>
                 </div>
             </div>}
             <MainText setPageEngaged={setPageEngaged} pageChanged={pageChanged} pageEngaged={pageEngaged} buttonText="ABOUT" />
