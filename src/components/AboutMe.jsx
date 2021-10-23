@@ -26,7 +26,7 @@ function AboutMe({ pageChanged, pageEngaged, setPageEngaged }) {
                 </p>
 
             </div>
-            {pageEngaged && <div className="aboutme-info-container">
+            {pageEngaged && <div className="aboutme-icons-container">
                 <div className='about-me-icon'>
                     <p className="about-me-icon-text">
                         Education: The graduation in English Philology has opened me the door to worldwide learning. I have completed a few online courses regarding
