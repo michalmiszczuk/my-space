@@ -21,7 +21,7 @@ function Background({ pageChanged, picture, pageEngaged }) {
                         style={{
                             backgroundImage: `url(${picture})`,
                             backgroundPosition: `${img.x - 1}% ${img.y - 1}% `,
-                            animation: !pageEngaged ? `drop-tiles 0.5s ${img.y * 10 + img.x * 10}ms ease forwards` :
+                            animation: !pageEngaged ? `drop-tiles 500ms ${img.y * 10 + img.x * 10}ms ease forwards` :
                                 'change-img 2s ease forwards',
                             opacity: "0",
                         }}
@@ -34,7 +34,7 @@ function Background({ pageChanged, picture, pageEngaged }) {
                         style={{
                             backgroundImage: `url(${picture})`,
                             backgroundPosition: `${img.x - 1}% ${img.y - 1}% `,
-                            animation: !pageEngaged ? `drop-tiles 0.5s ${img.y * 10 + img.x * 10}ms ease forwards reverse` :
+                            animation: !pageEngaged ? `drop-tiles 500ms ${img.y * 10 + img.x * 10}ms ease forwards reverse` :
                                 'change-img 2s ease forwards',
                             opacity: "1",
 

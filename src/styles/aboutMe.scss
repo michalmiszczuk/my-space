@@ -2,32 +2,25 @@
 @import "./utils";
 
 .about-me {
-  background-image: url("../static/aboutme.jpg");
-  background-size: 100%;
-  // animation: hue 25s infinite;
+  background: url("../static/n8.jpg") center / 100%;
 }
 
 .me-text {
-  background: url("../static/zero2.jpg");
-  background-position: center;
-  background-size: contain;
+  background: rgb(0, 0, 0, 0.1) url("../static/n4.jpg") top / 50%;
   position: absolute;
-  top: -50%;
+  top: 5%;
   left: 0;
   right: 0;
-  padding: 1rem 2rem 3rem 2rem;
+  padding: 1rem 2rem 3rem;
   transition: 1s;
   text-align: justify;
   margin-top: 1rem;
-  font-size: 1.3rem;
-  font-weight: lighter;
-  font-family: $base-font;
+  font: lighter 1.3rem $base-font;
   color: $text-color;
-  background-color: #000;
   transition: 1s;
-  opacity: 0;
-  clip-path: polygon(0 0, 100% 0, 100% 20%, 0 80%);
-  animation: open-me-text 1s 0.5s forwards;
+
+  clip-path: polygon(0 0, 100% 0, 100% 55%, 0 28%);
+  // animation: open-me-text 1s 0.5s forwards;
   z-index: 1;
 }
 
@@ -57,21 +50,18 @@
 
 .about-me-icon {
   @include flexCenter();
-
   position: relative;
   width: 40rem;
   height: 10rem;
   border-radius: 50px;
-  background-color: black;
   opacity: 0.8;
   clip-path: circle(30% at 0 0);
   transition: 500ms;
   text-align: center;
   transition: 1.5s;
   color: hsl(67, 10%, 90%, 0);
-  font-style: $base-font;
-  font-weight: lighter;
-  padding: 1rem 1rem;
+  font: lighter 1.2rem $base-font;
+  padding: 1rem;
   &::after {
     content: "education";
     color: hsl(67, 10%, 90%, 1);
@@ -113,7 +103,7 @@
   }
   .my-description {
     opacity: 1;
-    background-color: black;
+    background-color: #000;
   }
   .aboutme-info-container {
     flex-flow: column;
@@ -152,6 +142,7 @@
 @media (min-width: $medium) {
   .me-text {
     &:hover {
+      opacity: 1;
       transform: translateY(20%);
       clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
       &::before {
@@ -162,23 +153,27 @@
     &:before {
       transition: 600ms;
       content: "my story";
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
     }
+  }
+  .my-story {
+    color: red;
+    opacity: 1;
+    z-index: 1;
   }
   .my-description {
     &:hover {
       transition: 600ms;
       opacity: 0.8;
-      background-color: black;
+      background-color: #000;
       padding: 1rem;
     }
   }
 
   .about-me-icon {
-    background: url("../static/books.jpg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: black;
+    background: #0d3c71a9 url("../static/books.jpg") no-repeat center / contain;
     &:hover {
       color: hsl(67, 10%, 90%, 0.8);
       clip-path: circle(150% at 0 0);
@@ -193,7 +188,7 @@
     transition: 1s;
     &:hover {
       transition: 1s;
-      background-color: black;
+      background-color: #000;
       opacity: 1;
       z-index: 1;
       padding: 1rem;
@@ -201,11 +196,7 @@
     }
   }
   .icon-2 {
-    background: url("../static/drums.jpg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: black;
+    background-image: url("../static/drums.jpg");
   }
 }
 
@@ -258,7 +249,7 @@
     top: -50%;
   }
   100% {
-    opacity: 0.8;
+    opacity: 0.5;
     top: 5%;
   }
 }
