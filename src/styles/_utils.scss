@@ -5,7 +5,7 @@
   align-items: $align-items;
 }
 
-@mixin absCenter() {
+@mixin absCentered() {
   position: absolute;
   top: 50%;
   left: 50%;

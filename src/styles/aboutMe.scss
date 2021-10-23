@@ -12,6 +12,7 @@
   left: 0;
   right: 0;
   padding: 1rem 2rem 3rem;
+  opacity: 0;
   transition: 1s;
   text-align: justify;
   margin-top: 1rem;
@@ -19,7 +20,7 @@
   color: $text-color;
   transition: 1s;
   clip-path: polygon(0 0, 100% 0, 100% 55%, 0 28%);
-  // animation: open-me-text 1s 0.5s forwards;
+  animation: open-me-text 1s 0.5s forwards;
   z-index: 1;
 }
 
@@ -253,7 +254,7 @@
     top: -50%;
   }
   100% {
-    opacity: 0.5;
+    opacity: 1;
     top: 5%;
   }
 }
