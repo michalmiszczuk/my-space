@@ -4,8 +4,6 @@
 .contact {
   background-image: url("../static/contact.jpg");
   background-repeat: no-repeat;
-  perspective: 30rem;
-  transform-style: preserve-3d;
 }
 
 .contact-icon {
@@ -19,7 +17,6 @@
   border-radius: 50px;
   color: transparent;
   clip-path: circle(100% at 50% 50%);
-  animation: icon-pulse 2.5s infinite;
 }
 
 .contact-icon-hidden {
@@ -46,7 +43,6 @@
   height: 15rem;
   transition: 2s;
   border-radius: 20px;
-  perspective: 20rem;
 }
 
 .info-container-hidden {
@@ -67,16 +63,17 @@
   width: 50%;
   padding: 1rem;
   border-radius: 10px;
-  transform: rotateY(0deg);
-  transition: 3s;
+  transition: 1s;
   box-shadow: inset 0 0 40px $base-color;
-  font-weight: lighter;
-  font-style: italic;
-  font-family: $base-font;
+  font: italic lighter 1rem $base-font;
   opacity: 0.8;
 }
 
 @media (max-width: $small) {
+  .conctact {
+    background-image: url("../static/contact-mob.jpg");
+  }
+
   .contact-icon {
     top: 50%;
     right: 15%;
@@ -86,7 +83,7 @@
     transition: 3s;
   }
   .contact-icon-hidden {
-    animation: icon-pulse 3s infinite;
+    transition: 3s;
   }
 
   .info-container-hidden {
@@ -99,6 +96,9 @@
 }
 
 @media (min-width: $medium) {
+  .contact-icon {
+    animation: icon-pulse 2.5s infinite;
+  }
   .contact-icon-hidden {
     cursor: pointer;
   }
@@ -133,6 +133,6 @@
     transform: scale(1);
   }
   50% {
-    transform: scale(1.2);
+    transform: scale(1.3);
   }
 }

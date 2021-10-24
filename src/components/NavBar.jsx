@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import '../styles/nav-bar.scss'
 
 function NavBar({ navbar, setNavbar, setPage, closePage, pageEngaged }) {

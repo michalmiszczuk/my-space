@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../styles/skills.scss'
 import '../styles/page.scss'
-import picture from '../static/2.jpg'
+import picture from '../static/skills-mob.jpg'
 import Background from './Background';
 import Cube from './Cube';
 import SkillsTable from './SkillsTable';

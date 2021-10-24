@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import picture from '../static/contact.jpg'
+import picture from '../static/contact-mob.jpg'
 import '../styles/contact.scss'
 import '../styles/page.scss'
 import Background from './Background';

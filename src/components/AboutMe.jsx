@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../styles/aboutMe.scss'
 import '../styles/page.scss'
-import picture from '../static/n8.jpg'
+import picture from '../static/about-me-mob.jpg'
 import Background from './Background';
 import MainText from './MainText';
 
@@ -15,7 +15,7 @@ function AboutMe({ pageChanged, pageEngaged, setPageEngaged }) {
             className={pageEngaged && info ? " page-background about-me magnified-2 " : pageEngaged ? "page-background about-me" : "page-background"}>
             <Background pageChanged={pageChanged} pageEngaged={pageEngaged} picture={picture} />
             <div onMouseEnter={() => setInfo(true)} onMouseLeave={() => setInfo(false)} className={pageEngaged ? "me-text" : "me-text me-text-hidden"}>
-                {/* <div className="my-story">my story</div> */}
+                <div className="my-story">my story</div>
 
                 <p className="my-description">
                     Engulfed by the discovery of my latent passion to computer since in 2020 I started to immerse myself in this bizzare world of ones and zeros.

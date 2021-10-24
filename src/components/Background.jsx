@@ -4,10 +4,10 @@ function Background({ pageChanged, picture, pageEngaged }) {
 
     let image = []
 
-    for (let y = 0; y < 100; y += 10) {
+    for (let y = 1; y < 100; y += 10) {
         let row = []
-        for (let x = 0; x < 100; x += 10) {
-            row.push({ y: y, x: x })
+        for (let x = 1; x < 100; x += 10) {
+            row.push({ y, x })
         }
         image.push(row)
     }
@@ -21,8 +21,7 @@ function Background({ pageChanged, picture, pageEngaged }) {
                         style={{
                             backgroundImage: `url(${picture})`,
                             backgroundPosition: `${img.x - 1}% ${img.y - 1}% `,
-                            animation: !pageEngaged ? `drop-tiles 500ms ${img.y * 10 + img.x * 10}ms ease forwards` :
-                                'change-img 2s ease forwards',
+                            animation: `drop-tiles 500ms ${img.y * 10 + img.x * 10}ms ease forwards`,
                             opacity: "0",
                         }}
                         className="img-part"></div>
@@ -34,8 +33,7 @@ function Background({ pageChanged, picture, pageEngaged }) {
                         style={{
                             backgroundImage: `url(${picture})`,
                             backgroundPosition: `${img.x - 1}% ${img.y - 1}% `,
-                            animation: !pageEngaged ? `drop-tiles 500ms ${img.y * 10 + img.x * 10}ms ease forwards reverse` :
-                                'change-img 2s ease forwards',
+                            animation: `drop-tiles 500ms ${img.y * 10 + img.x * 10}ms ease forwards reverse`,
                             opacity: "1",
 
                         }}

@@ -3,8 +3,8 @@
 @import "./variables";
 
 .skills {
-  background-image: url("../static/2.jpg");
-  perspective: 1px;
+  background-image: url("../static/skills.jpg");
+  background-position-y: 70%;
 }
 
 .skills-container {
@@ -126,6 +126,9 @@
 }
 
 @media (max-width: $small) {
+  .skills {
+    background-image: url("../static/skills-mob.jpg");
+  }
   .skills-container-mobile {
     position: absolute;
     top: 50%;

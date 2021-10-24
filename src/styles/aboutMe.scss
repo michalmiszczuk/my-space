@@ -2,16 +2,14 @@
 @import "./utils";
 
 .about-me {
-  background: url("../static/n8.jpg") center / 100%;
+  background: url("../static/about-me.jpg") center / 100%;
 }
 
 .me-text {
-  background: rgb(0, 0, 0, 0.1) url("../static/n4.jpg") top / 50%;
+  background: url("../static/about-me-text.jpg") top / 50%;
   position: absolute;
-  top: 5%;
-  left: 0;
-  right: 0;
-  padding: 1rem 2rem 3rem;
+  padding: 2rem 2rem;
+  top: -50%;
   opacity: 0;
   transition: 1s;
   text-align: justify;
@@ -29,6 +27,9 @@
   padding: 1rem;
   border-radius: 20px;
   transition: 1s;
+}
+.my-story {
+  text-align: center;
 }
 
 .me-text-hidden {
@@ -85,11 +86,13 @@
 
 @media (max-width: $small) {
   .about-me {
+    background: url("../static/about-me-mob.jpg") center / 100%;
     animation: unset;
     display: flex;
     flex-flow: column;
   }
   .me-text {
+    background: url("../static/about-me-text-mob.jpg") top / 50%;
     clip-path: unset;
     transform: unset;
     padding: 1rem;
@@ -150,24 +153,9 @@
       opacity: 1;
       transform: translateY(20%);
       clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-      &::before {
-        transition: 600ms;
-        opacity: 0;
-      }
-    }
-    &:before {
-      transition: 600ms;
-      content: "my story";
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
     }
   }
-  .my-story {
-    color: red;
-    opacity: 1;
-    z-index: 1;
-  }
+
   .my-description {
     &:hover {
       transition: 600ms;
@@ -208,9 +196,9 @@
 @media (min-width: $large) {
   .me-text {
     padding: 3rem;
-    transform: translateY(40%);
+    transform: translateY(10%);
     &:hover {
-      transform: translateY(50%);
+      transform: translateY(30%);
     }
   }
 }
@@ -234,17 +222,6 @@
   100% {
     opacity: 1;
     transform: translateY(0rem) translateZ(0rem);
-  }
-}
-
-@keyframes change-img {
-  0% {
-    opacity: 1;
-    filter: brightness(100%) contrast(90%);
-  }
-  100% {
-    filter: brightness(0%);
-    opacity: 0;
   }
 }
 
