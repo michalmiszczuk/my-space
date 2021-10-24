@@ -3,7 +3,7 @@ import Background from './Background';
 import Cube from './Cube';
 import MainText from './MainText';
 import SkillsTable from './SkillsTable';
-import picture from '../static/skills-mob.jpg'
+import picture from '../static/skills.jpg'
 import '../styles/skills.scss'
 
 

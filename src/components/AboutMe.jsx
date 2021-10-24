@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Background from './Background';
 import MainText from './MainText';
 
-import picture from '../static/about-me-mob.jpg'
+import picture from '../static/about-me.jpg'
 import '../styles/aboutMe.scss'
 
 function AboutMe({ pageIsChanging, pageLoaded, setPageLoaded }) {

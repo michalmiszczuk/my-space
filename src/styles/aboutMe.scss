@@ -86,13 +86,11 @@
 
 @media (max-width: $small) {
   .about-me {
-    background: url("../static/about-me-mob.jpg") center / 100%;
     animation: unset;
     display: flex;
     flex-flow: column;
   }
   .me-text {
-    background: url("../static/about-me-text-mob.jpg") top / 50%;
     clip-path: unset;
     transform: unset;
     padding: 1rem;

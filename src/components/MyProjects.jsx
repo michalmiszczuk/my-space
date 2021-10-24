@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Background from './Background';
 import MainText from './MainText';
 import ProjectLink from './ProjectLink';
-import picture from '../static/my-projects-mob.jpg'
+import picture from '../static/my-projects.jpg'
 import '../styles/my-projects.scss'
 
 function MyProjects({ pageIsChanging, pageLoaded, setPageLoaded }) {
