@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Background({ pageChanged, picture, pageEngaged }) {
+function Background({ pageIsChanging, picture, pageLoaded }) {
 
     let image = []
 
@@ -12,32 +12,31 @@ function Background({ pageChanged, picture, pageEngaged }) {
         image.push(row)
     }
 
-    if (pageEngaged) return null;
+    if (pageLoaded) return null;
     return (
         <>
-            {!pageChanged && <div className="img-container ">
+            {!pageIsChanging && <div className="img-container ">
                 {image.map(row => row.map(img => {
                     return <div className="img-part" key={`${img.x}${img.y}`}
                         style={{
                             backgroundImage: `url(${picture})`,
-                            backgroundPosition: `${img.x - 1}% ${img.y - 1}% `,
+                            backgroundPosition: `${img.x}% ${img.y}% `,
                             animation: `drop-tiles 500ms ${img.y * 10 + img.x * 10}ms ease forwards`,
                             opacity: "0",
                         }}
-                        className="img-part"></div>
+                    />
                 }))}
             </div>}
-            {pageChanged && <div className="img-container ">
+            {pageIsChanging && <div className="img-container ">
                 {image.map(row => row.map(img => {
                     return <div className="img-part" key={`${img.x}${img.y}`}
                         style={{
                             backgroundImage: `url(${picture})`,
-                            backgroundPosition: `${img.x - 1}% ${img.y - 1}% `,
+                            backgroundPosition: `${img.x}% ${img.y}% `,
                             animation: `drop-tiles 500ms ${img.y * 10 + img.x * 10}ms ease forwards reverse`,
                             opacity: "1",
-
                         }}
-                        className="img-part"></div>
+                    />
                 }))}
             </div>}
         </>

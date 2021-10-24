@@ -2,7 +2,10 @@ import React from 'react';
 
 function Cube({ cube, setCube }) {
     return (
-        <div onMouseEnter={() => setCube(true)} onMouseLeave={() => setCube(false)} className={cube ? "cube-container cube-background" : "cube-container"}>
+        <div
+            onMouseEnter={() => setCube(true)} onMouseLeave={() => setCube(false)}
+            className={cube ? "cube-container cube-background" : "cube-container"}
+        >
             <div className="cube">
                 <div className="side front">HTML</div>
                 <div className="side left">CSS</div>

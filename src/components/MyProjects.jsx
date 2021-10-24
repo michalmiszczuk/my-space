@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
-import picture from '../static/my-projects-mob.jpg'
-import '../styles/my-projects.scss'
-import '../styles/page.scss'
 import Background from './Background';
 import MainText from './MainText';
 import ProjectLink from './ProjectLink';
+import picture from '../static/my-projects-mob.jpg'
+import '../styles/my-projects.scss'
 
-function MyProjects({ pageChanged, pageEngaged, setPageEngaged }) {
+function MyProjects({ pageIsChanging, pageLoaded, setPageLoaded }) {
 
     const [skills, setSkills] = useState(false)
 
@@ -18,10 +17,10 @@ function MyProjects({ pageChanged, pageEngaged, setPageEngaged }) {
     return (
         <div
 
-            className={pageEngaged && skills ? " page-background my-projects magnified" : pageEngaged ? "page-background my-projects " : "page-background"}>
+            className={pageLoaded && skills ? " page-background my-projects magnified" : pageLoaded ? "page-background my-projects " : "page-background"}>
 
-            <Background pageChanged={pageChanged} pageEngaged={pageEngaged} picture={picture} />
-            {pageEngaged && <div onClick={() => setSkills(true)} className={skills ? "projects-container-open" : "projects-container"} >
+            <Background pageIsChanging={pageIsChanging} pageLoaded={pageLoaded} picture={picture} />
+            {pageLoaded && <div onClick={() => setSkills(true)} className={skills ? "projects-container-open" : "projects-container"} >
                 <span className={skills ? "text-my-projects-open" : "text-my-projects"}>my projects</span>
                 <ProjectLink skills={skills} liveLink="https://englishempowering.com/" gitLink="https://englishempowering.com/"
                     description="Website / App - my online business card where students can book English lessons." />
@@ -35,7 +34,7 @@ function MyProjects({ pageChanged, pageEngaged, setPageEngaged }) {
                     onClick={(e) => handleCloseSkills(e)}
                     className={skills ? "project-close-icon" : "project-close-icon-hidden"} />
             </div>}
-            <MainText setPageEngaged={setPageEngaged} pageChanged={pageChanged} pageEngaged={pageEngaged} buttonText="PROJECTS" />
+            <MainText setPageLoaded={setPageLoaded} pageIsChanging={pageIsChanging} pageLoaded={pageLoaded} buttonText="PROJECTS" />
         </div>
     );
 }
