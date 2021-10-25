@@ -120,7 +120,8 @@ $items: 1, 2, 3, 4;
   .page-container-open {
     bottom: 0;
     top: -30%;
-    height: auto;
+    perspective: none;
+    min-height: 60rem;
   }
   .page-container {
     width: 100%;

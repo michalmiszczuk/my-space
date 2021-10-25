@@ -86,6 +86,10 @@
 
 @media (max-width: $small) {
   .about-me {
+    background-image: url("../static/about-me.jpg");
+    background-size: 100%;
+    // background-position-y: 10%;
+    background-attachment: fixed;
     animation: unset;
     display: flex;
     flex-flow: column;
