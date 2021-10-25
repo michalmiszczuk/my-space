@@ -16,20 +16,14 @@
   @include flexCenter;
   padding-top: 0.5rem;
   height: 15%;
-  font-family: $base-color;
+  font-family: $base-font;
   font-style: italic;
   font-weight: lighter;
   font-size: 4rem;
-  color: hsl(247, 13%, 25%, 0.65);
+  color: hsl(247, 13%, 25%, 0);
   transform: rotateX(30deg);
-  text-shadow: 10px 10px 1px hsl(247, 23%, 55%, 0.8);
+  text-shadow: 10px 10px 1px hsl(67, 10%, 90%, 0.8);
   transition: 2s;
-  &:hover {
-    color: hsl(247, 33%, 55%, 0.9);
-    text-shadow: 10px 10px 3px hsl(247, 23%, 85%, 0.5);
-    transform: rotateX(0deg);
-    transition: 2s;
-  }
 }
 
 .grid-container {
@@ -147,6 +141,14 @@ $items: 1, 2, 3, 4;
 }
 
 @media (min-width: $medium) {
+  .main-info {
+    &:hover {
+      color: hsl(247, 33%, 55%, 0.9);
+      text-shadow: 10px 10px 3px hsl(247, 23%, 85%, 0.5);
+      transform: rotateX(0deg);
+      transition: 2s;
+    }
+  }
   .page-container {
     max-width: 60%;
     max-height: 90%;
