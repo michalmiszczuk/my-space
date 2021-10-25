@@ -110,7 +110,8 @@ $items: 1, 2, 3, 4;
   position: relative;
 }
 
-.page-container-hover {
+.page-container-open {
+  perspective: 40rem;
   transform: rotateX(0deg);
   transition: 1s;
   width: 100%;
@@ -149,11 +150,8 @@ $items: 1, 2, 3, 4;
   .page-container {
     max-width: 60%;
     max-height: 90%;
-    border-radius: 50px;
-    grid-area: bkground;
     transform: rotateX(55deg);
     transition: 700ms;
-    position: relative;
   }
   @media (min-width: $large) {
     .page-container {

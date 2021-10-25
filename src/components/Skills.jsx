@@ -12,13 +12,15 @@ function Skills({ pageIsChanging, pageLoaded, setPageLoaded }) {
     const [cube, setCube] = useState(false)
 
     return (
-        <div
-            className={pageLoaded && cube ? "page-background transformed-2 skills " : pageLoaded ? "page-background skills" : "page-background"}>
-            <Background pageIsChanging={pageIsChanging} pageLoaded={pageLoaded} picture={picture} />
-            {pageLoaded && <Cube cube={cube} setCube={setCube} />}
-            {pageLoaded && <SkillsTable cube={cube} />}
+        <>
+            <div
+                className={pageLoaded && cube ? "page-background transformed-2 skills " : pageLoaded ? "page-background skills" : "page-background"}>
+                <Background pageIsChanging={pageIsChanging} pageLoaded={pageLoaded} picture={picture} />
+                {pageLoaded && <Cube cube={cube} setCube={setCube} />}
+                {pageLoaded && <SkillsTable cube={cube} />}
+            </div>
             <MainText setPageLoaded={setPageLoaded} pageIsChanging={pageIsChanging} pageLoaded={pageLoaded} buttonText="SKILLS" />
-        </div>
+        </>
     );
 }
 

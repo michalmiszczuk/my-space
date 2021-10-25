@@ -11,6 +11,7 @@
   box-shadow: 5px 0px 20px 10px $base-color;
   transition: 2s;
   overflow: hidden;
+  position: relative;
 }
 
 .img-container {
@@ -56,7 +57,7 @@
 }
 
 .main-text {
-  @include absCentered();
+  @include absCentered;
   color: $text-color;
   font-size: 2.8rem;
   font-weight: lighter;
@@ -64,11 +65,9 @@
   animation: headline 4s ease-out infinite;
   font-family: $base-font;
   transition: 500ms;
-  width: fit-content;
 }
 
 .main-text-hidden {
-  @include absCentered();
   perspective: 20rem;
   border: 1px solid #fff;
   opacity: 1;
@@ -80,10 +79,15 @@
   transform-origin: right;
 }
 .main-text-disappear {
+  @include absCentered;
+  perspective: 20rem;
   animation: main-out 1s forwards;
 }
 
 .main-text-appear {
+  position: relative;
+  @include absCentered;
+  perspective: 20rem;
   animation: main 1s forwards;
 }
 
@@ -129,7 +133,25 @@
   }
 
   .main-text {
+    transition: 1;
+    position: relative;
+    background: linear-gradient(
+      90deg,
+      rgba(247, 157, 225, 0) 0%,
+      hsl(247, 23%, 55%) 49%,
+      hsl(247, 13%, 25%) 100%
+    );
+    background-position-x: 0%;
+    background-size: 300%;
     &:hover {
+      background: linear-gradient(
+        90deg,
+        rgba(247, 157, 225, 0) 0%,
+        hsl(247, 23%, 55%) 49%,
+        hsl(247, 13%, 25%) 100%
+      );
+      background-position-x: 100%;
+      background-size: 300%;
       background-color: $base-color;
       padding: 3rem;
       transition: 1s;
@@ -139,7 +161,6 @@
   }
   .main-text-hidden {
     &:hover {
-      padding: 2rem;
       box-shadow: inset 0 0 0px 50px $base-color;
       transition: 1s;
       cursor: pointer;
@@ -150,12 +171,12 @@
 @keyframes headline {
   0%,
   100% {
-    transform: translateZ(0rem) rotateX(0deg) translateY(-50%) translateX(-50%);
+    transform: translateZ(0rem) translateY(-50%) translateX(-50%);
     box-shadow: 0 0px 10px hsl(0, 0%, 100%, 0.7);
     text-shadow: 0px 30px 5px hsl(0, 0%, 100%, 0.7);
   }
   50% {
-    transform: translateZ(10rem) rotateX(0deg) translateY(calc(-50% - 10rem)) translateX(-50%);
+    transform: translateZ(8rem) translateY(calc(-50% - 10rem)) translateX(-50%);
     box-shadow: 0 10px 20px hsl(0, 0%, 100%, 0.7);
     text-shadow: 0 0 0 white;
   }
