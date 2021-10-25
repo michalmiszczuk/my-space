@@ -117,7 +117,7 @@ $items: 1, 2, 3, 4;
 }
 
 @media (max-width: $small) {
-  .page-container-hover {
+  .page-container-open {
     bottom: 0;
     top: -30%;
     height: auto;

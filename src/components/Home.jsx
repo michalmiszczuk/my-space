@@ -38,22 +38,24 @@ function Home(props) {
 
 
     return (
-        <div className="main-container">
-            <div className="main-info"> Hello ! I'm Michal, Web developer.</div>
-            <div className="grid-container">
-                <NavButton setPage={handlePageChange} direction="left" pageLoaded={pageLoaded} pageNumber={1} title="about" />
-                <NavButton setPage={handlePageChange} direction="left" pageLoaded={pageLoaded} pageNumber={2} title="projects" />
-                <div className={pageLoaded ? "page-container-open" : "page-container"}>
-                    {page === 1 && <AboutMe pageIsChanging={pageIsChanging} setPageLoaded={setPageLoaded} pageLoaded={pageLoaded} />}
-                    {page === 2 && <MyProjects pageIsChanging={pageIsChanging} setPageLoaded={setPageLoaded} pageLoaded={pageLoaded} />}
-                    {page === 3 && <Skills pageIsChanging={pageIsChanging} setPageLoaded={setPageLoaded} pageLoaded={pageLoaded} />}
-                    {page === 4 && <Contact pageIsChanging={pageIsChanging} setPageLoaded={setPageLoaded} pageLoaded={pageLoaded} />}
+        <>
+            <div className="main-container">
+                <div className="main-info"> Hello ! I'm Michal, Web developer.</div>
+                <div className="grid-container">
+                    <NavButton setPage={handlePageChange} direction="left" pageLoaded={pageLoaded} pageNumber={1} title="about" />
+                    <NavButton setPage={handlePageChange} direction="left" pageLoaded={pageLoaded} pageNumber={2} title="projects" />
+                    <div className={pageLoaded ? "page-container-open" : "page-container"}>
+                        {page === 1 && <AboutMe pageIsChanging={pageIsChanging} setPageLoaded={setPageLoaded} pageLoaded={pageLoaded} />}
+                        {page === 2 && <MyProjects pageIsChanging={pageIsChanging} setPageLoaded={setPageLoaded} pageLoaded={pageLoaded} />}
+                        {page === 3 && <Skills pageIsChanging={pageIsChanging} setPageLoaded={setPageLoaded} pageLoaded={pageLoaded} />}
+                        {page === 4 && <Contact pageIsChanging={pageIsChanging} setPageLoaded={setPageLoaded} pageLoaded={pageLoaded} />}
+                    </div>
+                    <NavButton setPage={handlePageChange} direction="right" pageLoaded={pageLoaded} pageNumber={3} title="skills" />
+                    <NavButton setPage={handlePageChange} direction="right" pageLoaded={pageLoaded} pageNumber={4} title="contact" />
                 </div>
-                <NavButton setPage={handlePageChange} direction="right" pageLoaded={pageLoaded} pageNumber={3} title="skills" />
-                <NavButton setPage={handlePageChange} direction="right" pageLoaded={pageLoaded} pageNumber={4} title="contact" />
             </div>
             <NavBar pageLoaded={pageLoaded} closePage={() => setPageLoaded(false)} setPage={handleNavBar} navbar={navbar} setNavbar={setNavbar} />
-        </div>
+        </>
 
     );
 }

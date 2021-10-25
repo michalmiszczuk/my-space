@@ -7,21 +7,20 @@
   right: 0;
   display: flex;
   justify-content: center;
-  display: flex;
-  justify-content: center;
   flex-flow: column;
   opacity: 0.9;
   transition: 1s;
-  overflow: hidden;
 }
 
 .navbar-item {
+  position: relative;
   width: 100%;
   padding: 1rem;
   background-color: $base-color;
   transform: translateX(0rem);
   font-weight: lighter;
   font-style: italic;
+  color: $text-color;
 }
 
 .nav-hidden {
