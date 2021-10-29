@@ -19,7 +19,6 @@
   transition: 1s;
   clip-path: polygon(0 0, 100% 0, 100% 55%, 0 28%);
   animation: open-me-text 1s 0.5s forwards;
-  z-index: 1;
 }
 
 .my-description {
@@ -86,10 +85,9 @@
 
 @media (max-width: $small) {
   .about-me {
-    background-image: url("../static/about-me.jpg");
-    background-size: 100%;
-    // background-position-y: 10%;
+    background: url("../static/about-me.jpg") center / 200%;
     background-attachment: fixed;
+    height: fit-content;
     animation: unset;
     display: flex;
     flex-flow: column;
@@ -142,7 +140,7 @@
 
   .icon-2 {
     clip-path: none;
-    margin: 1rem 0 1rem;
+    margin: 1rem 0 10rem;
     &::after {
       content: unset;
     }
@@ -151,6 +149,8 @@
 
 @media (min-width: $medium) {
   .me-text {
+    z-index: 2;
+    position: relative;
     &:hover {
       opacity: 1;
       transform: translateY(20%);

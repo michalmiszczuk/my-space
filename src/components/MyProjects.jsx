@@ -36,7 +36,9 @@ function MyProjects({ pageIsChanging, pageLoaded, setPageLoaded }) {
                         className={skills ? "project-close-icon" : "project-close-icon-hidden"} />
                 </div>}
             </div>
-            <MainText setPageLoaded={setPageLoaded} pageIsChanging={pageIsChanging} pageLoaded={pageLoaded} buttonText="PROJECTS" />
+            <div className={skills ? "menu-button-hidden2" : "menu-button-visible"}>
+                <MainText setPageLoaded={setPageLoaded} pageIsChanging={pageIsChanging} pageLoaded={pageLoaded} buttonText="PROJECTS" />
+            </div>
         </>
     );
 }

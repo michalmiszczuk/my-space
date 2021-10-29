@@ -39,7 +39,9 @@ function AboutMe({ pageIsChanging, pageLoaded, setPageLoaded }) {
                     </div>
                 </div>}
             </div>
-            <MainText setPageLoaded={setPageLoaded} pageIsChanging={pageIsChanging} pageLoaded={pageLoaded} buttonText="ABOUT" />
+            <div className={info ? "menu-button-hidden" : "menu-button-visible"}>
+                <MainText setPageLoaded={setPageLoaded} pageIsChanging={pageIsChanging} pageLoaded={pageLoaded} buttonText="ABOUT" />
+            </div>
         </>
     );
 }
