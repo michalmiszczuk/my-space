@@ -53,27 +53,27 @@
 }
 
 #html::after {
-  @include progress-animation(eighty, 80%, 3s);
+  @include progress-animation(eighty, 80%, 2s);
 }
 
 #css::after {
-  @include progress-animation(seventyFive, 75%, 4s);
+  @include progress-animation(seventyFive, 75%, 3s);
 }
 
 #javascript::after {
-  @include progress-animation(seventy, 70%, 5s);
+  @include progress-animation(seventy, 70%, 4s);
 }
 #react::after {
-  @include progress-animation(seventy, 70%, 6s);
+  @include progress-animation(seventy, 70%, 5s);
 }
 #node::after {
-  @include progress-animation(fourty, 40%, 7s);
+  @include progress-animation(fourty, 40%, 6s);
 }
 #mongo::after {
-  @include progress-animation(thirty, 30%, 8s);
+  @include progress-animation(thirty, 30%, 7s);
 }
 #git::after {
-  @include progress-animation(fourtyFive, 45%, 9s);
+  @include progress-animation(fourtyFive, 45%, 8s);
 }
 
 #html {
@@ -125,7 +125,7 @@
   background: transparent;
 }
 
-@media (max-width: $small) {
+@media (max-width: $medium) {
   .skills-container-mobile {
     position: absolute;
     top: 50%;

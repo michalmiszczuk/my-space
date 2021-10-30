@@ -10,16 +10,22 @@ import '../styles/skills.scss'
 function Skills({ pageIsChanging, pageLoaded, setPageLoaded }) {
 
     const [cube, setCube] = useState(false)
+    const [skillsTable, setSkillsTable] = useState(false)
+
+    const handlePageChange = () => {
+        setPageLoaded(!pageLoaded);
+        setSkillsTable(false);
+    }
 
     return (
         <>
             <div
                 className={pageLoaded && cube ? "page-background transformed-2 skills " : pageLoaded ? "page-background skills" : "page-background"}>
                 <Background pageIsChanging={pageIsChanging} pageLoaded={pageLoaded} picture={picture} />
-                {pageLoaded && <Cube cube={cube} setCube={setCube} />}
-                {pageLoaded && <SkillsTable cube={cube} />}
+                {pageLoaded && <Cube cube={cube} setCube={setCube} setSkillsTable={setSkillsTable} />}
+                {pageLoaded && <SkillsTable skillsTable={skillsTable} />}
             </div>
-            <MainText setPageLoaded={setPageLoaded} pageIsChanging={pageIsChanging} pageLoaded={pageLoaded} buttonText="SKILLS" />
+            <MainText setPageLoaded={handlePageChange} pageIsChanging={pageIsChanging} pageLoaded={pageLoaded} buttonText="SKILLS" />
         </>
     );
 }

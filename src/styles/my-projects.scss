@@ -3,6 +3,8 @@
 
 .my-projects {
   background-image: url("../static/my-projects.jpg");
+  background-attachment: fixed;
+  overflow: hidden;
 }
 
 .projects-container {
@@ -38,7 +40,7 @@
 .projects-container-open {
   padding: 2rem;
   width: 80%;
-  height: 70%;
+  height: 75%;
   position: absolute;
   transition: width 1s, height 1s ease-out 1s, background-color 1s, font-size 1s linear 2s, opacity 2s,
     transform 2s;
@@ -163,20 +165,22 @@
   .projects-container {
     width: 4rem;
     height: 4rem;
-    font-size: 0.8rem;
+    font-size: 1rem;
     box-shadow: 0 0 50px 10px $base-color;
   }
   .projects-container-open {
     width: 65%;
-    height: 65%;
-    font-size: 0.8rem;
+    height: 70%;
+    font-size: 1rem;
     transition: 1s;
+    padding-top: 3rem;
   }
   .text-my-projects {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
   .text-my-projects-open {
-    font-size: 0.8rem;
+    font-size: 1rem;
+    padding: 0 1rem 1.5rem 1rem;
   }
   .link,
   .link-2,
@@ -192,10 +196,11 @@
     left: 5%;
   }
   .projects-item {
+    transition: 1s;
     opacity: 0;
   }
   .projects-item-visible {
-    transition: 1s;
+    transition: 1s 1s;
     opacity: 1;
   }
 }

@@ -1,9 +1,9 @@
 import React from 'react';
 
-function SkillsTable({ cube }) {
+function SkillsTable({ skillsTable }) {
     return (
-        <div className={cube ? "skills-container" : "skills-container-mobile"}>
-            <div className={cube ? "skills-tab" : "skills-tab-hidden"}>
+        <div className={skillsTable ? "skills-container" : "skills-container-mobile"}>
+            <div className={skillsTable ? "skills-tab" : "skills-tab-hidden"}>
                 <div id="skills-title">Skills acquired:</div>
                 <div className="skills-item" id="html">HTML</div>
                 <div className="skills-item" id="css">CSS (sass/scss)</div>

@@ -83,9 +83,9 @@
   }
 }
 
-@media (max-width: $small) {
+@media (max-width: $medium) {
   .about-me {
-    background: url("../static/about-me.jpg") center / 200%;
+    background: url("../static/about-me.jpg") center / 100%;
     background-attachment: fixed;
     height: fit-content;
     animation: unset;
@@ -140,7 +140,7 @@
 
   .icon-2 {
     clip-path: none;
-    margin: 1rem 0 10rem;
+    margin: 1rem 0 5rem;
     &::after {
       content: unset;
     }

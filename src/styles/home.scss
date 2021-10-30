@@ -117,7 +117,7 @@ $items: 1, 2, 3, 4;
   transform-style: preserve-3d;
 }
 
-@media (max-width: $small) {
+@media (max-width: $medium) {
   .page-container-open {
     bottom: 0;
     top: -30%;
@@ -141,6 +141,12 @@ $items: 1, 2, 3, 4;
   }
 }
 
+@media (min-width: $small) and (max-width: $medium) {
+  .main-info {
+    font-size: 3rem;
+  }
+}
+
 @media (min-width: $medium) {
   .main-info {
     &:hover {
@@ -155,6 +161,9 @@ $items: 1, 2, 3, 4;
     max-height: 90%;
     transform: rotateX(55deg);
     transition: 700ms;
+  }
+  .page-container-open {
+    overflow-y: hidden;
   }
   @media (min-width: $large) {
     .page-container {
