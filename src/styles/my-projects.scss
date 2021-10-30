@@ -3,8 +3,6 @@
 
 .my-projects {
   background-image: url("../static/my-projects.jpg");
-  background-attachment: fixed;
-  overflow: hidden;
 }
 
 .projects-container {
@@ -162,6 +160,9 @@
 }
 
 @media (max-width: $small) {
+  .my-projects {
+    background-size: 120%;
+  }
   .projects-container {
     width: 4rem;
     height: 4rem;

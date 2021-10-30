@@ -36,7 +36,6 @@ function Home(props) {
     }
 
 
-
     return (
         <>
             <div className="main-container">

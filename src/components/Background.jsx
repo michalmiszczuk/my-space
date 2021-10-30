@@ -2,6 +2,8 @@ import React from 'react';
 
 function Background({ pageIsChanging, picture, pageLoaded }) {
 
+    // const isLargeDesktop = window.innerWidth > 1200
+
     let image = []
 
     for (let y = 1; y < 100; y += 10) {

@@ -10,7 +10,7 @@
   perspective: 40rem;
   overflow-x: hidden;
   overflow-y: scroll;
-  overscroll-behavior: none;
+  overscroll-behavior-y: contain;
 }
 
 .main-info {
@@ -121,7 +121,7 @@ $items: 1, 2, 3, 4;
   .page-container-open {
     bottom: 0;
     top: -30%;
-    height: 100vh;
+    height: auto;
   }
   .page-container {
     width: 100%;
