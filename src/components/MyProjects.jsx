@@ -23,14 +23,16 @@ function MyProjects({ pageIsChanging, pageLoaded, setPageLoaded }) {
                 <Background pageIsChanging={pageIsChanging} pageLoaded={pageLoaded} picture={picture} />
                 {pageLoaded && <div onClick={() => setSkills(true)} className={skills ? "projects-container-open" : "projects-container"} >
                     <span className={skills ? "text-my-projects-open" : "text-my-projects"}>my projects</span>
-                    <ProjectLink skills={skills} liveLink="https://englishempowering.com/" gitLink="https://englishempowering.com/"
-                        description="Website / App - my online business card where students can book English lessons." />
-                    <ProjectLink skills={skills} liveLink="https://englishempowering.com/" gitLink="https://englishempowering.com/"
+                    <ProjectLink skills={skills} liveLink="https://englishempowering.netlify.app/" gitLink="https://github.com/michalmiszczuk/english-empowering"
+                        description="Website / App - an online business card where students can book English lessons." />
+                    <ProjectLink skills={skills} liveLink="https://englishempowering.netlify.app/" gitLink="https://github.com/michalmiszczuk/english-empowering-backend"
+                        description="Backend for English Empowering" />
+                    <ProjectLink skills={skills} liveLink="https://tilewars.netlify.app/" gitLink="https://github.com/michalmiszczuk/tile-wars-typescript"
                         description="Tile Wars - a board game" />
-                    <ProjectLink skills={skills} liveLink="https://englishempowering.com/" gitLink="https://englishempowering.com/"
-                        description="Sorting Alogrithm" />
-                    <ProjectLink skills={skills} liveLink="https://englishempowering.com/" gitLink="https://englishempowering.com/"
-                        description="Calculator - a simple project using vanilla JS" />
+                    <ProjectLink skills={skills} liveLink="https://bearsort.netlify.app/" gitLink="https://github.com/michalmiszczuk/bearsort-algo"
+                        description="Sorting Alogrithm - live version built with vanilla JS" />
+                    <ProjectLink skills={skills} liveLink="https://michalmiszczuk.netlify.app/" gitLink="https://github.com/michalmiszczuk/my-space"
+                        description="This website / My portfolio" />
                     <div
                         onClick={(e) => handleCloseSkills(e)}
                         className={skills ? "project-close-icon" : "project-close-icon-hidden"} />
