@@ -23,7 +23,7 @@ function Background({ pageIsChanging, picture, pageLoaded }) {
                         style={{
                             backgroundImage: `url(${picture})`,
                             backgroundPosition: `${img.x}% ${img.y}% `,
-                            animation: `drop-tiles 500ms ${img.y * 10 + img.x * 10}ms ease forwards`,
+                            animation: `drop-tiles 0.5s ${img.y * 10 + img.x * 10}ms ease forwards`,
                             opacity: "0",
                         }}
                     />
@@ -35,7 +35,7 @@ function Background({ pageIsChanging, picture, pageLoaded }) {
                         style={{
                             backgroundImage: `url(${picture})`,
                             backgroundPosition: `${img.x}% ${img.y}% `,
-                            animation: `drop-tiles 500ms ${img.y * 10 + img.x * 10}ms ease forwards reverse`,
+                            animation: `drop-tiles 0.5s ${img.y * 10 + img.x * 10}ms ease forwards reverse`,
                             opacity: "1",
                         }}
                     />
