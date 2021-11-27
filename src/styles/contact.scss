@@ -64,8 +64,9 @@
 
 .contact-item {
   @include flexCenter;
+  text-align: center;
   margin: 2rem 0;
-  width: 50%;
+  width: 70%;
   padding: 1rem;
   border-radius: 10px;
   transition: 1s;
