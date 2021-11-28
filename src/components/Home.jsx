@@ -43,7 +43,7 @@ function Home(props) {
                 <div className="grid-container">
                     <NavButton setPage={handlePageChange} direction="left" pageLoaded={pageLoaded} pageNumber={1} title="about" />
                     <NavButton setPage={handlePageChange} direction="left" pageLoaded={pageLoaded} pageNumber={2} title="projects" />
-                    <div className={pageLoaded ? "page-container-open" : "page-container"}>
+                    <div className={pageLoaded ? "page-container-open" : "page-container"} id={page === 1 && pageLoaded ? "about-me-open" : ""}>
                         {page === 1 && <AboutMe pageIsChanging={pageIsChanging} setPageLoaded={setPageLoaded} pageLoaded={pageLoaded} />}
                         {page === 2 && <MyProjects pageIsChanging={pageIsChanging} setPageLoaded={setPageLoaded} pageLoaded={pageLoaded} />}
                         {page === 3 && <Skills pageIsChanging={pageIsChanging} setPageLoaded={setPageLoaded} pageLoaded={pageLoaded} />}

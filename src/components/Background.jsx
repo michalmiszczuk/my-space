@@ -6,6 +6,7 @@ function Background({ pageIsChanging, picture, pageLoaded }) {
 
     let image = []
 
+
     for (let y = 1; y < 100; y += 10) {
         let row = []
         for (let x = 1; x < 100; x += 10) {
