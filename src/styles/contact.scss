@@ -76,6 +76,16 @@
 }
 
 @media (max-width: $small) {
+  .contact {
+    display: flex;
+    flex-flow: column;
+  }
+
+  .contact-info-container {
+    width: 100%;
+    top: 35%;
+  }
+
   .contact-icon {
     top: 50%;
     right: 15%;

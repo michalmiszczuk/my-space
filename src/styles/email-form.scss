@@ -74,3 +74,11 @@ label {
   transform: translateY(70rem);
   transition: 1s;
 }
+
+@media (max-width: 950px) {
+  .email-form-container {
+    position: static;
+    height: auto;
+    width: auto;
+  }
+}

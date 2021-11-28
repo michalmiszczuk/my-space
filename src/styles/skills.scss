@@ -53,76 +53,68 @@
 }
 
 #html::after {
-  @include progress-animation(eighty, 80%, 2s);
+  @include skillbar-animation(eighty, 100%, 2s);
 }
 
 #css::after {
-  @include progress-animation(seventyFive, 75%, 3s);
+  @include skillbar-animation(seventyFive, 100%, 3s);
 }
 
 #javascript::after {
-  @include progress-animation(seventy, 70%, 4s);
+  @include skillbar-animation(seventy, 100%, 4s);
 }
 #react::after {
-  @include progress-animation(seventy, 70%, 5s);
+  @include skillbar-animation(seventy, 100%, 5s);
 }
 #node::after {
-  @include progress-animation(fourty, 40%, 6s);
+  @include skillbar-animation(fourty, 100%, 6s);
 }
 #mongo::after {
-  @include progress-animation(thirty, 30%, 7s);
+  @include skillbar-animation(thirty, 100%, 7s);
 }
 #git::after {
-  @include progress-animation(fourtyFive, 45%, 8s);
+  @include skillbar-animation(fourtyFive, 100%, 8s);
+}
+
+#html,
+#css,
+#javascript,
+#react,
+#node,
+#mongo,
+#git {
+  transform: translateY(-100%) rotateX(180deg);
+  backface-visibility: hidden;
+  background-color: transparent;
 }
 
 #html {
   transform: translateY(-100%) rotateX(180deg);
   animation: roll 1s 1s forwards;
-  backface-visibility: hidden;
-  background-color: transparent;
 }
 
 #css {
-  transform: translateY(-100%) rotateX(180deg);
   animation: roll 1s 2s forwards;
-  backface-visibility: hidden;
-  background: transparent;
 }
 
 #javascript {
-  transform: translateY(-100%) rotateX(180deg);
   animation: roll 1s 3s forwards;
-  backface-visibility: hidden;
-  background: transparent;
 }
 
 #react {
-  transform: translateY(-100%) rotateX(180deg);
   animation: roll 1s 4s forwards;
-  backface-visibility: hidden;
-  background: transparent;
 }
 
 #node {
-  transform: translateY(-100%) rotateX(180deg);
   animation: roll 1s 5s forwards;
-  backface-visibility: hidden;
-  background: transparent;
 }
 
 #mongo {
-  transform: translateY(-100%) rotateX(180deg);
   animation: roll 1s 6s forwards;
-  backface-visibility: hidden;
-  background: transparent;
 }
 
 #git {
-  transform: translateY(-100%) rotateX(180deg);
   animation: roll 1s 7s forwards;
-  backface-visibility: hidden;
-  background: transparent;
 }
 
 @media (max-width: $medium) {

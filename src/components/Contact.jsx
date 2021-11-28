@@ -26,6 +26,7 @@ function Contact({ pageIsChanging, pageLoaded, setPageLoaded }) {
             </div >
             <MainText setPageLoaded={setPageLoaded} pageIsChanging={pageIsChanging} pageLoaded={pageLoaded} buttonText="CONTACT" />
             <EmailForm infoShown={infoShown} pageLoaded={pageLoaded} />
+
         </>
     );
 }

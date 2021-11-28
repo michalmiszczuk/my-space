@@ -19,7 +19,7 @@
   transform: translate($value1, $value2);
 }
 
-@mixin progress-animation($name, $value, $delay) {
+@mixin skillbar-animation($name, $value, $delay) {
   @keyframes #{$name} {
     from {
       width: 0%;
