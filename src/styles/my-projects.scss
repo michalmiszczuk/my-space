@@ -164,6 +164,7 @@
 
 @media (max-width: $small) {
   .my-projects {
+    background-image: url("../static/my-projects-small.jpg");
     background-size: 120%;
   }
   .projects-container {

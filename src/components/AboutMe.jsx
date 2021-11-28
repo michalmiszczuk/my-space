@@ -2,18 +2,21 @@ import React, { useState } from 'react';
 import Background from './Background';
 import MainText from './MainText';
 
-import picture from '../static/about-me.jpg'
+import picture from '../static/about-me.jpg';
+import pictureSmall from '../static/about-me-small.jpg';
 import '../styles/aboutMe.scss'
 
 function AboutMe({ pageIsChanging, pageLoaded, setPageLoaded }) {
 
     const [info, setInfo] = useState(false)
+    const isMobile = window.innerWidth < 768
+
 
     return (
         <>
             <div
                 className={pageLoaded && info ? " page-background about-me magnified-2 " : pageLoaded ? "page-background about-me" : "page-background"}>
-                <Background pageIsChanging={pageIsChanging} pageLoaded={pageLoaded} picture={picture} />
+                <Background pageIsChanging={pageIsChanging} pageLoaded={pageLoaded} picture={isMobile ? pictureSmall : picture} />
                 <div onMouseEnter={() => setInfo(true)} onMouseLeave={() => setInfo(false)} className={pageLoaded ? "me-text" : "me-text me-text-hidden"}>
                     <div className="my-story">my story</div>
                     <p className="my-description">

@@ -90,6 +90,14 @@
   animation: main 1s forwards;
 }
 
+@media (max-width: $small) {
+  .img-container {
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
 @media (max-width: $medium) {
   .page-background {
     overflow: visible;

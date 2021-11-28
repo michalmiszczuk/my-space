@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import picture from '../static/contact.jpg'
+import pictureSmall from '../static/contact-small.jpg'
 import Background from './Background';
 import MainText from './MainText';
 import EmailForm from './EmailForm';
@@ -8,12 +9,13 @@ import '../styles/contact.scss'
 function Contact({ pageIsChanging, pageLoaded, setPageLoaded }) {
 
     const [infoShown, setInfoShown] = useState(false)
+    const isMobile = window.innerWidth < 768
 
     return (
         <>
             <div
                 className={pageLoaded && infoShown ? "page-background contact moveup" : pageLoaded ? "page-background contact grey-contact" : "page-background"}>
-                <Background pageIsChanging={pageIsChanging} pageLoaded={pageLoaded} picture={picture} />
+                <Background pageIsChanging={pageIsChanging} pageLoaded={pageLoaded} picture={isMobile ? pictureSmall : picture} />
                 {pageLoaded && <div onClick={() => setInfoShown(false)}
                     onMouseEnter={() => setInfoShown(true)}
                     onTouchMove={() => setInfoShown(true)}

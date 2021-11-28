@@ -2,7 +2,7 @@ import React from 'react';
 
 function Background({ pageIsChanging, picture, pageLoaded }) {
 
-    // const isLargeDesktop = window.innerWidth > 1200
+    const isMobile = window.innerWidth < 768
 
     let image = []
 
@@ -15,6 +15,7 @@ function Background({ pageIsChanging, picture, pageLoaded }) {
     }
 
     if (pageLoaded) return null;
+    if (isMobile) return <div className="img-container" style={{ backgroundImage: `url(${picture})` }}></div>
     return (
         <>
             {!pageIsChanging && <div className="img-container ">

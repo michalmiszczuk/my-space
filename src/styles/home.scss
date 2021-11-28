@@ -8,8 +8,7 @@
   background-color: black;
   color: $text-color;
   perspective: 40rem;
-  overflow-x: hidden;
-  overflow-y: scroll;
+  overflow: hidden;
   overscroll-behavior-y: contain;
 }
 
@@ -115,6 +114,12 @@ $items: 1, 2, 3, 4;
   bottom: -12%;
   transform-origin: bottom;
   transform-style: preserve-3d;
+}
+
+@media (max-width: $small) {
+  .main-container {
+    overflow-y: visible;
+  }
 }
 
 @media (max-width: $medium) {

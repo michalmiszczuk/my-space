@@ -10,7 +10,6 @@
   position: absolute;
   padding: 2rem 2rem;
   top: -50%;
-  opacity: 0;
   transition: 1s;
   text-align: justify;
   margin-top: 1rem;
@@ -19,6 +18,7 @@
   transition: 1s;
   clip-path: polygon(0 0, 100% 0, 100% 55%, 0 28%);
   animation: open-me-text 1s 0.5s forwards;
+  opacity: 0;
 }
 
 .my-description {
@@ -80,6 +80,15 @@
   &::after {
     content: "pastime";
     left: 85%;
+  }
+}
+
+@media (max-width: $small) {
+  .about-me {
+    background: url("../static/about-me-small.jpg") center / 100%;
+  }
+  .me-text {
+    background: none;
   }
 }
 
@@ -151,6 +160,7 @@
   .me-text {
     z-index: 2;
     position: relative;
+    opacity: 0.6;
     &:hover {
       opacity: 1;
       transform: translateY(20%);
@@ -233,7 +243,7 @@
     top: -50%;
   }
   100% {
-    opacity: 1;
+    opacity: 0.9;
     top: 5%;
   }
 }

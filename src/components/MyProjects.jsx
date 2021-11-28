@@ -3,11 +3,13 @@ import Background from './Background';
 import MainText from './MainText';
 import ProjectLink from './ProjectLink';
 import picture from '../static/my-projects.jpg'
+import pictureSmall from '../static/my-projects-small.jpg'
 import '../styles/my-projects.scss'
 
 function MyProjects({ pageIsChanging, pageLoaded, setPageLoaded }) {
 
     const [skills, setSkills] = useState(false)
+    const isMobile = window.innerWidth < 768
 
     const handleCloseSkills = (e) => {
         e.stopPropagation()
@@ -20,7 +22,7 @@ function MyProjects({ pageIsChanging, pageLoaded, setPageLoaded }) {
 
                 className={pageLoaded && skills ? " page-background my-projects magnified" : pageLoaded ? "page-background my-projects " : "page-background"}>
 
-                <Background pageIsChanging={pageIsChanging} pageLoaded={pageLoaded} picture={picture} />
+                <Background pageIsChanging={pageIsChanging} pageLoaded={pageLoaded} picture={isMobile ? pictureSmall : picture} />
                 {pageLoaded && <div onClick={() => setSkills(true)} className={skills ? "projects-container-open" : "projects-container"} >
                     <span className={skills ? "text-my-projects-open" : "text-my-projects"}>my projects</span>
                     <ProjectLink skills={skills} liveLink="https://englishempowering.netlify.app/" gitLink="https://github.com/michalmiszczuk/english-empowering"

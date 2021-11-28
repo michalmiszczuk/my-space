@@ -8,20 +8,22 @@ body {
   padding: 0;
 }
 
-::-webkit-scrollbar {
-  width: 10px;
-}
+@media (min-width: 1200px) {
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
 
-::-webkit-scrollbar-track {
-  background: hsl(247, 13%, 25%);
-}
+  ::-webkit-scrollbar-track {
+    background: hsl(247, 13%, 25%);
+  }
 
-::-webkit-scrollbar-thumb {
-  background: hsl(247, 23%, 55%);
-}
+  ::-webkit-scrollbar-thumb {
+    background: hsl(247, 23%, 55%);
+  }
 
-::-webkit-scrollbar-thumb:hover {
-  background: hsl(247, 53%, 75%);
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(247, 53%, 75%);
+  }
 }
 
 a {

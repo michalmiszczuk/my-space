@@ -117,6 +117,12 @@
   animation: roll 1s 7s forwards;
 }
 
+@media (max-width: $small) {
+  .skills {
+    background: url("../static/skills-small.jpg") center / 100%;
+  }
+}
+
 @media (max-width: $medium) {
   .skills-container-mobile {
     position: absolute;
