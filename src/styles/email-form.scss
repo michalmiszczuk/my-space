@@ -1,4 +1,5 @@
 @import "./variables";
+@import "./utils";
 
 .email-form-container {
   position: absolute;
@@ -11,7 +12,7 @@
   width: 20rem;
   padding: 1rem;
   background-color: hsl(0%, 0%, 0%, 0.7);
-  transition: 1s;
+  transition: 1.5s;
 }
 
 .contact-title {
@@ -32,7 +33,7 @@ textarea {
   outline: none;
   margin-bottom: 1rem;
   transition: 0.2s;
-  height: 2rem;
+  height: 1rem;
   padding: 0.5rem;
   border: none;
   &:focus {
@@ -75,10 +76,43 @@ label {
   transition: 1s;
 }
 
-@media (max-width: 950px) {
+.open-form {
+  display: none;
+}
+
+@media (max-width: $medium) {
   .email-form-container {
-    position: static;
+    position: absolute;
     height: auto;
-    width: auto;
+    width: 100%;
+    border: 2px solid $base-color;
+    top: 50%;
+    padding: 1rem 0;
+    right: 0;
+    transform: translateY(-50%) translateX(0);
+  }
+
+  .mob-hidden {
+    transform: translateY(-50%) translateX(50rem);
+  }
+  .open-form {
+    display: flex;
+    justify-content: center;
+    border: 2px solid $base-color;
+    position: absolute;
+    right: 0;
+    top: 12%;
+    background-color: $base-color;
+    width: 40%;
+    z-index: 10000;
+    font-size: 1rem;
+    padding: 0.8rem;
+    border-radius: 10px 0 0 10px;
+  }
+}
+
+@media (min-width: $medium) {
+  .project-close-icon {
+    display: none;
   }
 }

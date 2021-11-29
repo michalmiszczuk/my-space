@@ -2,8 +2,12 @@ import React, { useRef } from 'react';
 import emailjs from 'emailjs-com';
 import '../styles/email-form.scss'
 
-function EmailForm({ infoShown, pageLoaded }) {
+function EmailForm({ infoShown, pageLoaded, showForm, setShowForm }) {
+
+
+    const isLargeScreen = window.innerWidth > 1200
     const form = useRef();
+
 
     const sendEmail = (e) => {
         e.preventDefault();
@@ -17,8 +21,11 @@ function EmailForm({ infoShown, pageLoaded }) {
         e.target.reset()
     };
 
+    const hiddenClass = isLargeScreen ? "hidden" : "mob-hidden"
+
     return (
-        <div className={infoShown && pageLoaded ? "email-form-container" : "email-form-container hidden"}>
+        <div className={infoShown || showForm && pageLoaded ? "email-form-container" : `email-form-container ${hiddenClass}`}>
+            <div class="project-close-icon" onClick={() => setShowForm(false)}></div>
             <form ref={form} onSubmit={sendEmail}>
                 <div className="contact-title">CONTACT ME: </div>
                 <label>Name</label>

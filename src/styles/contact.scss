@@ -32,7 +32,7 @@
   border-radius: 50px;
   transition: 2s;
   z-index: 1;
-  background-color: black;
+  background-color: #000;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -75,31 +75,31 @@
   opacity: 0.8;
 }
 
-@media (max-width: $small) {
+@media (max-width: $medium) {
   .contact {
     background-image: url("../static/contact-small.jpg");
     display: flex;
     flex-flow: column;
     filter: none;
+    background-color: black;
   }
-
-  .contact-icon-hidden {
-    transition: 3s;
-  }
-
-  .moveup {
-    background-position: top;
-    transition: 2s;
-  }
-}
-
-@media (max-width: $small) {
   .contact-icon,
   .contact-icon-hidden {
     display: none;
   }
   .contact-info-container {
-    display: static;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    top: 25%;
+    width: 100%;
+    height: auto;
+    left: 0;
+  }
+  .contact-item {
+    box-shadow: none;
+    background-color: hsl(247, 13%, 25%, 0.8);
+    opacity: 1;
   }
 }
 
