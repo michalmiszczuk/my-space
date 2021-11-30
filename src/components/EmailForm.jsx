@@ -24,7 +24,7 @@ function EmailForm({ infoShown, pageLoaded, showForm, setShowForm }) {
     const hiddenClass = isLargeScreen ? "hidden" : "mob-hidden"
 
     return (
-        <div className={infoShown || showForm && pageLoaded ? "email-form-container" : `email-form-container ${hiddenClass}`}>
+        <div className={infoShown || (showForm && pageLoaded) ? "email-form-container" : `email-form-container ${hiddenClass}`}>
             <div class="project-close-icon" onClick={() => setShowForm(false)}></div>
             <form ref={form} onSubmit={sendEmail}>
                 <div className="contact-title">CONTACT ME: </div>

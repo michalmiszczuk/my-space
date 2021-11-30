@@ -93,21 +93,27 @@ label {
   }
 
   .mob-hidden {
-    transform: translateY(-50%) translateX(50rem);
+    transform: translateY(-50%) translateX(80rem);
   }
   .open-form {
     display: flex;
     justify-content: center;
     border: 2px solid $base-color;
     position: absolute;
-    right: 0;
-    top: 12%;
+    left: 0;
+    top: 14%;
     background-color: $base-color;
     width: 40%;
-    z-index: 10000;
     font-size: 1rem;
+    z-index: 100;
     padding: 0.8rem;
-    border-radius: 10px 0 0 10px;
+    border-radius: 0;
+    transform: translateX(0rem);
+    transition: 1.5s;
+  }
+  .form-hidden {
+    transform: translateX(-50rem);
+    transition: 1.5s;
   }
 }
 
