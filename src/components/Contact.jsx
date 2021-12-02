@@ -10,19 +10,20 @@ function Contact({ pageIsChanging, pageLoaded, setPageLoaded }) {
 
     const [infoShown, setInfoShown] = useState(false)
     const [showForm, setShowForm] = useState(false)
-    const isMobile = window.innerWidth < 768
+    const isMobileTablet = window.innerWidth < 1200
+    const pageLoadedClass = isMobileTablet ? "page-background contact" : "page-background contact grey-contact"
 
     return (
         <>
 
             <div
-                className={pageLoaded && infoShown ? "page-background contact" : pageLoaded ? "page-background contact grey-contact" : "page-background"}>
-                <Background pageIsChanging={pageIsChanging} pageLoaded={pageLoaded} picture={isMobile ? pictureSmall : picture} />
+                className={pageLoaded && infoShown ? "page-background contact" : pageLoaded ? pageLoadedClass : "page-background"}>
+                <Background pageIsChanging={pageIsChanging} pageLoaded={pageLoaded} picture={isMobileTablet ? pictureSmall : picture} />
                 {pageLoaded && <div onClick={() => setInfoShown(false)}
                     onMouseEnter={() => setInfoShown(true)}
-                    className={infoShown ? "contact-icon-hidden" : "contact-icon"}>i</div>}
+                    className={infoShown ? "contact-icon-hidden" : "contact-icon"}></div>}
                 {pageLoaded && <div className={!showForm ? "open-form" : "open-form form-hidden"} onClick={() => setShowForm(true)}>Contact Form</div>}
-                {pageLoaded && <div className={infoShown || isMobile ? "contact-info-container" : "info-container-hidden"}>
+                {pageLoaded && <div className={infoShown || isMobileTablet ? "contact-info-container" : "info-container-hidden"}>
                     <a href="mailto:michal.miszczuk.webdev@gmail.com" className="contact-item">michal.miszczuk.webdev@gmail.com</a>
                     <a href="https://linkedin.com" className="contact-item">Linkedin</a>
                     <a href="tel:579 870 405" className="contact-item">579 870 405</a>

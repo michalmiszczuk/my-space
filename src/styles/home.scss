@@ -125,12 +125,12 @@ $items: 1, 2, 3, 4;
 @media (max-width: $medium) {
   .page-container-open {
     height: 100vh;
-    bottom: 0%;
+    top: -22vh;
   }
 
   #about-me-open {
     height: auto;
-    bottom: -50%;
+    // bottom: -50%;
   }
 
   .page-container {

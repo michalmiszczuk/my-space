@@ -14,11 +14,17 @@ function Home(props) {
     const [pageLoaded, setPageLoaded] = useState(false)
     const [pageIsChanging, setPageIsChanging] = useState(false)
 
+    const isLargeScreen = window.innerWidth > 1200
+
     const handlePageChange = (page) => {
         if (pageIsChanging) return
+        if (!isLargeScreen) {
+            setPage(page)
+            setNavbar(false)
+            return
+        }
         setPageLoaded(false)
         setPageIsChanging(true)
-        setNavbar(false)
         setTimeout(() => {
             setPage(page)
             setPageIsChanging(false)
@@ -53,7 +59,7 @@ function Home(props) {
                     <NavButton setPage={handlePageChange} direction="right" pageLoaded={pageLoaded} pageNumber={4} title="contact" />
                 </div>
             </div>
-            <NavBar pageLoaded={pageLoaded} closePage={() => setPageLoaded(false)} setPage={handleNavBar} navbar={navbar} setNavbar={setNavbar} />
+            {!isLargeScreen && <NavBar pageLoaded={pageLoaded} closePage={() => setPageLoaded(false)} setPage={handleNavBar} navbar={navbar} setNavbar={setNavbar} />}
         </>
 
     );

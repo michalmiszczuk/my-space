@@ -9,7 +9,9 @@ function NavBar({ navbar, setNavbar, setPage, closePage, pageLoaded }) {
             <div className={navbar ? "navbar-item nav-item2" : "nav-hidden nav-item2"} onClick={() => setPage(2)}>projects</div>
             <div className={navbar ? "navbar-item nav-item3" : "nav-hidden nav-item3"} onClick={() => setPage(3)}>skills</div>
             <div className={navbar ? "navbar-item nav-item4" : "nav-hidden nav-item4"} onClick={() => setPage(4)}>contact</div>
-            <div className={navbar ? "close-icon" : "menu-icon"} onClick={() => setNavbar(!navbar)} />
+            <div className="navbar-icons-wrapper" onClick={() => setNavbar(!navbar)}>
+                <div className={navbar ? "close-icon" : "menu-icon"} />
+            </div>
             <div className={pageLoaded ? "back-icon" : "back-icon-hidden"} onClick={() => closePage()} />
         </div>
     );

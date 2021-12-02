@@ -78,10 +78,7 @@
 @media (max-width: $medium) {
   .contact {
     background-image: url("../static/contact-small.jpg");
-    display: flex;
-    flex-flow: column;
-    filter: none;
-    background-color: black;
+    background-color: #131313;
   }
   .contact-icon,
   .contact-icon-hidden {

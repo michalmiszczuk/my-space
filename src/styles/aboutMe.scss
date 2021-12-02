@@ -84,11 +84,6 @@
 }
 
 @media (max-width: $small) {
-  .about-me {
-    background: url("../static/about-me-small.jpg") center / 100%;
-    height: auto;
-    bottom: -50%;
-  }
   .me-text {
     background: none;
   }
@@ -96,24 +91,31 @@
 
 @media (max-width: $medium) {
   .about-me {
-    // background: url("../static/about-me.jpg") 49% / 100%;
+    background: url("../static/about-me-small.jpg") center / 100%;
+    background-position-y: 49%;
+    transition: background-position-y 1s 1s;
     background-attachment: fixed;
-    height: fit-content;
-    background-size: contain;
-    // animation: back 1s forwards;
-    // background-position: top;
+    height: inherit;
     display: flex;
     flex-flow: column;
+    background-repeat: repeat-y;
+    // background-color: hsl(0, 0, 0, 1);
   }
 
-  @keyframes back {
+  .my-story {
+    background-color: #000;
+    padding: 1rem 1rem;
+  }
+
+  @keyframes show {
     from {
-      background-position-y: bottom;
+      opacity: 1;
     }
     to {
-      background-position-y: top;
+      opacity: 0;
     }
   }
+
   .me-text {
     clip-path: unset;
     transform: unset;
