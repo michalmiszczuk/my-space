@@ -26,11 +26,11 @@ function Contact({ pageIsChanging, pageLoaded, setPageLoaded }) {
                 {pageLoaded && <div className={infoShown || isMobileTablet ? "contact-info-container" : "info-container-hidden"}>
                     <a href="mailto:michal.miszczuk.webdev@gmail.com" className="contact-item">michal.miszczuk.webdev@gmail.com</a>
                     <a href="https://linkedin.com" className="contact-item">Linkedin</a>
-                    <a href="tel:579 870 405" className="contact-item">579 870 405</a>
+                    <a href="tel:+48 579 870 405" className="contact-item">+ 48 579 870 405</a>
                 </div>}
             </div >
             <MainText setPageLoaded={setPageLoaded} pageIsChanging={pageIsChanging} pageLoaded={pageLoaded} buttonText="CONTACT" />
-            <EmailForm infoShown={infoShown} pageLoaded={pageLoaded} showForm={showForm} setShowForm={setShowForm} />
+            {pageLoaded && <EmailForm infoShown={infoShown} pageLoaded={pageLoaded} showForm={showForm} setShowForm={setShowForm} />}
         </>
     );
 }

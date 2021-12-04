@@ -58,6 +58,7 @@
 
 .projects-item {
   transform: translateX(-60rem);
+  height: 0;
   transition: 1s;
 }
 
@@ -165,6 +166,7 @@
     background-image: url("../static/my-projects-small.jpg");
     background-repeat: no-repeat;
     background-color: #000;
+    height: 100vh;
   }
   .projects-container {
     // @include absCentered;
@@ -186,6 +188,7 @@
     font-size: 1rem;
     transition: none;
   }
+
   .text-my-projects {
     font-size: 1rem;
     transition: none;
