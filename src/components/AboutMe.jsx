@@ -20,23 +20,23 @@ function AboutMe({ pageIsChanging, pageLoaded, setPageLoaded }) {
                 <div onMouseEnter={() => setInfo(true)} onMouseLeave={() => setInfo(false)} className={pageLoaded ? "me-text" : "me-text me-text-hidden"}>
                     <div className="my-story">my story</div>
                     <p className="my-description">
-                        Two years ago I discovered my latent passion to computer science when I immersed myself in this bizzare world of ones and zeros.
-                        Being a person who has always balanced on the brink of both scientific and humanistic realities as well as someone
-                        who loves new challenges made me an avid student. I eagerly broaden knowledge of the coding order.
+                        Two years ago I discovered my latent passion to computer science immersing myself in this bizzare world of ones and zeros.
+                        Then I started learning web development. I have completed several courses, read thousands of pages of documentation and most important
+                        having spent dozens of hours avidly practicing coding I have accomplished a few projects.
                         <br />     <br />
-                        In the past I worked as a musician as well as in a recording studio. Now an English teacher who is awaiting a new chapter in his life.
+                        In the past I worked as a musician and in a recording studio. Now an English teacher who is awaiting a new chapter in his life.
                     </p>
                 </div>
                 {pageLoaded && <div className="aboutme-icons-container">
                     <div className='about-me-icon'>
                         <p className="about-me-icon-text">
                             Skills: Being a resourceful person I have always loved new challenges which give a great background for further development.
-                            Conscientious, open-minded and resourceful working in a group is not a problem for me. Setting goals and meeting deadlines.
+                            Conscientious, open-minded with a positive mindset make me a great team worker. Setting goals and meeting deadlines.
                         </p>
                     </div>
                     <div className='about-me-icon icon-2'>
                         <p className="about-me-icon-text">
-                            Hobbies: Exploring the diversity of music genres by playing instruments. Learning about the universe and its mysteries.
+                            Hobbies: Taking my creativity to a next level by playing drums, piano and guitar. Learning about the universe and its mysteries.
                             Watching and reading sci-fiction and fantasy.
                         </p>
                     </div>

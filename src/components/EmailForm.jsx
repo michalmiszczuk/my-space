@@ -25,7 +25,7 @@ function EmailForm({ infoShown, pageLoaded, showForm, setShowForm }) {
 
     return (
         <div className={infoShown || (showForm && pageLoaded) ? "email-form-container" : `email-form-container ${hiddenClass}`}>
-            {!isLargeScreen && <div class="project-close-icon" onClick={() => setShowForm(false)}></div>}
+            {!isLargeScreen && <div className="project-close-icon" onClick={() => setShowForm(false)}></div>}
             <form ref={form} onSubmit={sendEmail}>
                 <div className="contact-title">CONTACT ME: </div>
                 <label>Name</label>

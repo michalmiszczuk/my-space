@@ -6,7 +6,10 @@
 }
 
 .me-text {
-  background: url("../static/about-me-text.jpg") top / 50%;
+  background: url("../static/t3.jpg") right 100% / 45% no-repeat,
+    url("../static/t8.jpg") left 50% / 50% no-repeat;
+
+  background-color: $about-me-icons-color;
   position: absolute;
   padding: 2rem 2rem;
   top: -50%;
@@ -50,6 +53,7 @@
 
 .about-me-icon {
   @include flexCenter();
+  background: url("../static/t6.jpg") left 50% / 100% no-repeat;
   position: relative;
   width: 40rem;
   height: 10rem;
@@ -62,6 +66,7 @@
   color: hsl(67, 10%, 90%, 0);
   font: lighter 1.2rem $base-font;
   padding: 1rem;
+
   &::after {
     content: "soft-skills";
     color: hsl(67, 10%, 90%, 1);
@@ -76,6 +81,7 @@
   opacity: 0;
 }
 .icon-2 {
+  background: url("../static/t2.jpg") right 50% / 100% no-repeat;
   clip-path: circle(30% at 100% 0%);
   &::after {
     content: "pastime";
@@ -193,7 +199,7 @@
   }
 
   .about-me-icon {
-    background: #0d3c71a9 url("../static/books.jpg") no-repeat center / contain;
+    background-color: $about-me-icons-color;
     &:hover {
       color: hsl(67, 10%, 90%, 0.8);
       clip-path: circle(150% at 0 0);
@@ -214,9 +220,6 @@
       padding: 1rem;
       color: hsl(67, 10%, 90%, 1);
     }
-  }
-  .icon-2 {
-    background-image: url("../static/drums.jpg");
   }
 }
 
