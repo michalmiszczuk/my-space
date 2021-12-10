@@ -47,8 +47,8 @@
 .navbar-icons-wrapper {
   @include flexCenter;
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 10%;
+  right: 10%;
   width: 3rem;
   height: 3rem;
 }
@@ -115,6 +115,13 @@
   height: 1.5rem;
   clip-path: polygon(0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0);
   transition: 1s;
+}
+
+@media (max-width: $small) {
+  .navbar-icons-wrapper {
+    top: 5%;
+    right: 5%;
+  }
 }
 
 @media (min-width: $medium) {

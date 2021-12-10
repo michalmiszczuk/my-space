@@ -136,7 +136,7 @@
   position: absolute;
   background-color: $base-color-lighter2;
   top: 5%;
-  right: 5%;
+  left: 5%;
   width: 1.5rem;
   height: 1.5rem;
   transition: 500ms;
@@ -166,8 +166,8 @@
     background-image: url("../static/my-projects-small.jpg");
     background-repeat: no-repeat;
     background-color: #000;
-    height: 100vh;
   }
+
   .projects-container {
     // @include absCentered;
     position: static;
@@ -223,6 +223,9 @@
 }
 
 @media (min-width: $medium) {
+  .my-projects {
+    height: 100vh;
+  }
   .projects-container {
     &:hover {
       background-color: $base-color;

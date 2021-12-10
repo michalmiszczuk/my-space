@@ -6,9 +6,6 @@
 }
 
 .me-text {
-  background: url("../static/t3.jpg") right 100% / 45% no-repeat,
-    url("../static/t8.jpg") left 50% / 50% no-repeat;
-
   position: absolute;
   padding: 2rem 2rem;
   top: -50%;
@@ -88,6 +85,9 @@
 }
 
 @media (max-width: $small) {
+  .about-me {
+    height: inherit;
+  }
   .me-text {
     background: none;
   }
@@ -95,14 +95,14 @@
 
 @media (max-width: $medium) {
   .about-me {
-    background: url("../static/about-me-small.jpg") center / 100%;
-    background-position-y: 49%;
-    transition: background-position-y 1s 1s;
+    background: url("../static/about-me-small.jpg") 49% / 100%;
+    // transition: background-position-y 1s 1s;
     background-attachment: fixed;
-    height: inherit;
+
     display: flex;
     flex-flow: column;
-    background-repeat: repeat-y;
+    // background-repeat: round;
+    // background-position-y: 0vh;
     // background-color: hsl(0, 0, 0, 1);
   }
 
@@ -161,7 +161,7 @@
     }
   }
   .about-me-icon-text {
-    background-color: hsl(0%, 0%, 0%, 0.6%);
+    background-color: hsl(0, 0%, 0%, 0.5);
     padding: 1rem;
     opacity: 1;
   }
@@ -176,7 +176,12 @@
 }
 
 @media (min-width: $medium) {
+  .about-me {
+    height: 100vh;
+  }
   .me-text {
+    background: url("../static/t3.jpg") right 100% / 45% no-repeat,
+      url("../static/t8.jpg") left 50% / 50% no-repeat;
     z-index: 2;
     position: relative;
     opacity: 0.6;
@@ -219,9 +224,9 @@
       color: hsl(67, 10%, 90%, 1);
     }
   }
-}
-.icon-2 {
-  background: url("../static/t2.jpg") right 50% / 100% no-repeat;
+  .icon-2 {
+    background: url("../static/t2.jpg") right 50% / 100% no-repeat;
+  }
 }
 
 @media (min-width: $large) {

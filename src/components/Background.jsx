@@ -16,7 +16,7 @@ function Background({ pageIsChanging, picture, pageLoaded }) {
     }
 
     if (pageLoaded) return null;
-    if (!isLargeScreen) return <div className="img-container" style={{ backgroundImage: `url(${picture})`, backgroundSize: "100%", backgroundRepeat: "no-repeat" }}></div>
+    if (!isLargeScreen) return <div className="img-container" style={{ backgroundImage: `url(${picture})`, backgroundSize: "100%", backgroundRepeat: "no-repeat", backgroundPosition: "center" }}></div>
     return (
         <>
             {!pageIsChanging && <div className="img-container ">

@@ -19,9 +19,7 @@ function MyProjects({ pageIsChanging, pageLoaded, setPageLoaded }) {
     return (
         <>
             <div
-
                 className={pageLoaded && skills ? " page-background my-projects magnified" : pageLoaded ? "page-background my-projects " : "page-background"}>
-
                 <Background pageIsChanging={pageIsChanging} pageLoaded={pageLoaded} picture={isMobile ? pictureSmall : picture} />
                 {pageLoaded && <div onClick={() => setSkills(true)} className={skills ? "projects-container-open" : "projects-container"} >
                     <span className={skills ? "text-my-projects-open" : "text-my-projects"}>my projects</span>

@@ -9,7 +9,7 @@
   border-radius: 50px;
   perspective: 40rem;
   box-shadow: 5px 0px 20px 10px $base-color;
-  transition: 2s;
+  transition: 1s;
   // overflow: hidden;
 }
 
@@ -100,7 +100,7 @@
 
 @media (max-width: $medium) {
   .page-background {
-    overflow: visible;
+    overflow: hidden;
   }
   .main-text-hidden {
     display: none;
