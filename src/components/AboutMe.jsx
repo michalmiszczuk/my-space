@@ -31,13 +31,14 @@ function AboutMe({ pageIsChanging, pageLoaded, setPageLoaded }) {
                     <div className='about-me-icon'>
                         <p className="about-me-icon-text">
                             Skills: Being a resourceful person I have always loved new challenges which give a great background for further development.
-                            Conscientious, open-minded with a positive mindset make me a great team worker. Setting goals and meeting deadlines.
+                            Open-mindedness and a positive mindset allow me to envince high efficiency in a demanding environment. Working with other
+                            people is something I cherish most.
                         </p>
                     </div>
                     <div className='about-me-icon icon-2'>
                         <p className="about-me-icon-text">
                             Hobbies: Taking my creativity to a next level by playing drums, piano and guitar. Learning about the universe and its mysteries.
-                            Watching and reading sci-fiction and fantasy.
+                            Watching and reading sci-fiction and fantasy. Taking pizza recipes to a new level.
                         </p>
                     </div>
                 </div>}
