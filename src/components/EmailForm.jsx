@@ -12,7 +12,7 @@ function EmailForm({ infoShown, pageLoaded, showForm, setShowForm }) {
     const sendEmail = (e) => {
         e.preventDefault();
 
-        emailjs.sendForm('aylon7', 'template_jnwkrx9', form.current, 'user_A8nmVSomjP3JZCWugeqaD')
+        emailjs.sendForm(process.env.REACT_APP_EMAIL_SERVICEID, process.env.REACT_APP_MAIL_TEMPLATEID, form.current, process.env.REACT_APP_EMAIL_USERID)
             .then((result) => {
                 console.log(result.text);
             }, (error) => {
