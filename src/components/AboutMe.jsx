@@ -32,7 +32,7 @@ function AboutMe({ pageIsChanging, pageLoaded, setPageLoaded }) {
                         <p className="about-me-icon-text">
                             Skills: Being a resourceful person I have always loved new challenges which give a great background for further development.
                             Open-mindedness and a positive mindset allow me to envince high efficiency in a demanding environment. Working with other
-                            people is something I cherish most.
+                            people is something I cherish the most.
                         </p>
                     </div>
                     <div className='about-me-icon icon-2'>
