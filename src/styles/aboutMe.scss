@@ -180,8 +180,8 @@
     height: 100vh;
   }
   .me-text {
-    background: url("../static/t3.jpg") right 100% / 45% no-repeat,
-      url("../static/t8.jpg") left 50% / 50% no-repeat;
+    background: url("../static/about-me3.jpg") right 100% / 45% no-repeat,
+      url("../static/about-me8.jpg") left 50% / 50% no-repeat;
     z-index: 2;
     position: relative;
     opacity: 0.6;
@@ -202,7 +202,7 @@
   }
 
   .about-me-icon {
-    background: url("../static/t6.jpg") left 50% / 100% no-repeat;
+    background: url("../static/about-me6.jpg") left 50% / 100% no-repeat;
     &:hover {
       color: hsl(67, 10%, 90%, 0.8);
       clip-path: circle(150% at 0 0);
@@ -225,7 +225,7 @@
     }
   }
   .icon-2 {
-    background: url("../static/t2.jpg") right 50% / 100% no-repeat;
+    background: url("../static/about-me2.jpg") right 50% / 100% no-repeat;
   }
 }
 
